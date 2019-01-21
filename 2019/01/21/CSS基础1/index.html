@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="css层叠样式表&amp;emsp;1、元素内嵌样式表直接在元素里面写样式。1&amp;lt;p style=&amp;quot; color:red;font-size:50px;&amp;quot;&amp;gt;.....&amp;lt;p&amp;gt; &amp;emsp;2、外部样式表是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。&amp;lt;link&amp;gt;元素应用，一般写在&amp;lt;head&amp;gt;元素内部。12345678910">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-21T12:35:58.602Z">
+<meta property="og:updated_time" content="2019-01-21T12:48:56.567Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础篇-1">
 <meta name="twitter:description" content="css层叠样式表&amp;emsp;1、元素内嵌样式表直接在元素里面写样式。1&amp;lt;p style=&amp;quot; color:red;font-size:50px;&amp;quot;&amp;gt;.....&amp;lt;p&amp;gt; &amp;emsp;2、外部样式表是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。&amp;lt;link&amp;gt;元素应用，一般写在&amp;lt;head&amp;gt;元素内部。12345678910">
@@ -386,8 +386,69 @@
 <p>主要由两个主部分构成<br>&emsp;1 选择器：要改变以样式的HTML元素。<br>&emsp;2 一条或多条声明：一个属性和一个值组成（属性（property））是需要设置的样式(style attribute)；</p>
 <p>属性和值用冒号分开；用花括号包围）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a（选择器）&#123;</span><br><span class="line">color（属性）：black（值）；</span><br><span class="line">font-size：100px；（声明）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>css多重声明</strong><br>大多数样式表不止一条规则，包含不止一个声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　a&#123; color：blac；font-size：100px；&#125;</span><br></pre></td></tr></table></figure></p>
-<p>###常用选择器</p>
-<p>　　.class| 　　　　　　　　　.myset|　　  选择所有class=” myset “的元素<br>:—:|:—:|:—:<br>　　#id| 　　　　　　　　　　 #myId|　　   选择id=” myId “的元素<br>　　* |　　　　　　　　　　　  *|　　　　    选择所有的元素<br>　　element1&emsp; element2| 　　   div P |　　　 选择所有元素1内部的元素2<br>　　element　　　　　|　　　 a　|　　　　选择所有该元素<br>　　element1&gt;element2　|　　div&gt;p|　　　选择父元素为元素1的元素2<br>　　element1+element2|　　　div+p　|　　选择紧接元素1后的元素2<br>　　element1，element2|　　  div，p|　　 选择所有元素1和元素2<br>　　element：hover|　　　　　　a：hover|　鼠标位于其上的元素<br>　　：：seletion　|　　　　　::selection|　选择被用户选取的元素部分</p>
+<p><strong>常用选择器</strong>
+　</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选择器</th>
+<th style="text-align:center">样式</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.class</td>
+<td style="text-align:center">.myset</td>
+<td style="text-align:center">选择所有class=” myset “的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">#id</td>
+<td style="text-align:center">#myId</td>
+<td style="text-align:center">选`id=” myId “的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　*</td>
+<td style="text-align:center">　　　　　　　　　　　  *</td>
+<td style="text-align:center">　　　　    选择所有的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1&emsp; element2</td>
+<td style="text-align:center">　　   div P</td>
+<td style="text-align:center">　　　 选择所有元素1内部的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element　　　　　</td>
+<td style="text-align:center">　　　 a　</td>
+<td style="text-align:center">　　　　选择所有该元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1 >element2　</td>
+<td style="text-align:center">　　div>p</td>
+<td style="text-align:center">　　　选择父元素为元素1的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1+element2</td>
+<td style="text-align:center">　　　div+p　</td>
+<td style="text-align:center">　　选择紧接元素1后的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1，element2</td>
+<td style="text-align:center">　　  div，p</td>
+<td style="text-align:center">　　 选择所有元素1和元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element:hover</td>
+<td style="text-align:center">　　　　　　a：hover</td>
+<td style="text-align:center">　鼠标位于其上的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　：：seletion　</td>
+<td style="text-align:center">　　　　　::selection</td>
+<td style="text-align:center">　选择被用户选取的元素部分</td>
+</tr>
+</tbody>
+</table>
 <p><strong>css背景</strong></p>
 <table>
 <thead>
