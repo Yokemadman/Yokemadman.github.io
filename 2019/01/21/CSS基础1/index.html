@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="css层叠样式表&amp;emsp;1、元素内嵌样式表直接在元素里面写样式。1&amp;lt;p style=&amp;quot; color:red;font-size:50px;&amp;quot;&amp;gt;.....&amp;lt;p&amp;gt; &amp;emsp;2、外部样式表是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。&amp;lt;link&amp;gt;元素应用，一般写在&amp;lt;head&amp;gt;元素内部。12345678910">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-21T12:33:15.693Z">
+<meta property="og:updated_time" content="2019-01-21T12:35:58.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS基础篇-1">
 <meta name="twitter:description" content="css层叠样式表&amp;emsp;1、元素内嵌样式表直接在元素里面写样式。1&amp;lt;p style=&amp;quot; color:red;font-size:50px;&amp;quot;&amp;gt;.....&amp;lt;p&amp;gt; &amp;emsp;2、外部样式表是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。&amp;lt;link&amp;gt;元素应用，一般写在&amp;lt;head&amp;gt;元素内部。12345678910">
@@ -389,7 +389,48 @@
 <p>###常用选择器</p>
 <p>　　.class| 　　　　　　　　　.myset|　　  选择所有class=” myset “的元素<br>:—:|:—:|:—:<br>　　#id| 　　　　　　　　　　 #myId|　　   选择id=” myId “的元素<br>　　* |　　　　　　　　　　　  *|　　　　    选择所有的元素<br>　　element1&emsp; element2| 　　   div P |　　　 选择所有元素1内部的元素2<br>　　element　　　　　|　　　 a　|　　　　选择所有该元素<br>　　element1&gt;element2　|　　div&gt;p|　　　选择父元素为元素1的元素2<br>　　element1+element2|　　　div+p　|　　选择紧接元素1后的元素2<br>　　element1，element2|　　  div，p|　　 选择所有元素1和元素2<br>　　element：hover|　　　　　　a：hover|　鼠标位于其上的元素<br>　　：：seletion　|　　　　　::selection|　选择被用户选取的元素部分</p>
 <p><strong>css背景</strong></p>
-<p>　　background　　　|　　　　　　　　　　　　　在一个声明中设置所有的背景属性<br>:—:|:—:<br>　　background-image：url（img/…）|　　　　　　背景图像<br>　　background-size：50px； （100%）　　　|　　尺寸<br>　　background-repeat：no-repeat；(不重复)|　　　是否及5如何重复<br>　　background-attachement：|fixed；(背景固定)　　scoll（滚动）<br>　　background-color：rgb（0，0，0，0）；|　　    背景颜色<br>　　background-position（位置）：|值&emsp;right&emsp;top&emsp;button&emsp;%&emsp;px<br>　　background-clip：|　　　　　　　　　　　　　　背景绘制区域<br>　　background-orgin：|　　　　　　　　　　　　　定位区域</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">background　　　</th>
+<th style="text-align:center">　　　　　　　　　　　　　在一个声明中设置所有的背景属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">　　background-image：url（img/…）</td>
+<td style="text-align:center">　　　　　　背景图像</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-size：50px； （100%）　　　</td>
+<td style="text-align:center">　　尺寸</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-repeat：no-repeat；(不重复)</td>
+<td style="text-align:center">　　　是否及5如何重复</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-attachement：</td>
+<td style="text-align:center">fixed；(背景固定)　　scoll（滚动）</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-color：rgb（0，0，0，0）；</td>
+<td style="text-align:center">　　    背景颜色</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-position（位置）：</td>
+<td style="text-align:center">值&emsp;right&emsp;top&emsp;button&emsp;%&emsp;px</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-clip：</td>
+<td style="text-align:center">　　　　　　　　　　　　　　背景绘制区域</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-orgin：</td>
+<td style="text-align:center">　　　　　　　　　　　　　定位区域</td>
+</tr>
+</tbody>
+</table>
 <p>&emsp;<strong>&gt;-size尺寸</strong><br>&emsp;x%&emsp;y%&emsp;&emsp;&emsp;宽、高百分比，只设一个，第二个默认” auto”;<br>&emsp;x&emsp;px&emsp;y&emsp;px&emsp;宽高像素<br>&emsp;cover&emsp;&emsp;&emsp;&emsp;扩展至足够大，使用图像完全覆盖区域，某些部分也许无法显示在背景定位区域中<br>&emsp;contain&emsp;&emsp;&emsp;把图像扩展至在最大尺寸，适应内容区域</p>
 <p><font color="red"><strong>一条声明设置所有背景</strong></font><br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background：bg-color　　bg-image　　position/bg-size　　bg-repeat　　bg-orgin　　bg-clip　　bg-attachment initial / inherit;</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;<strong>&gt;background-clip&emsp;规定绘制区域</strong><br>&emsp;border-box&emsp;被裁减到边框盒<br>&emsp;padding-box&emsp;被裁减到内边距框<br>&emsp;content-box&emsp;被裁减到内边框</p>
