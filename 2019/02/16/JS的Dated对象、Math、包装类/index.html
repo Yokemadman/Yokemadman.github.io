@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>JS构造函数、原型对象、隐含参数this | Yokemadman</title>
-  <meta name="description" content="This解析器再调用函数每次都会向函数内部传递一个隐含的参数this，this指向的是一个对象（函数执行的上下文对象）1、以函数形式调用时，this永远是window。2、以方法形式调用时，this就是调用方法的那个对象3、当以构造函数的形式调用时，this就是新创建的那个对象4、使用call和apply调用时，this是指定的那个对象 使用工厂的方法创建对象通过该方法可以大批量的创建对象，这样创">
+  <title>JS的Dated对象、Math、包装类 | Yokemadman</title>
+  <meta name="description" content="##Date对象##在JS使用Date对象来表示时间&amp;emsp;当前时间var d = new Date();&amp;emsp;指定时间格式：月/日/年 时：分：秒var e = new Date(&amp;quot;02/16/2019 11:49:20&amp;quot;);&amp;emsp;getDate()获取当前日期对象是几日 &amp;emsp;getDay()获取当前日期对象是周几0-60表示周日 &amp;emsp;getM">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS构造函数、原型对象、隐含参数this">
-<meta property="og:url" content="http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/index.html">
+<meta property="og:title" content="JS的Dated对象、Math、包装类">
+<meta property="og:url" content="http://yokemadman.github.io/2019/02/16/JS的Dated对象、Math、包装类/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="This解析器再调用函数每次都会向函数内部传递一个隐含的参数this，this指向的是一个对象（函数执行的上下文对象）1、以函数形式调用时，this永远是window。2、以方法形式调用时，this就是调用方法的那个对象3、当以构造函数的形式调用时，this就是新创建的那个对象4、使用call和apply调用时，this是指定的那个对象 使用工厂的方法创建对象通过该方法可以大批量的创建对象，这样创">
+<meta property="og:description" content="##Date对象##在JS使用Date对象来表示时间&amp;emsp;当前时间var d = new Date();&amp;emsp;指定时间格式：月/日/年 时：分：秒var e = new Date(&amp;quot;02/16/2019 11:49:20&amp;quot;);&amp;emsp;getDate()获取当前日期对象是几日 &amp;emsp;getDay()获取当前日期对象是周几0-60表示周日 &amp;emsp;getM">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-02-19T09:54:15.902Z">
+<meta property="og:updated_time" content="2019-02-20T05:06:57.769Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS构造函数、原型对象、隐含参数this">
-<meta name="twitter:description" content="This解析器再调用函数每次都会向函数内部传递一个隐含的参数this，this指向的是一个对象（函数执行的上下文对象）1、以函数形式调用时，this永远是window。2、以方法形式调用时，this就是调用方法的那个对象3、当以构造函数的形式调用时，this就是新创建的那个对象4、使用call和apply调用时，this是指定的那个对象 使用工厂的方法创建对象通过该方法可以大批量的创建对象，这样创">
+<meta name="twitter:title" content="JS的Dated对象、Math、包装类">
+<meta name="twitter:description" content="##Date对象##在JS使用Date对象来表示时间&amp;emsp;当前时间var d = new Date();&amp;emsp;指定时间格式：月/日/年 时：分：秒var e = new Date(&amp;quot;02/16/2019 11:49:20&amp;quot;);&amp;emsp;getDate()获取当前日期对象是几日 &amp;emsp;getDay()获取当前日期对象是周几0-60表示周日 &amp;emsp;getM">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/index.html">
+  <link rel="canonical" href="http://yokemadman.github.io/2019/02/16/JS的Dated对象、Math、包装类/index.html">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -340,14 +340,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-JS构造函数、原型对象、隐含参数this" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="post-JS的Dated对象、Math、包装类" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      JS构造函数、原型对象、隐含参数this
+      JS的Dated对象、Math、包装类
     </h1>
   
 
@@ -355,8 +355,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2019/02/11/JS构造函数、原型对象、隐含参数this/" class="article-date">
-	  <time datetime="2019-02-11T05:48:00.000Z" itemprop="datePublished">2019-02-11</time>
+	<a href="/2019/02/16/JS的Dated对象、Math、包装类/" class="article-date">
+	  <time datetime="2019-02-16T05:02:00.000Z" itemprop="datePublished">2019-02-16</time>
 	</a>
 </span>
         
@@ -374,17 +374,21 @@
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/02/11/JS构造函数、原型对象、隐含参数this/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2019/02/16/JS的Dated对象、Math、包装类/#comments" class="article-comment-link">评论</a></span>
         
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <p><strong>This</strong><br>解析器再调用函数每次都会向函数内部传递一个隐含的参数this，this指向的是一个对象（函数执行的上下文对象）<br><strong>1、以函数形式调用时，this永远是window。</strong><br><strong>2、以方法形式调用时，this就是调用方法的那个对象</strong><br><strong>3、当以构造函数的形式调用时，this就是新创建的那个对象</strong><br><strong>4、使用call和apply调用时，this是指定的那个对象</strong></p>
-<p><strong>使用工厂的方法创建对象</strong><br>通过该方法可以大批量的创建对象，这样创建的对象使用的构造函数都是Object，无法区分多种不同类型的对象。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function create(name,age,geder)&#123;</span><br><span class="line"> var obj = new Object();</span><br><span class="line"> obj.name = name;</span><br><span class="line"> obj.age = age;</span><br><span class="line"> obj.gender =gender;</span><br><span class="line"> obj.sayName = function()&#123;</span><br><span class="line"> alert(this.name);</span><br><span class="line"> &#125;;</span><br><span class="line"> return obj;</span><br><span class="line">&#125;</span><br><span class="line"> var obj1 = create(“xx”,xx，“x”);</span><br><span class="line"> var obj2 = create(“xx”,xx，“x”);</span><br><span class="line"> var obj3 = create(“xx”,xx，“x”);</span><br><span class="line"> console.log(obj1);</span><br><span class="line"> console.log(obj2);</span><br><span class="line"> console.log(obj3);</span><br></pre></td></tr></table></figure></p>
-<p><strong>构造函数</strong><br>一个普通的函数，创建方式和普通函数没有区别，不同的是构造函数习惯首字母大写<br><strong>构造函数和普通函数的区别就是调用方式不同，普通函数直接调用，构造函数需要用new关键字</strong><br>执行流程：<br>1、 立刻创建一个新的对象<br>2、将新建对象设置为this，在构造函数中可以使用this来引用新建的对象<br>3、逐行执行函数中代码<br>4、将新建的对象作为返回值返回<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function person(name,age,geder)&#123;</span><br><span class="line"> this.name = name;</span><br><span class="line"> this.age = age;</span><br><span class="line"> this.gender =gender;</span><br><span class="line"> this.sayName = function()&#123;</span><br><span class="line"> alert(this.name);</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"> var per = new person(“xx”,xx，“x”);</span><br><span class="line"> var per2 = new person(“xx”,xx，“x”);</span><br><span class="line"> var per2 = new person(“xx”,xx，“x”);</span><br><span class="line"> console.log(per);</span><br><span class="line"> console.log(per2);</span><br><span class="line"> console.log(per3);</span><br></pre></td></tr></table></figure></p>
-<p>使用instanceof可以检查一个对象是否是一个类的实例<br>语法：<strong>对象 instanceof 构造函数</strong><br>如果是则返回true，否则返回false<br>为节省空间，将sayname方法在全局作用域中定以，<br>&emsp;但会污染全局作用域的命名空间，不安全<br><strong>原型（prototype）</strong><br>每创建一个函数，解析器都会向函数中添加一个属性，这个属性对应一个对象就是原型对象<br>&emsp;作为普通函数调用prototype没有任何作用<br>&emsp;以构造函数调用时，创建的对象都会有一个隐含的属性，<br>&nbsp;&nbsp;&nbsp;&nbsp;指向该构造函数的原型对象，可以通过_ _proto_ _来访问该属性<br>&emsp;<strong>原型对象相当于一个公共的区域，所有对象都可以访问到原型的属性</strong>可以将对象中共有的内容，统一设置到原型对象中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function MyClass()&#123;</span><br><span class="line">&#125;</span><br><span class="line">//向MyClass的原型中添加属性a</span><br><span class="line">MyClass.prototype.a = 123;</span><br><span class="line">//向MyClass的原型中添加一个方法</span><br><span class="line">MyClass.prototype.sayHello = function()&#123;</span><br><span class="line"> alert(&quot;Hello&quot;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>检查对象自身中是否含有某个属性用<strong>对象的hasOwnProperty()</strong></p>
+        <p>##Date对象##<br>在JS使用Date对象来表示时间<br>&emsp;当前时间<br>var d = new Date();<br>&emsp;指定时间<br>格式：<strong>月/日/年 时：分：秒</strong><br><code>var e = new Date(&quot;02/16/2019 11:49:20&quot;);</code><br><strong>&emsp;getDate()</strong>获取当前日期对象是几日</p>
+<p><strong>&emsp;getDay()</strong>获取当前日期对象是周几0-6<br>0表示周日</p>
+<p><strong>&emsp;getMonth()</strong>获取当前日期对象的月份0-11<br>0表示一月</p>
+<p><strong>&emsp;getFullYear()</strong>获取当前日期对象的年份</p>
+<p><strong>&emsp;getTime()</strong>获取当前日期对象的时间戳<br>时间戳：指从格林威治标准时间的1970年1月1日，0时0分0秒到当前日期所花的毫秒数</p>
+<p>获取当前时间戳<code>time = Date.now();</code><br>利用时间戳测试代码的执行性能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var start = Date.now()；</span><br><span class="line">for(var i=0;i&lt;100;i++)&#123;</span><br><span class="line">console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">var end = Date.now();</span><br><span class="line">console.log(&quot;执行了&quot;+(end - start)+&quot;毫秒&quot;)；</span><br></pre></td></tr></table></figure></p>
+<p>##Math##<br>Math不是一个构造函数，属于一个工具类，不用创建对象，里边封装了数学运算相关属性和方法<br>Math.PI表示圆周率<br>Math.abs()表示绝对值<br>&emsp;<strong>Math.ceil()</strong>对一个数进行向上取整，小数有值自动进1<br>&emsp;<strong>Math.floor()</strong>向下取整，小数部分被舍掉<br>&emsp;<strong>Math.round()</strong>四舍五入取整<br>&emsp;<strong>Math.random()</strong>用来生成一个0-1之间的随机数<br>生成x-y之间的随机数<code>Math.round(Math.random()*(y-x)+x)</code><br>&emsp;<strong>Math.max()</strong>获取多个数中的最大值<br>&emsp;<strong>Math.min()</strong>获取多个数中的最小值<br>&emsp;<strong>Math.pow(x,y)</strong>返回x的y次幂<br>&emsp;<strong>Math.sqrt()</strong>对一个数进行开方</p>
+<p>##包装类##<br>通过包装类基本数据类型的数据转换为对象<br><strong>String()</strong><br>将基本数据类型字符串转换为String对象<br><strong>Number()</strong><br>将基本数据类型的数字转换为Number对象<br><strong>Boolean()</strong><br>将基本数据类型的布尔值转换为Boolean对象</p>
+<p><font color="skyblue">注意：实际应用中不会使用基本数据类型的对象，可能出现一些不可预期的结果</font><br>83</p>
 
       
     </div>
@@ -394,7 +398,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/" title="JS构造函数、原型对象、隐含参数this" target="_blank" rel="external">http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/</a>
+      <a href="http://yokemadman.github.io/2019/02/16/JS的Dated对象、Math、包装类/" title="JS的Dated对象、Math、包装类" target="_blank" rel="external">http://yokemadman.github.io/2019/02/16/JS的Dated对象、Math、包装类/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -441,12 +445,12 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/2019/02/11/JS数组/" title="JS数组"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/2019/02/19/jQuery初识、函数、对象/" title="jQuery初识、函数、对象"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
     
     <li class="next">
-      <a href="/2019/02/07/JS函数、变量作用域/" title="JS函数、变量作用域"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2019/02/14/JS方法/" title="JS方法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
