@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>DOM(Domcument Object Model) | Yokemadman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;emsp;DOM&amp;emsp;1. 是万维网联盟（W3C）的标准。&amp;emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM(Domcument Object Model)">
+<meta property="og:url" content="http://yokemadman.github.io/2019/02/26/DOM/index.html">
+<meta property="og:site_name" content="Yokemadman">
+<meta property="og:description" content="&amp;emsp;DOM&amp;emsp;1. 是万维网联盟（W3C）的标准。&amp;emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-26T12:07:31.999Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DOM(Domcument Object Model)">
+<meta name="twitter:description" content="&amp;emsp;DOM&amp;emsp;1. 是万维网联盟（W3C）的标准。&amp;emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”">
+  
+    <link rel="alternate" href="/atom.xml" title="Yokemadman" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yokemadman</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yokemadman.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-DOM" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/26/DOM/" class="article-date">
+  <time datetime="2019-02-26T11:59:00.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      DOM(Domcument Object Model)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="emsp-DOM"><a href="#emsp-DOM" class="headerlink" title="&emsp;DOM"></a>&emsp;DOM</h2><p>&emsp;1. 是万维网联盟（W3C）的标准。<br>&emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”<br><a id="more"></a><br>分三部分：</p>
+<ul>
+<li>DOM——针对任何文档的标准模型</li>
+<li>XML DOM——针对XML文档</li>
+<li>HTML DOM——针对HTML<h2 id="XML-DOM"><a href="#XML-DOM" class="headerlink" title="XML DOM"></a>XML DOM</h2>&emsp;XML DOM 定义了所有 XML 元素的对象和属性，以及访问它们的方法。<h2 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h2>&emsp;HTML的标准对象模型，标准编程接口，W3C标准。<br>&emsp;定义了所有html元素的对象和属性。以及访问他们的方法。（是关于获取、修改、添加或删除html的标准）<h2 id="DOM节点"><a href="#DOM节点" class="headerlink" title="DOM节点"></a>DOM节点</h2>HTML 文档中的所有内容都是节点：</li>
+<li>整个文档是一个文档节点</li>
+<li>每个 HTML 元素是元素节点</li>
+<li>HTML 元素内的文本是文本节点</li>
+<li>每个 HTML 属性是属性节点</li>
+<li>注释是注释节点</li>
+</ul>
+<h2 id="HTML-DOM方法"><a href="#HTML-DOM方法" class="headerlink" title="HTML DOM方法"></a>HTML DOM方法</h2><p>——可以在节点（html）上执行的动作。<br><strong>编程接口</strong><br>通过JavaScript（及其他编程语言）对齐访问。<br>元素为对象，编程接口则是对象方法和属性。<br>方法：内够执行的动作。（添加或修改元素）<br>属性：能够获取或设置的值。（节点名称或内容）。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>getElementById()方法</strong>:返回带有指定id的元素。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>HTML DOM对象-方法和属性</strong><br>一些常用的 HTML DOM 方法：</p>
+<ul>
+<li>getElementById(id) - 获取带有指定 id 的节点（元素）</li>
+<li>appendChild(node) - 插入新的子节点（元素）</li>
+<li><p>removeChild(node) - 删除子节点（元素）<br>一些常用的 HTML DOM 属性：</p>
+</li>
+<li><p>innerHTML - 节点（元素）的文本值<br>+parentNode - 节点（元素）的父节点</p>
+</li>
+<li>childNodes - 节点（元素）的子节点</li>
+<li>attributes - 节点（元素）的属性节点<h3 id="DOM对象方法"><a href="#DOM对象方法" class="headerlink" title="DOM对象方法"></a>DOM对象方法</h3></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">getElementById()</td>
+<td style="text-align:center">返回带有指定 ID 的元素。</td>
+</tr>
+<tr>
+<td style="text-align:center">getElementsByTagName()</td>
+<td style="text-align:center">返回包含带有指定标签名称的所有元素的节点列表（集合/节点数组）。</td>
+</tr>
+<tr>
+<td style="text-align:center">getElementsByClassName()</td>
+<td style="text-align:center">返回包含带有指定类名的所有元素的节点列表。</td>
+</tr>
+<tr>
+<td style="text-align:center">appendChild()</td>
+<td style="text-align:center">把新的子节点添加到指定节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">removeChild()</td>
+<td style="text-align:center">删除子节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">replaceChild()</td>
+<td style="text-align:center">替换子节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">insertBefore()</td>
+<td style="text-align:center">在指定的子节点前面插入新的子节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">createAttribute()</td>
+<td style="text-align:center">创建属性节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">createElement()</td>
+<td style="text-align:center">创建元素节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">createTextNode()</td>
+<td style="text-align:center">创建文本节点。</td>
+</tr>
+<tr>
+<td style="text-align:center">getAttribute()</td>
+<td style="text-align:center">返回指定的属性值。</td>
+</tr>
+<tr>
+<td style="text-align:center">setAttribute()</td>
+<td style="text-align:center">把指定属性设置或修改为指定的  </td>
+</tr>
+</tbody>
+</table>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p><strong>innerHTML属性</strong>：获取元素内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取id=&quot;intro&quot;的&lt;p&gt;元素的innerHTML</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var txt=document.getElementById(&quot;intro&quot;).innerHTML;</span><br><span class="line">document.write(txt);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>nodeName属性</strong>：规定节点名称</p>
+<ul>
+<li>nodeName 是只读的</li>
+<li>元素节点的 nodeName 与标签名相同</li>
+<li>属性节点的 nodeName 与属性名相同</li>
+<li>文本节点的 nodeName 始终是 #text</li>
+<li>文档节点的 nodeName 始终是 #document<br><strong>nodeValue属性</strong>：规定节点的值。</li>
+<li>元素节点的 nodeValue 是 undefined 或 null</li>
+<li>文本节点的 nodeValue 是文本本身</li>
+<li>属性节点的 nodeValue 是属性值</li>
+</ul>
+<h5 id="获取值实例"><a href="#获取值实例" class="headerlink" title="获取值实例"></a>获取值实例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">x=document.getElementById(&quot;intro&quot;);</span><br><span class="line">document.write(x.firstChild.nodeValue);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>nodeType属性</strong>：返回类型。<br>重要节点类型：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">元素类型</th>
+<th style="text-align:center">NodeType</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">元素</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">属性</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">文本</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">注释</td>
+<td style="text-align:center">8</td>
+</tr>
+<tr>
+<td style="text-align:center">文档</td>
+<td style="text-align:center">9 </td>
+</tr>
+</tbody>
+</table>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>方式（1）：<strong>getElementById()</strong> 方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node.getElementById(&quot;id&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;intro&quot;);//id=&quot;intro&quot;的元素</span><br></pre></td></tr></table></figure></p>
+<p>方式（2）：<strong>getElementsByTagName()</strong> 方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node.getElementsByTagName(&quot;tagname&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;p&quot;);//获取文档所有&lt;p&gt;元素的列表</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;mian&quot;).getElementByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure>
+<p>方式（3）： <strong>getElementsByClassName()</strong>方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuement.getElementByClassName(&quot;intro&quot;);//带有相同类名的所有HTML元素（包含class=&quot;intro&quot;的所有元素列表）</span><br></pre></td></tr></table></figure></p>
+<p><font color="red"><strong>注释</strong>：在Inter Explorer 5，6，7，8中无效</font></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改元素</p>
+<ul>
+<li>改变html内容</li>
+<li>改变css样式</li>
+<li>改变html属性</li>
+<li>创建新的html元素</li>
+<li>删除已有的html元素</li>
+<li>改变事件（处理程序）</li>
+</ul>
+<p><strong>创建内容</strong>(改变一个 </p><p> 元素的 HTML 内容)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;p1&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;p1&quot;).innerHTML=&quot;New text!&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>改变样式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;p2&quot;&gt;Hello world!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">document.getElementById(&quot;p2&quot;).style.color=&quot;blue&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p><strong>添加新元素</strong>（必须先创建该元素（接点），然后把它追加都爱已有的元素上）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;d1&quot;&gt;</span><br><span class="line">&lt;p id=&quot;p1&quot;&gt;This is a prograph.&lt;/p&gt;</span><br><span class="line">&lt;p id=&quot;p2&quot;&gt;This is another pargraph.&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var para= document.createElement(&quot;p&quot;);</span><br><span class="line">var node= document.createTextNode(&quot;This is new.&quot;);</span><br><span class="line">para.appendChild(node);</span><br><span class="line">var element = docuemt.getElementById(&quot;d1&quot;);</span><br><span class="line">element.appendChild(para);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">/</span><br><span class="line">/</span><br><span class="line">var para=document.createElement(&quot;p&quot;);</span><br></pre></td></tr></table></figure></p>
+<p><strong>使用事件</strong></p>
+<ul>
+<li>在元素上点击</li>
+<li>加载页面</li>
+<li>改变输入字段</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//按钮点击时改变&lt;dody&gt;元素的背景色</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=&quot;button&quot; onclick=&quot;document.body.style.backgroundColor=&apos;lavender&apos;;&quot; value=&quot;Change background color&quot;/&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">/</span><br><span class="line">/</span><br><span class="line">/函数</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function ChangeBackground()&#123;</span><br><span class="line"> dovument.body.style.backgroundColor=&quot;lavender&quot;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/sctript&gt;</span><br><span class="line">&lt;input type=&quot;button&quot; onclick=&quot;ChangeBackground()&quot; value=&quot;Change background color&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yokemadman.github.io/2019/02/26/DOM/" data-id="cjslq1p8c0007bsuen8ntjebh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/02/26/jQuery添加删除/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery添加删除</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yokemadman<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

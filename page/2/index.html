@@ -62,27 +62,93 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-新文档" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-JS函数、变量作用域" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/01/新文档/" class="article-date">
-  <time datetime="2019-02-01T12:23:56.775Z" itemprop="datePublished">2019-02-01</time>
+    <a href="/2019/02/07/JS函数、变量作用域/" class="article-date">
+  <time datetime="2019-02-07T08:23:00.000Z" itemprop="datePublished">2019-02-07</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/07/JS函数、变量作用域/">JS函数、变量作用域</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>jQuery_offset和position</strong><br><code>var offset = $(&#39;.xxx&#39;).offset() console.log(offset.left.,offset.top)</code>xxx相对于页面左上角的位置<br><code>var position = $(&#39;.xxx&#39;).position() console.log(position.left,position.top)</code>xxx相对于父元素左上角的位置<br><code>$(&#39;.xxx&#39;).offset({left:50, top:100})</code>设置位置<br><strong>jQuery_scroll</strong><br>1、scrollTop()：读取/设置滚动条的Y坐标<br>2、<code>$(document.body).scrollTop()+$(document.documentElement).scrollTop()</code>：读取页面滚动条的Y坐标(兼容chrome和IE)<br>3、<code>$(&#39;body,html&#39;).scrollTop(60);</code>滚动条到指定位置(兼容chrome和IE)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//平滑滚到顶部</span><br><span class="line">var $page = $(&apos;html,body&apos;)</span><br><span class="line">var distance = $(&apos;html&apos;).scrollTop()+$(&apos;oody&apos;).scrollTop()//总距离</span><br><span class="line">var time = 2000//总时间</span><br><span class="line">//间隔时间</span><br><span class="line">var intervalTime = 50</span><br><span class="line">var itemDistance = distance/(time/intervalTime)</span><br><span class="line">//循环定时器不断滚动</span><br><span class="line">var intervalId = setInterval(function()&#123;</span><br><span class="line">distance -=itemDistance</span><br><span class="line">//到顶部停止</span><br><span class="line">if(distance&lt;=0)&#123;</span><br><span class="line">distance =0//修正</span><br><span class="line">clearInterval(intervalId)</span><br><span class="line">&#125;</span><br><span class="line">$page.scrollTop(distance)</span><br><span class="line">&#125;,intervalTime)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p><strong>元素尺寸</strong><br>1、内容尺寸<br>height():height<br>width():width<br>2、内部尺寸<br>innerHeight():height+padding<br>innerwidth():width+padding<br>3、外部尺寸<br>outerHeight(false/true):height+padding+border如果是true，加上margin<br>outerWidth(false/true):width+padding+border如果是true，加上margin<br><strong>jQuery对象的过滤</strong><br>1、first()<br>2、last()<br>3、eq(index|-index)<br>4、filter(selector)<code>fileter(&#39;[title=hello]&#39;)</code><br>5、not(selector)<code>not(&#39;[title=hello]&#39;)</code><br>6、has(selector)</p>
-
+        <p><strong>函数参数</strong><br>函数的（）中指定一个或多个形参（形式参数），多个形参之间用,号隔开，声明形参相当于在函数内部声明了对应的变量，但不赋值。在调用时在（）中指定实参<br>&emsp;调用时解析器不会检查实参类型、数量，实参可以是任意的数据类型。<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/02/07/JS函数、变量作用域/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/01/新文档/" data-id="cjsk2e90x001ptsuenya32jmm" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/07/JS函数、变量作用域/" data-id="cjslq1p90000jbsuei8ewb8f8" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JS对象、数据类型区别、函数" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/02/JS对象、数据类型区别、函数/" class="article-date">
+  <time datetime="2019-02-02T09:44:12.000Z" itemprop="datePublished">2019-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/02/JS对象、数据类型区别、函数/">JS对象、数据类型区别、函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>对象</strong><br>基本数据类型都是单一的值，值和值之间没有任何联系，变量之间独立，不能成为一个整体。<br>对象属于一种符合的数据类型，对象中可以保存对个不同数据类型的属性。<br><strong>对象分类：</strong><br>&emsp;<strong>1.内建对象</strong><br>&emsp;&emsp;由ES标准中定义的对象，在任何的ES的事项中都可以使用：Math&emsp;String&emsp;Number&emsp;Bollean&emsp;Function&emsp;Object<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/02/02/JS对象、数据类型区别、函数/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yokemadman.github.io/2019/02/02/JS对象、数据类型区别、函数/" data-id="cjslq1p9j000sbsueinhyvhhi" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
     </footer>
   </div>
   
@@ -126,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/30/JS数据类型及转换/" data-id="cjsk2e8z7000ntsuenk1x58uf" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/30/JS数据类型及转换/" data-id="cjslq1p9m000vbsueoonliivh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -175,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/29/JS基础-3/" data-id="cjsk2e8zi000utsuei1tac8nd" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/29/JS基础-3/" data-id="cjslq1p9f000pbsuebqju4a18" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -222,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/25/JS基础-2/" data-id="cjsk2e8ym000itsuetwupx9wv" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/25/JS基础-2/" data-id="cjslq1p9c000nbsueecxw63z7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -269,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/24/JS基础-1/" data-id="cjsk2e9cu0024tsuemkdsbf1k" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/24/JS基础-1/" data-id="cjslq1pck002fbsuekoaaj425" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -316,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/24/CSS基础3/" data-id="cjsk2e8xp0005tsuepw3u4soc" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/24/CSS基础3/" data-id="cjslq1p880006bsuerxf2nv1r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -361,7 +427,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/22/CSS基础2/" data-id="cjsk2e8xs0006tsue29regngt" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/22/CSS基础2/" data-id="cjslq1p830005bsueoriwpv0n" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
@@ -409,7 +475,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/21/CSS基础1/" data-id="cjsk2e8x40001tsueg9mblzub" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/21/CSS基础1/" data-id="cjslq1p7r0002bsuemwmuw34z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
@@ -456,57 +522,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/20/CSS中的px、em、rem 详解/" data-id="cjsk2e8xf0002tsuenhpfh3s2" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/01/20/CSS中的px、em、rem 详解/" data-id="cjslq1p7a0000bsueq8ptrztn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-HTML-tag2" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/15/HTML-tag2/" class="article-date">
-  <time datetime="2019-01-15T12:20:00.000Z" itemprop="datePublished">2019-01-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/15/HTML-tag2/">HTML-tag2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong><code>&lt;form&gt;</code>标签</strong>&emsp;用户输入的手段&emsp;先服务器传输数据<br>&emsp;&emsp;&emsp;属性:action=”url” &emsp;&emsp;向何处发送表单数据<br>&emsp;&emsp;&emsp;method&emsp;发送form-data的http方法&emsp;get/post<br>&emsp;&emsp;&emsp;aceept-charset&emsp;服务器可处理的表单数据字符集&emsp;charset_list<br>&emsp;&emsp;&emsp;autocomplete&emsp;是否用表单自动完成功能&emsp;on/off<br>&emsp;&emsp;&emsp;enctype&emsp;对其进行编码<br>&emsp;&emsp;&emsp;name&emsp;表单名称&emsp;form_name<br>&emsp;&emsp;&emsp;novalidate&emsp;使用后，提交时不进行验证&emsp;nvalidate<br>&emsp;&emsp;&emsp;target&emsp;何处打开action url&emsp;_blank&emsp;_self&emsp;_parent&emsp;_top<br>
-        
-          </p><p class="article-more-link">
-            <a href="/2019/01/15/HTML-tag2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/01/15/HTML-tag2/" data-id="cjsk2e8z2000ktsuecnush540" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
 
     </footer>
   </div>
@@ -572,23 +591,23 @@
       <ul>
         
           <li>
-            <a href="/2019/02/20/jQuery_$方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+            <a href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
           </li>
         
           <li>
-            <a href="/2019/02/20/jQuery方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+            <a href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
           </li>
         
           <li>
             <a href="/2019/02/20/jQuery选择器/">jQuery选择器</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/19/jQuery初识、函数、对象/">jQuery初识、函数、对象</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/16/JS的Dated对象、Math、包装类/">JS的Dated对象、Math、包装类</a>
           </li>
         
       </ul>

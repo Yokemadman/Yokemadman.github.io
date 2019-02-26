@@ -62,10 +62,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-jQuery_$方法、属性、点击切换" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-DOM" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/20/jQuery_$方法、属性、点击切换/" class="article-date">
-  <time datetime="2019-02-20T09:15:00.000Z" itemprop="datePublished">2019-02-20</time>
+    <a href="/2019/02/26/DOM/" class="article-date">
+  <time datetime="2019-02-26T11:59:00.000Z" itemprop="datePublished">2019-02-26</time>
 </a>
     
   <div class="article-category">
@@ -80,7 +80,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/20/jQuery_$方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+      <a class="article-title" href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
     </h1>
   
 
@@ -88,16 +88,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>jQuery_$方法</strong><br>1、$.each():遍历数组或对象中的数据<br>2、$.trim():去除字符串两边的空格<br>3、$.type(obj):得到数据的类型<br>4、$.isArray(obj):判断是否为数组<br>5、$.isFunction(obj):判断是否为函数<br>6、$.parseJSON(json):解析json字符串转换js对象/数组<br>
+        <h2 id="emsp-DOM"><a href="#emsp-DOM" class="headerlink" title="&emsp;DOM"></a>&emsp;DOM</h2><p>&emsp;1. 是万维网联盟（W3C）的标准。<br>&emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”<br>
         
           </p><p class="article-more-link">
-            <a href="/2019/02/20/jQuery_$方法、属性、点击切换/#more">Read More</a>
+            <a href="/2019/02/26/DOM/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/20/jQuery_$方法、属性、点击切换/" data-id="cjsk2e90k001ftsuektkrqmwi" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/26/DOM/" data-id="cjslq1p8c0007bsuen8ntjebh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery添加删除" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/26/jQuery添加删除/" class="article-date">
+  <time datetime="2019-02-26T11:10:00.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">//代码</span><br><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;添加记录练习&lt;title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css.css&quot;/&gt;</span><br><span class="line">   &lt;/head&gt;</span><br><span class="line">   &lt;body&gt;</span><br><span class="line">    &lt;table id=&quot;employeeTable&quot;&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">      &lt;th&gt;Name&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;Email&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;Salery&lt;/th&gt;</span><br><span class="line">      &lt;th&gt; &lt;/th&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Tom&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;tom@tom.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;5000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=001&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Jerry&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;jerry@sohu.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;8000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=002&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Bob&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;bob@tom.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;10000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=003&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">    &lt;div id= &quot;formDiv&quot;&gt;</span><br><span class="line">        &lt;h4&gt;添加新员工&lt;/h4&gt;</span><br><span class="line">        &lt;table&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;name:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;empName&quot; id=&quot;empName&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;email:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;email&quot; id=&quot;email&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;salary:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;salary&quot; id=&quot;salary&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;</span><br><span class="line">        &lt;button id=&quot;addEmpButton&quot; value=&quot;abc&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.10.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"> //1、添加</span><br><span class="line"> //2、删除</span><br><span class="line">$(&apos;#addEmpButton&apos;).click(function()&#123;</span><br><span class="line">//1、收集输入的数据</span><br><span class="line">var $empName =$(&apos;#empName&apos;)</span><br><span class="line">var $email = $(&apos;#email&apos;)</span><br><span class="line">var $salary = $(&apos;#salary&apos;)</span><br><span class="line">var empName = $empName.val()</span><br><span class="line">var email = $email.val()</span><br><span class="line">var salary = $salary.val()</span><br><span class="line">//2、生成对应的&lt;tr&gt;标签结构，并插入#employeeTable的body中</span><br><span class="line">$(&apos;&lt;tr&gt;&lt;/tr&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+empName+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+email+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+salary+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&lt;a href=&quot;deletEmp?id=&quot; &apos;+Date.now()+&apos;&gt;Delete&lt;/a&gt;&lt;/td&gt;&apos;)</span><br><span class="line">    .appendTo(&apos;#employeeTable&gt;tbody&apos;)</span><br><span class="line">    .find(&apos;a&apos;)</span><br><span class="line">    .click(clickDelete)</span><br><span class="line">//3、清除输入</span><br><span class="line">    $empName.val(&apos;&apos;)</span><br><span class="line">    $email.val(&apos;&apos;)</span><br><span class="line">    $salary.val(&apos;&apos;)</span><br><span class="line">&#125;)</span><br><span class="line">//给所有删除链接绑定点击监听</span><br><span class="line">$(&apos;#employeeTable a&apos;).click(clickDelete)</span><br><span class="line">/*</span><br><span class="line">点击删除的回调函数</span><br><span class="line">*/</span><br><span class="line">function clickDelete()&#123;</span><br><span class="line">    var $tr = $(this).parent().parent()</span><br><span class="line">    var name = $tr.children(&apos;:first&apos;).html()</span><br><span class="line">    if(confirm(&apos;确定删除&apos;+name+&apos;吗&apos;))&#123;</span><br><span class="line">        $tr.remove()</span><br><span class="line">  &#125;</span><br><span class="line">   return false</span><br><span class="line">&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">   &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yokemadman.github.io/2019/02/26/jQuery添加删除/" data-id="cjslq1pan001ibsuepqjwvs9o" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -109,9 +150,56 @@
 
 
   
-    <article id="post-jQuery方法、属性、点击切换" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-jQuery的offset、position、scroll，元素尺寸、对象的过滤" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/20/jQuery方法、属性、点击切换/" class="article-date">
+    <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/" class="article-date">
+  <time datetime="2019-02-26T01:44:00.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong> jQuery_offset和position </strong><br><code>var offset = $(&#39;.xxx&#39;).offset() console.log(offset.left.,offset.top)</code>xxx相对于页面左上角的位置<br><code>var position = $(&#39;.xxx&#39;).position() console.log(position.left,position.top)</code>xxx相对于父元素左上角的位置<br><code>$(&#39;.xxx&#39;).offset({left:50, top:100})</code>设置位置<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yokemadman.github.io/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/" data-id="cjslq1par001lbsue7vsq7n63" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-jQuery美元方法、属性、点击切换" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/20/jQuery美元方法、属性、点击切换/" class="article-date">
   <time datetime="2019-02-20T09:15:00.000Z" itemprop="datePublished">2019-02-20</time>
 </a>
     
@@ -127,7 +215,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/20/jQuery方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+      <a class="article-title" href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
     </h1>
   
 
@@ -138,13 +226,13 @@
         <p><strong>jQuery_$方法</strong><br>1、$.each():遍历数组或对象中的数据<br>2、$.trim():去除字符串两边的空格<br>3、$.type(obj):得到数据的类型<br>4、$.isArray(obj):判断是否为数组<br>5、$.isFunction(obj):判断是否为函数<br>6、$.parseJSON(json):解析json字符串转换js对象/数组<br>
         
           </p><p class="article-more-link">
-            <a href="/2019/02/20/jQuery方法、属性、点击切换/#more">Read More</a>
+            <a href="/2019/02/20/jQuery美元方法、属性、点击切换/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/20/jQuery方法、属性、点击切换/" data-id="cjsk2e90q001mtsuee87fy3w4" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/20/jQuery美元方法、属性、点击切换/" data-id="cjslq1pau001obsueq99d7uxw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -191,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/20/jQuery选择器/" data-id="cjsk2e910001stsue947yz5i8" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/20/jQuery选择器/" data-id="cjslq1pay001rbsue5ytpxgb5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -229,7 +317,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##初识jQuery##<br>官方地址：<a href="http://jquery.com/" target="_blank" rel="noopener">http://jquery.com/</a><br><strong>what：</strong>一个优秀的JS函数库(封装了BOM、DOM(主要))<br><strong>why：</strong><br>HTML元素选取(选择器)<br>HTML元素操作<br>CSS操作<br>HTML事件处理<br>JS动画效果<br><strong>链式调用</strong><br>
+        <h2 id="初识jQuery"><a href="#初识jQuery" class="headerlink" title="初识jQuery"></a>初识jQuery</h2><p>官方地址：<a href="http://jquery.com/" target="_blank" rel="noopener">http://jquery.com/</a><br><strong>what：</strong>一个优秀的JS函数库(封装了BOM、DOM(主要))<br><strong>why：</strong><br>HTML元素选取(选择器)<br>HTML元素操作<br>CSS操作<br>HTML事件处理<br>JS动画效果<br><strong>链式调用</strong><br>
         
           </p><p class="article-more-link">
             <a href="/2019/02/19/jQuery初识、函数、对象/#more">Read More</a>
@@ -238,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/19/jQuery初识、函数、对象/" data-id="cjsk2e90n001itsue2029s5j8" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/19/jQuery初识、函数、对象/" data-id="cjslq1pab001ebsue09letxuk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
@@ -250,9 +338,9 @@
 
 
   
-    <article id="post-JS的Dated对象、Math、包装类" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-JS的Date对象、Math、包装类" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/02/16/JS的Dated对象、Math、包装类/" class="article-date">
+    <a href="/2019/02/16/JS的Date对象、Math、包装类/" class="article-date">
   <time datetime="2019-02-16T05:02:00.000Z" itemprop="datePublished">2019-02-16</time>
 </a>
     
@@ -268,7 +356,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/JS的Dated对象、Math、包装类/">JS的Dated对象、Math、包装类</a>
+      <a class="article-title" href="/2019/02/16/JS的Date对象、Math、包装类/">JS的Date对象、Math、包装类</a>
     </h1>
   
 
@@ -279,13 +367,13 @@
         <p>##Date对象##<br>在JS使用Date对象来表示时间<br>&emsp;当前时间<br>var d = new Date();<br>&emsp;指定时间<br>格式：<strong>月/日/年 时：分：秒</strong><br><code>var e = new Date(&quot;02/16/2019 11:49:20&quot;);</code><br>
         
           </p><p class="article-more-link">
-            <a href="/2019/02/16/JS的Dated对象、Math、包装类/#more">Read More</a>
+            <a href="/2019/02/16/JS的Date对象、Math、包装类/#more">Read More</a>
           </p>
         
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/16/JS的Dated对象、Math、包装类/" data-id="cjsk2e90g001btsuet494fxvy" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/16/JS的Date对象、Math、包装类/" data-id="cjslq1pa20017bsue9q1i847w" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -332,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/14/JS方法/" data-id="cjsk2e8zl000xtsuedwo26cu3" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/14/JS方法/" data-id="cjslq1p9t0011bsuey7pwrcbq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -379,7 +467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/11/JS数组/" data-id="cjsk2e9070014tsue5yhlxtgh" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/11/JS数组/" data-id="cjslq1p9q000ybsue0ut8hyx7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -426,101 +514,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/" data-id="cjsk2e8zq0011tsuevtnzoyzn" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JS函数、变量作用域" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/07/JS函数、变量作用域/" class="article-date">
-  <time datetime="2019-02-07T08:23:00.000Z" itemprop="datePublished">2019-02-07</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/07/JS函数、变量作用域/">JS函数、变量作用域</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>函数参数</strong><br>函数的（）中指定一个或多个形参（形式参数），多个形参之间用,号隔开，声明形参相当于在函数内部声明了对应的变量，但不赋值。在调用时在（）中指定实参<br>&emsp;调用时解析器不会检查实参类型、数量，实参可以是任意的数据类型。<br>
-        
-          </p><p class="article-more-link">
-            <a href="/2019/02/07/JS函数、变量作用域/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/07/JS函数、变量作用域/" data-id="cjsk2e8yh000dtsued973xk7k" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JS对象、数据类型区别、函数" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/02/02/JS对象、数据类型区别、函数/" class="article-date">
-  <time datetime="2019-02-02T09:44:12.000Z" itemprop="datePublished">2019-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/02/JS对象、数据类型区别、函数/">JS对象、数据类型区别、函数</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>对象</strong><br>基本数据类型都是单一的值，值和值之间没有任何联系，变量之间独立，不能成为一个整体。<br>对象属于一种符合的数据类型，对象中可以保存对个不同数据类型的属性。<br><strong>对象分类：</strong><br>&emsp;<strong>1.内建对象</strong><br>&emsp;&emsp;由ES标准中定义的对象，在任何的ES的事项中都可以使用：Math&emsp;String&emsp;Number&emsp;Bollean&emsp;Function&emsp;Object<br>
-        
-          </p><p class="article-more-link">
-            <a href="/2019/02/02/JS对象、数据类型区别、函数/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yokemadman.github.io/2019/02/02/JS对象、数据类型区别、函数/" data-id="cjsk2e8zb000qtsueidw5q7di" class="article-share-link">Share</a>
+      <a data-url="http://yokemadman.github.io/2019/02/11/JS构造函数、原型对象、隐含参数this/" data-id="cjslq1p9x0014bsueorp31etq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
@@ -589,23 +583,23 @@
       <ul>
         
           <li>
-            <a href="/2019/02/20/jQuery_$方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+            <a href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
           </li>
         
           <li>
-            <a href="/2019/02/20/jQuery方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+            <a href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
           </li>
         
           <li>
             <a href="/2019/02/20/jQuery选择器/">jQuery选择器</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/19/jQuery初识、函数、对象/">jQuery初识、函数、对象</a>
-          </li>
-        
-          <li>
-            <a href="/2019/02/16/JS的Dated对象、Math、包装类/">JS的Dated对象、Math、包装类</a>
           </li>
         
       </ul>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>jQuery添加删除 | Yokemadman</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;emsp;12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+<meta name="keywords" content="jQuery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery添加删除">
+<meta property="og:url" content="http://yokemadman.github.io/2019/02/26/jQuery添加删除/index.html">
+<meta property="og:site_name" content="Yokemadman">
+<meta property="og:description" content="&amp;emsp;12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-26T11:40:42.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery添加删除">
+<meta name="twitter:description" content="&amp;emsp;12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+  
+    <link rel="alternate" href="/atom.xml" title="Yokemadman" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yokemadman</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yokemadman.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-jQuery添加删除" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/02/26/jQuery添加删除/" class="article-date">
+  <time datetime="2019-02-26T11:10:00.000Z" itemprop="datePublished">2019-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      jQuery添加删除
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&emsp;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br></pre></td><td class="code"><pre><span class="line">//代码</span><br><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">   &lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;添加记录练习&lt;title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css.css&quot;/&gt;</span><br><span class="line">   &lt;/head&gt;</span><br><span class="line">   &lt;body&gt;</span><br><span class="line">    &lt;table id=&quot;employeeTable&quot;&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">      &lt;th&gt;Name&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;Email&lt;/th&gt;</span><br><span class="line">      &lt;th&gt;Salery&lt;/th&gt;</span><br><span class="line">      &lt;th&gt; &lt;/th&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Tom&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;tom@tom.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;5000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=001&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Jerry&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;jerry@sohu.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;8000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=002&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">     &lt;tr&gt;</span><br><span class="line">     &lt;td&gt;Bob&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;bob@tom.com&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;10000&lt;/td&gt;</span><br><span class="line">     &lt;td&gt;&lt;a href = &quot;deleteEmp? id=003&quot;&gt;Delete&lt;/a&gt;&lt;/td&gt;</span><br><span class="line">     &lt;/tr&gt;</span><br><span class="line">    &lt;/table&gt;</span><br><span class="line">    &lt;div id= &quot;formDiv&quot;&gt;</span><br><span class="line">        &lt;h4&gt;添加新员工&lt;/h4&gt;</span><br><span class="line">        &lt;table&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;name:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;empName&quot; id=&quot;empName&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;email:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;email&quot; id=&quot;email&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td class=&quot;word&quot;&gt;salary:&lt;/td&gt;</span><br><span class="line">        &lt;td class=&quot;inp&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; name=&quot;salary&quot; id=&quot;salary&quot;/&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;tr&gt;</span><br><span class="line">        &lt;td colspan=&quot;2&quot; align=&quot;center&quot;&gt;</span><br><span class="line">        &lt;button id=&quot;addEmpButton&quot; value=&quot;abc&quot;&gt;Submit&lt;/button&gt;</span><br><span class="line">        &lt;/td&gt;</span><br><span class="line">        &lt;/tr&gt;</span><br><span class="line">        &lt;/table&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.10.1.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"> //1、添加</span><br><span class="line"> //2、删除</span><br><span class="line">$(&apos;#addEmpButton&apos;).click(function()&#123;</span><br><span class="line">//1、收集输入的数据</span><br><span class="line">var $empName =$(&apos;#empName&apos;)</span><br><span class="line">var $email = $(&apos;#email&apos;)</span><br><span class="line">var $salary = $(&apos;#salary&apos;)</span><br><span class="line">var empName = $empName.val()</span><br><span class="line">var email = $email.val()</span><br><span class="line">var salary = $salary.val()</span><br><span class="line">//2、生成对应的&lt;tr&gt;标签结构，并插入#employeeTable的body中</span><br><span class="line">$(&apos;&lt;tr&gt;&lt;/tr&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+empName+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+email+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&apos;+salary+&apos;&lt;/td&gt;&apos;)</span><br><span class="line">    .append(&apos;&lt;td&gt;&lt;a href=&quot;deletEmp?id=&quot; &apos;+Date.now()+&apos;&gt;Delete&lt;/a&gt;&lt;/td&gt;&apos;)</span><br><span class="line">    .appendTo(&apos;#employeeTable&gt;tbody&apos;)</span><br><span class="line">    .find(&apos;a&apos;)</span><br><span class="line">    .click(clickDelete)</span><br><span class="line">//3、清除输入</span><br><span class="line">    $empName.val(&apos;&apos;)</span><br><span class="line">    $email.val(&apos;&apos;)</span><br><span class="line">    $salary.val(&apos;&apos;)</span><br><span class="line">&#125;)</span><br><span class="line">//给所有删除链接绑定点击监听</span><br><span class="line">$(&apos;#employeeTable a&apos;).click(clickDelete)</span><br><span class="line">/*</span><br><span class="line">点击删除的回调函数</span><br><span class="line">*/</span><br><span class="line">function clickDelete()&#123;</span><br><span class="line">    var $tr = $(this).parent().parent()</span><br><span class="line">    var name = $tr.children(&apos;:first&apos;).html()</span><br><span class="line">    if(confirm(&apos;确定删除&apos;+name+&apos;吗&apos;))&#123;</span><br><span class="line">        $tr.remove()</span><br><span class="line">  &#125;</span><br><span class="line">   return false</span><br><span class="line">&#125;</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">   &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yokemadman.github.io/2019/02/26/jQuery添加删除/" data-id="cjslq1pan001ibsuepqjwvs9o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/02/26/DOM/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          DOM(Domcument Object Model)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/jQuery/" style="font-size: 15px;">jQuery</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
+          </li>
+        
+          <li>
+            <a href="/2019/02/20/jQuery选择器/">jQuery选择器</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Yokemadman<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
