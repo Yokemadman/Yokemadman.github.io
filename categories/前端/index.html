@@ -1,666 +1,343 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta charset="utf-8">
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
     
+      Yokemadman
     
-    
-    <title>分类: 前端 | Yokemadman</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    
-    <meta name="theme-color" content="#77AAFF">
-    
-    
-    <meta name="keywords" content="">
-    
-    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+    css('css/plugins/gitment.css')
+  
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
-    
-
-    <!-- Baidu Push -->
-<script>
-	(function(){
-		var bp = document.createElement('script');
-		var curProtocol = window.location.protocol.split(':')[0];
-		if (curProtocol === 'https') {
-			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-		}
-		else {
-			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-		}
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(bp, s);
-	})();
-
-	var _hmt = _hmt || [];
-</script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
 
 
-
-    
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Yokemadman">
-<meta property="og:url" content="http://yokemadman.github.io/categories/前端/index.html">
-<meta property="og:site_name" content="Yokemadman">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yokemadman">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
-    <script>window.lazyScripts=[]</script>
-
-    <!-- custom head -->
-    
-            
 </head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
 
-<body>
-    <div id="loading" class="active"></div>
-    <aside id="menu">
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
     </a>
-    <div class="brand-wrap">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg" alt="avatar">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname" id="name">Yokemadman</h5>
+    <ul class="right-list">
+      
+        <li class="list-item">
           
-            <div id="yiyanmotto" class="motto">&nbsp;</div>
+            <a href="/" class="item-link">Home</a>
           
-        </hgroup>
-      </div>
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-              <li class="waves-block waves-effect">
-                  <a href="/">
-                    <i class="icon icon-lg icon-home"></i>
-                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          <li class="menu-item">
             
-              <li class="waves-block waves-effect">
-                  <a href="/archives">
-                    <i class="icon icon-lg icon-archives"></i>
-                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+              <a href="/" class="menu-link">Home</a>
             
-              <li class="waves-block waves-effect active">
-                  <a href="/categories">
-                    <i class="icon icon-lg icon-th-list"></i>
-                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          </li>
+        
+          <li class="menu-item">
             
-              <li class="waves-block waves-effect">
-                  <a href="/tags">
-                    <i class="icon icon-lg icon-tags"></i>
-                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+              <a href="/tags/" class="menu-link">Tags</a>
             
-              <li class="waves-block waves-effect">
-                  <a href="/about">
-                    <i class="icon icon-lg icon-smile-o"></i>
-                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          </li>
+        
+          <li class="menu-item">
             
-      <div class="nav2">
-          
-              <a class="nav2item" data-title="Email" href="mailto:1755811882@qq.com" target="_parent" title="Email">
-                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
-              </a>
-          
-              <a class="nav2item" data-title="Github" href="https://github.com/tomotoes" target="_blank" title="Github">
-                <i class="icon icon-lg icon-github github"></i>
-              </a>
-          
-              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank" title="微博">
-                <i class="icon icon-lg icon-weibo weibo"></i>
-              </a>
-          
-
-            </div>
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
         
       </ul>
-        
     </div>
   </div>
- 
-</aside>
-
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">分类: 前端</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
-            <i class="icon icon-lg icon-rss"></i>
-        </a>
-    </div>
-</header>
-<header class="content-header categories-header">
-    
-    
-    <div class="container fade-scale">
-        <div id="myheader">
-            <h1 class="title">
-                
-            </h1>
-            <h5 class="subtitle">
-                
-                    <h1 id="pagetitle" class="archivestitle"></h1>
-                    <script>
-                        if(location.href.indexOf('about')!=-1){
-                            pagetitle.textContent = '一个坏掉的番茄';
-                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
-                            var a=location.href.substring(location.href.length-5,location.href.length-1);
-                            if(a==='tags'){
-                                pagetitle.textContent = '不积小流无以成江海';
-                            }else if(a==='ries'){
-                                pagetitle.textContent = '不积跬步无以至千里';
-                            }
-                        }
-                    </script>
-                
-            </h5>
-        </div>
-    </div>
-
 </header>
 
-<div class="container body-wrap fade">
-    
-        
-        
-        <h5 class="tag-tip">
-            <i class="icon icon-tag"></i>
-            关于
-            <span style="color:rgb(100, 100, 100)">前端</span>
-            共&nbsp;23&nbsp;篇文章</h5>
-        <div class="waterfall">
-            
-                <article class="archive-article" onclick="location.href='/2019/02/26/DOM/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-26
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/26/DOM/">DOM(Domcument Object Model)</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/26/jQuery添加删除/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-26
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/26/jQuery添加删除/">jQuery添加删除</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-26
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/20/jQuery美元方法、属性、点击切换/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-20
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/20/jQuery美元方法、属性、点击切换/">jQuery_$方法、属性、点击切换</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/20/jQuery选择器/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-20
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/20/jQuery选择器/">jQuery选择器</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/19/jQuery初识、函数、对象/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-19
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/19/jQuery初识、函数、对象/">jQuery初识、函数、对象</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/16/JS的Date对象、Math、包装类/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-16
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/16/JS的Date对象、Math、包装类/">JS的Date对象、Math、包装类</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/14/JS方法/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-14
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/14/JS方法/">JS方法</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/11/JS数组/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-11
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/11/JS数组/">JS数组</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-  </article>
-            
-                <article class="archive-article" onclick="location.href='/2019/02/11/JS构造函数、原型对象、隐含参数this/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2019-02-11
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/11/JS构造函数、原型对象、隐含参数this/">JS构造函数、原型对象、隐含参数this</a>
-    </h3>
-  
-
-
-
-      <br>
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-  </article>
-            
-        </div>
-    
-
-<nav id="page-nav">
-    <div class="inner">
-    <span class="page-number current">1</span><a class="page-number" href="/categories/前端/page/2/">2</a><a class="page-number" href="/categories/前端/page/3/">3</a><a class="extend next" rel="next" href="/categories/前端/page/2/">下一页</a>
-    </div>
-</nav>
-
+    <div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date">文章归档</p>
 </div>
+<main class="app-body" id="archives">
+  
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2019
+  </h1>
+  <div class="section-list">
+    
+    
+      <div class="section-list-item">
+        <a href="/2019/02/26/DOM/" class="archive-title">DOM(Domcument Object Model)</a>
+        <p class="archive-date">02-26</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/26/jQuery添加删除/" class="archive-title">jQuery添加删除</a>
+        <p class="archive-date">02-26</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/26/jQuery的offset、position、scroll，元素尺寸、对象的过滤/" class="archive-title">jQuery的offset、position、scroll，元素尺寸、对象过滤、查找、文档处理</a>
+        <p class="archive-date">02-26</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/20/jQuery美元方法、属性、点击切换/" class="archive-title">jQuery_$方法、属性、点击切换</a>
+        <p class="archive-date">02-20</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/20/jQuery选择器/" class="archive-title">jQuery选择器</a>
+        <p class="archive-date">02-20</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/19/jQuery初识、函数、对象/" class="archive-title">jQuery初识、函数、对象</a>
+        <p class="archive-date">02-19</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/16/JS的Date对象、Math、包装类/" class="archive-title">JS的Date对象、Math、包装类</a>
+        <p class="archive-date">02-16</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/14/JS方法/" class="archive-title">JS方法</a>
+        <p class="archive-date">02-14</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/11/JS数组/" class="archive-title">JS数组</a>
+        <p class="archive-date">02-11</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/11/JS构造函数、原型对象、隐含参数this/" class="archive-title">JS构造函数、原型对象、隐含参数this</a>
+        <p class="archive-date">02-11</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/07/JS函数、变量作用域/" class="archive-title">JS函数、变量作用域</a>
+        <p class="archive-date">02-07</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/02/02/JS对象、数据类型区别、函数/" class="archive-title">JS对象、数据类型区别、函数</a>
+        <p class="archive-date">02-02</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/30/JS数据类型及转换/" class="archive-title">JS数据类型及转换</a>
+        <p class="archive-date">01-30</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/29/JS基础-3/" class="archive-title">JS基础-3</a>
+        <p class="archive-date">01-29</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/25/JS基础-2/" class="archive-title">JS基础-2</a>
+        <p class="archive-date">01-25</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/24/JS基础-1/" class="archive-title">JS基础-1</a>
+        <p class="archive-date">01-24</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/24/CSS基础3/" class="archive-title">CSS基础3</a>
+        <p class="archive-date">01-24</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/22/CSS基础2/" class="archive-title">CSS基础2</a>
+        <p class="archive-date">01-22</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/21/CSS基础1/" class="archive-title">CSS基础1</a>
+        <p class="archive-date">01-21</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/20/CSS中的px、em、rem 详解/" class="archive-title">CSS中的px、em、rem 详解</a>
+        <p class="archive-date">01-20</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/15/HTML-tag2/" class="archive-title">HTML-tag2</a>
+        <p class="archive-date">01-15</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/14/HTML-tag1/" class="archive-title">HTML-tag1</a>
+        <p class="archive-date">01-14</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/13/HTML学习笔记/" class="archive-title">HTML学习笔记</a>
+        <p class="archive-date">01-13</p>
+      </div>
+    
+      <div class="section-list-item">
+        <a href="/2019/01/10/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">01-10</p>
+      </div>
+    
+  </div>
+</section>
+  
+</main>
 
-
-        <footer class="footer">
-    <div class="footer-content">
-        <span class="power">
-            <i class="icon icon-lg icon-copyright"></i>
-            2017
-            <i class="icon icon-lg icon-heart"></i>
-            <a href="http://yokemadman.github.io">tomotoes.com</a>
-            <br>
-            Power by
-            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
-            Theme
-            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
-        </span>
-
-        <br>
-
-        <span id="RunTime" style="color:#a7a7a2;"></span>
-        <br>
-
-        <span>
-            
-	<i class="icon icon-lg icon-user">
-<span id="busuanzi_container_site_uv" style="display:none">
-       访问用户：<span id="busuanzi_value_site_uv"></span>
-    </span>人</i>
-    ·
-    <i class="icon icon-lg icon-eye">
-    <span id="busuanzi_container_site_pv" style="display:none">
-      访问次数：<span id="busuanzi_value_site_pv"></span>
-    </span>次
-    </i>
-
-
-        </span>
-        <br>
-
-        <span class="license"><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-    </div>
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/categories/前端/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-    </main>
-    
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-    <!-- waves按钮特效 -->
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<!-- 主题配置脚本 -->
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
 </script>
 
-<!-- jquery -->
-<script src="/js/jquery.min.js?v=3.0"></script>
-
-<!-- 搜索 -->
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item waves-block waves-effect" onclick="location.href='{path}'">
-    <div class="title ellipsis" title="{title}">{title}</div>
-</li>
-</template>
-
-
-<!-- main博客脚本 -->
-<script src="/js/main.min.js?v=3.0"></script>
-
-<!-- 动画&配置 -->
-<script src="/js/script.min.js?v=3.0"></script>
-
-<!-- 脚本管理 -->
 <script>
-
-if(window.innerWidth > 800){
-	/* 3D标题 */
-	$(".content-header").on("mousemove", threedee);
-
-	/* 底部追随鼠标 */
-	$(".footer").hover(2);
-
-	/* gotop键的涟漪 */
-	$("#gotop").hover(1);
-
-	/* 赞赏的粒子雨 */
-	$("#reward").hover(3);
-
-	/* 微信公众号的底部渲染 */
-	$("#wechat").hover(4);
-
-    /* 标题跳动 */
-    $(".archivestitle").bumpyText();
-
-	/* 图片点击放大 */
-	const postimg = jQuery(".post-content img:not(.github-emoji)");
-	postimg.on("click",function(){
-
-		mask.classList.add("in");
-		main.classList.add("Mask");
-		menu.classList.add("Mask");
-		var myimg = this.cloneNode(true);
-		myimg.classList.add("imgShow");
-
-		setTimeout(function(){
-			jQuery(myimg).animate({
-				opacity:"1"
-			},1000);
-		},0);
-
-		document.body.appendChild(myimg);
-
-		myimg.onclick=function(){
-			document.body.removeChild(myimg);
-			mask.classList.remove("in");
-			main.classList.remove("Mask");
-			menu.classList.remove("Mask");
-		};
-
-	});
-
-}
-
-/* 名字跳动 */
-$("#name").bumpyText();
-
-
-/* 网站运行时间 */
-setInterval(function () {
-	setTime("2017/10/11");
-}, 1000);
-
-/* 文章块的淡出 */
-postshow();
-
-/* 座右铭 */
-
-   getHitokoto();
-
-
-
-/* 粘贴提示 */
-G($(".post-content"), location.href, "Yokemadman");
-
-
-/* 控制台 */
-if (window.console && window.console.log) {
-	setTimeout(function () {
-		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
-	}, 0);
-}
-
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
 </script>
+<!-- Baidu Tongji -->
 
-
-
-
-<!-- 公式渲染 -->
-
-
-
-<!-- 不蒜子 -->
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-</body>
+<script src="/js/script.js"></script>
+  </body>
 </html>

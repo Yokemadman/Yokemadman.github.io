@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      CSS基础1 | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+    css('css/plugins/gitment.css')
+  
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>CSS基础1</h2>
+  <p class="post-date">2019-01-21</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><p><strong>css层叠样式表</strong><br>&emsp;<strong>1、元素内嵌样式表</strong><br>直接在元素里面写样式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot; color:red;font-size:50px;&quot;&gt;.....&lt;p&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;<strong>2、外部样式表</strong><br>是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。<br><code>&lt;link&gt;</code>元素应用，一般写在<code>&lt;head&gt;</code>元素内部。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　　　&lt;html&gt;</span><br><span class="line">　　　　&lt;head&gt;&lt;title&gt;css基础&lt;title&gt;</span><br><span class="line">　　　　&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css.css&quot; /&gt;（引用外部样式语句）</span><br><span class="line">　　　　&lt;/head&gt;</span><br><span class="line">　　　　&lt;body&gt;</span><br><span class="line">　　　　　　&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br><span class="line">　　　　&lt;/body&gt;</span><br><span class="line">　　　　&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;<strong>3、文档内嵌样式表</strong><br>写在<code>&lt;style&gt;</code>元素中，一般位于<code>&lt;head&gt;</code>中<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">　　　　&lt;html&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;head&gt;&lt;title&gt;css基础&lt;title&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line"></span><br><span class="line">　　　　　　p&#123;color:red;font-size:100px;&#125;</span><br><span class="line"></span><br><span class="line">　　　　&lt;/style&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;body&gt;</span><br><span class="line"></span><br><span class="line">　　　　　　&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">　　　　&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>主要由两个主部分构成<br>&emsp;1 选择器：要改变以样式的HTML元素。<br>&emsp;2 一条或多条声明：一个属性和一个值组成（属性（property））是需要设置的样式(style attribute)；</p>
+<p>属性和值用冒号分开；用花括号包围）。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a（选择器）&#123;</span><br><span class="line">color（属性）：black（值）；</span><br><span class="line">font-size：100px；（声明）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>css多重声明</strong><br>大多数样式表不止一条规则，包含不止一个声明。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　a&#123; color：blac；font-size：100px；&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>常用选择器</strong>
+　</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">选择器</th>
+<th style="text-align:center">样式</th>
+<th style="text-align:center">解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.class</td>
+<td style="text-align:center">.myset</td>
+<td style="text-align:center">选择所有class=” myset “的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">#id</td>
+<td style="text-align:center">#myId</td>
+<td style="text-align:center">选`id=” myId “的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　*</td>
+<td style="text-align:center">　　　　　　　　　　　  *</td>
+<td style="text-align:center">　　　　    选择所有的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1&emsp; element2</td>
+<td style="text-align:center">　　   div P</td>
+<td style="text-align:center">　　　 选择所有元素1内部的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element　　　　　</td>
+<td style="text-align:center">　　　 a　</td>
+<td style="text-align:center">　　　　选择所有该元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1 >element2　</td>
+<td style="text-align:center">　　div>p</td>
+<td style="text-align:center">　　　选择父元素为元素1的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1+element2</td>
+<td style="text-align:center">　　　div+p　</td>
+<td style="text-align:center">　　选择紧接元素1后的元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element1，element2</td>
+<td style="text-align:center">　　  div，p</td>
+<td style="text-align:center">　　 选择所有元素1和元素2</td>
+</tr>
+<tr>
+<td style="text-align:center">　　element:hover</td>
+<td style="text-align:center">　　　　　　a：hover</td>
+<td style="text-align:center">　鼠标位于其上的元素</td>
+</tr>
+<tr>
+<td style="text-align:center">　　：：seletion　</td>
+<td style="text-align:center">　　　　　::selection</td>
+<td style="text-align:center">　选择被用户选取的元素部分</td>
+</tr>
+</tbody>
+</table>
+<p><strong>css背景</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">background　　　</th>
+<th style="text-align:center">　　　　　　　　　　　　　在一个声明中设置所有的背景属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">　　background-image：url（img/…）</td>
+<td style="text-align:center">　　　　　　背景图像</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-size：50px； （100%）　　　</td>
+<td style="text-align:center">　　尺寸</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-repeat：no-repeat；(不重复)</td>
+<td style="text-align:center">　　　是否及5如何重复</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-attachement：</td>
+<td style="text-align:center">fixed；(背景固定)　　scoll（滚动）</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-color：rgb（0，0，0，0）；</td>
+<td style="text-align:center">　　    背景颜色</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-position（位置）：</td>
+<td style="text-align:center">值&emsp;right&emsp;top&emsp;button&emsp;%&emsp;px</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-clip：</td>
+<td style="text-align:center">　　　　　　　　　　　　　　背景绘制区域</td>
+</tr>
+<tr>
+<td style="text-align:center">　　background-orgin：</td>
+<td style="text-align:center">　　　　　　　　　　　　　定位区域</td>
+</tr>
+</tbody>
+</table>
+<p>&emsp;<strong>&gt;-size尺寸</strong><br>&emsp;x%&emsp;y%&emsp;&emsp;&emsp;宽、高百分比，只设一个，第二个默认” auto”;<br>&emsp;x&emsp;px&emsp;y&emsp;px&emsp;宽高像素<br>&emsp;cover&emsp;&emsp;&emsp;&emsp;扩展至足够大，使用图像完全覆盖区域，某些部分也许无法显示在背景定位区域中<br>&emsp;contain&emsp;&emsp;&emsp;把图像扩展至在最大尺寸，适应内容区域</p>
+<p><font color="red"><strong>一条声明设置所有背景</strong></font><br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background：bg-color　　bg-image　　position/bg-size　　bg-repeat　　bg-orgin　　bg-clip　　bg-attachment initial / inherit;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;<strong>&gt;background-clip&emsp;规定绘制区域</strong><br>&emsp;border-box&emsp;被裁减到边框盒<br>&emsp;padding-box&emsp;被裁减到内边距框<br>&emsp;content-box&emsp;被裁减到内边框</p>
+<p>&emsp;<strong>&gt;background-origin:&emsp;规定图片定位区域</strong><br>&emsp;border-box&emsp;相对于边框盒来定位<br>&emsp;padding-box&emsp;相对于内边距框来定位<br>&emsp;content-box&emsp;相对于内边框来定位</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/01/20/CSS中的px、em、rem 详解/">
+        <span class="nav-arrow">← </span>
+        
+          CSS中的px、em、rem 详解
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2019/01/22/CSS基础2/">
+        
+          CSS基础2
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="nav">none</ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/01/21/CSS基础1/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "yanm1ng";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "CSS基础1",
+        owner: "yanm1ng",
+        repo: "yanm1ng.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

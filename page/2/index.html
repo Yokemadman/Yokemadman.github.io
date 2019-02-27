@@ -1,788 +1,410 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta charset="utf-8">
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
     
+      Yokemadman
     
-    
-    <title>Yokemadman</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    
-    <meta name="theme-color" content="#77AAFF">
-    
-    
-    <meta name="keywords" content="">
-    
-    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
+    css('css/plugins/gitment.css')
+  
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
 
-    
-
-    <!-- Baidu Push -->
-<script>
-	(function(){
-		var bp = document.createElement('script');
-		var curProtocol = window.location.protocol.split(':')[0];
-		if (curProtocol === 'https') {
-			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-		}
-		else {
-			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-		}
-		var s = document.getElementsByTagName("script")[0];
-		s.parentNode.insertBefore(bp, s);
-	})();
-
-	var _hmt = _hmt || [];
-</script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
 
 
-
-    
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Yokemadman">
-<meta property="og:url" content="http://yokemadman.github.io/page/2/index.html">
-<meta property="og:site_name" content="Yokemadman">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yokemadman">
-    
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
-    <script>window.lazyScripts=[]</script>
-
-    <!-- custom head -->
-    
-            
 </head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
 
-<body>
-    <div id="loading" class="active"></div>
-    <aside id="menu">
-  <div class="inner flex-row-vertical">
-    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-        <i class="icon icon-lg icon-close"></i>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
     </a>
-    <div class="brand-wrap">
-      <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/img/avatar.jpg" alt="avatar">
-        </a>
-        <hgroup class="introduce">
-          <h5 class="nickname" id="name">Yokemadman</h5>
+    <ul class="right-list">
+      
+        <li class="list-item">
           
-            <div id="yiyanmotto" class="motto">&nbsp;</div>
+            <a href="/" class="item-link active">Home</a>
           
-        </hgroup>
-      </div>
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </div>
-    <div class="scroll-wrap flex-col">
-      <ul class="nav">
+    <div class="menu-mask">
+      <ul class="menu-list">
         
-              <li class="waves-block waves-effect">
-                  <a href="/">
-                    <i class="icon icon-lg icon-home"></i>
-                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          <li class="menu-item">
             
-              <li class="waves-block waves-effect">
-                  <a href="/archives">
-                    <i class="icon icon-lg icon-archives"></i>
-                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+              <a href="/" class="menu-link mobile-active">Home</a>
             
-              <li class="waves-block waves-effect">
-                  <a href="/categories">
-                    <i class="icon icon-lg icon-th-list"></i>
-                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          </li>
+        
+          <li class="menu-item">
             
-              <li class="waves-block waves-effect">
-                  <a href="/tags">
-                    <i class="icon icon-lg icon-tags"></i>
-                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+              <a href="/tags/" class="menu-link">Tags</a>
             
-              <li class="waves-block waves-effect">
-                  <a href="/about">
-                    <i class="icon icon-lg icon-smile-o"></i>
-                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
-                  </a>
-              </li>
+          </li>
+        
+          <li class="menu-item">
             
-      <div class="nav2">
-          
-              <a class="nav2item" data-title="Email" href="mailto:1755811882@qq.com" target="_parent" title="Email">
-                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
-              </a>
-          
-              <a class="nav2item" data-title="Github" href="https://github.com/tomotoes" target="_blank" title="Github">
-                <i class="icon icon-lg icon-github github"></i>
-              </a>
-          
-              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank" title="微博">
-                <i class="icon icon-lg icon-weibo weibo"></i>
-              </a>
-          
-
-            </div>
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
         
       </ul>
-        
     </div>
   </div>
- 
-</aside>
-
-
-    <main id="main">
-        <header class="top-header" id="header">
-    <div class="flex-row">
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
-        </a>
-        <div class="flex-col header-title ellipsis">Yokemadman</div>
-        
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
-            </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
-            <i class="icon icon-lg icon-rss"></i>
-        </a>
-    </div>
-</header>
-<header class="content-header index-header">
-    
-    
-    <div class="container fade-scale">
-        <div id="myheader">
-            <h1 class="title">
-                 
-                    Yokemadman
-                
-            </h1>
-            <h5 class="subtitle">
-                
-                    在Web全栈的道路上努力前行
-                
-            </h5>
-        </div>
-    </div>
-
 </header>
 
-<div class="container body-wrap">
-    <ul class="post-list">
-    
-        <li class="post-list-item fade">
-            <article id="post-JS函数、变量作用域" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+    <main class="app-body">
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/07/JS函数、变量作用域/">JS函数、变量作用域</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-02-07 16:23:00" datetime="2019-02-07T08:23:00.000Z" itemprop="datePublished">2019-02-07</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p><strong>函数参数</strong><br>函数的（）中指定一个或多个形参（形式参数），多个形参之间用,号隔开，声明形参相当于在函数内部声明了对应的变量，但不赋值。在调用时在（）中指定实参<br>&emsp;调用时解析器不会检查实参类型、数量，实参可以是任意的数据类型。<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/02/07/JS函数、变量作用域/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/02/07/JS函数、变量作用域/">JS函数、变量作用域</a>
+      </h2>
+      <p class="article-date">2019年2月7日</p>
+      
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
 
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JS对象、数据类型区别、函数" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/02/02/JS对象、数据类型区别、函数/">JS对象、数据类型区别、函数</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-02-02 17:44:12" datetime="2019-02-02T09:44:12.000Z" itemprop="datePublished">2019-02-02</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p><strong>对象</strong><br>基本数据类型都是单一的值，值和值之间没有任何联系，变量之间独立，不能成为一个整体。<br>对象属于一种符合的数据类型，对象中可以保存对个不同数据类型的属性。<br><strong>对象分类：</strong><br>&emsp;<strong>1.内建对象</strong><br>&emsp;&emsp;由ES标准中定义的对象，在任何的ES的事项中都可以使用：Math&emsp;String&emsp;Number&emsp;Bollean&emsp;Function&emsp;Object<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/02/02/JS对象、数据类型区别、函数/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
+      
+      <div class="article-summary">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JS数据类型及转换" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+          <p><strong>函数参数</strong><br>函数的（）中指定一个或多个形参（形式参数），多个形参之间用,号隔开，声明形参相当于在函数内部声明了对应的变量，但不赋值。在调用时在（）中指定实参<br>&emsp;调用时解析器不会检查实参类型、数量，实参可以是任意的数据类型。<br>
+        
+      </p></div>
+      <a class="more" href="/2019/02/07/JS函数、变量作用域/">Read more</a>
+    </article>
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/30/JS数据类型及转换/">JS数据类型及转换</a>
-    </h3>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/02/02/JS对象、数据类型区别、函数/">JS对象、数据类型区别、函数</a>
+      </h2>
+      <p class="article-date">2019年2月2日</p>
+      
+        
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <p><strong>对象</strong><br>基本数据类型都是单一的值，值和值之间没有任何联系，变量之间独立，不能成为一个整体。<br>对象属于一种符合的数据类型，对象中可以保存对个不同数据类型的属性。<br><strong>对象分类：</strong><br>&emsp;<strong>1.内建对象</strong><br>&emsp;&emsp;由ES标准中定义的对象，在任何的ES的事项中都可以使用：Math&emsp;String&emsp;Number&emsp;Bollean&emsp;Function&emsp;Object<br>
+        
+      </p></div>
+      <a class="more" href="/2019/02/02/JS对象、数据类型区别、函数/">Read more</a>
+    </article>
   
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/30/JS数据类型及转换/">JS数据类型及转换</a>
+      </h2>
+      <p class="article-date">2019年1月30日</p>
+      
+        
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
 
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-30 19:25:00" datetime="2019-01-30T11:25:00.000Z" itemprop="datePublished">2019-01-30</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>数据类型就是字面量的类型</p>
+      
+      <div class="article-summary">
+        
+          <p>数据类型就是字面量的类型</p>
 <p>分类：<br><strong>基本数据类型：</strong><br>&emsp;<strong>String 字符串</strong><br><code>var str= &quot;xxx&quot;;</code>可使用双引号或单引号，不要混用<br>字符串中可用 \ 作为转义字符&emsp;当表示一些特殊符号时用 \ 进行转义<br>\“表示双引号<br>\‘表示单引号<br>\t表示制表符<br>\\表示\<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/30/JS数据类型及转换/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JS基础-3" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+      </p></div>
+      <a class="more" href="/2019/01/30/JS数据类型及转换/">Read more</a>
+    </article>
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/29/JS基础-3/">JS基础-3</a>
-    </h3>
-  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/29/JS基础-3/">JS基础-3</a>
+      </h2>
+      <p class="article-date">2019年1月29日</p>
+      
+        
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
 
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-29 19:43:00" datetime="2019-01-29T11:43:00.000Z" itemprop="datePublished">2019-01-29</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="代码位置"><a href="#代码位置" class="headerlink" title="代码位置"></a>代码位置</h2><p><strong>JavaScript弹出框警告框</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;xxx&quot;);</span><br></pre></td></tr></table></figure></p>
+      
+      <div class="article-summary">
+        
+          <h2 id="代码位置"><a href="#代码位置" class="headerlink" title="代码位置"></a>代码位置</h2><p><strong>JavaScript弹出框警告框</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&quot;xxx&quot;);</span><br></pre></td></tr></table></figure></p>
 <p><strong>JavaScript页面body输出内容</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.write(&quot;xxx&quot;);</span><br></pre></td></tr></table></figure></p>
 <p><strong>JavaScript控制台输出</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(&quot;xxx&quot;);</span><br></pre></td></tr></table></figure></p>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/29/JS基础-3/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </div>
-    
-    <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JS基础-2" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+      </div>
+      <a class="more" href="/2019/01/29/JS基础-3/">Read more</a>
+    </article>
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/25/JS基础-2/">JS基础-2</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-25 19:56:00" datetime="2019-01-25T11:56:00.000Z" itemprop="datePublished">2019-01-25</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p>JavScript在页面上显示时间，首先我们先来了解关于时间的一些简单方法：<br>&emsp;getFullYear()&emsp;获取当前年份<br>&emsp;getMonth()&emsp;0-n(一月到十二月)<br>&emsp;getDate()&emsp;1-31(月份中的天数)<br>&emsp;getHours()&emsp;0-23(小时)<br>&emsp;getMinntes()&emsp;0-59(分钟)<br>&emsp;getseconds()&emsp;0-59(秒)<br>&emsp;getDay()&emsp;0-6(星期几)<br>&emsp;setTimeout(“ 函数”，毫秒数) 设定定时器，经过指定某个毫秒值后执行某个函数。<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/25/JS基础-2/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/25/JS基础-2/">JS基础-2</a>
+      </h2>
+      <p class="article-date">2019年1月25日</p>
+      
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
 
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JS基础-1" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/24/JS基础-1/">JS基础-1</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-24 20:36:00" datetime="2019-01-24T12:36:00.000Z" itemprop="datePublished">2019-01-24</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="1-JavaScript概述"><a href="#1-JavaScript概述" class="headerlink" title="1. JavaScript概述"></a>1. JavaScript概述</h2><p>JavaScript 是世界上最流行的编程语言。这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。<br>&emsp;<br>JavaScript是一种面向对象的，动态的脚本语言，主要被作为客户端脚本语言在用户的浏览器上运行，不需要编译即可运行，不需要服务器的支持。<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/24/JS基础-1/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
+      
+      <div class="article-summary">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-CSS基础3" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/24/CSS基础3/">CSS基础3</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-24 15:00:00" datetime="2019-01-24T07:00:00.000Z" itemprop="datePublished">2019-01-24</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p><strong>–css列表</strong><br>导航条、文章列表使用<br>list-style&emsp;&emsp;一条声明设置所有属性<br>list-style-image&emsp;&emsp;图像设置为列表项标记<br>list-style-position&emsp;标记的放置位<br>list-style-type&emsp;&emsp;列表项标记的类型<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/24/CSS基础3/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-CSS基础2" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/22/CSS基础2/">CSS基础2</a>
-    </h3>
-  
-
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-22 20:30:00" datetime="2019-01-22T12:30:00.000Z" itemprop="datePublished">2019-01-22</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p><strong>–css文本</strong>&emsp;文本外观、颜色、间距、对齐<br>&emsp;<strong>&gt;text-decoration</strong>&emsp;用来去掉元素下滑线<br>&emsp;&emsp;值<br>&emsp;&emsp;&emsp;none&emsp;&emsp;&emsp;没有下划线<br>&emsp;&emsp;&emsp;underline&emsp;底下下滑线<br>&emsp;&emsp;&emsp;overline&emsp;&emsp;顶部下滑线<br>&emsp;&emsp;&emsp;line-throgh&emsp;中间下滑线<br>&emsp;&emsp;&emsp;inherit&emsp;&emsp;&emsp;继承父元素<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/22/CSS基础2/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
+          <p>JavScript在页面上显示时间，首先我们先来了解关于时间的一些简单方法：<br>&emsp;getFullYear()&emsp;获取当前年份<br>&emsp;getMonth()&emsp;0-n(一月到十二月)<br>&emsp;getDate()&emsp;1-31(月份中的天数)<br>&emsp;getHours()&emsp;0-23(小时)<br>&emsp;getMinntes()&emsp;0-59(分钟)<br>&emsp;getseconds()&emsp;0-59(秒)<br>&emsp;getDay()&emsp;0-6(星期几)<br>&emsp;setTimeout(“ 函数”，毫秒数) 设定定时器，经过指定某个毫秒值后执行某个函数。<br>
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-CSS基础1" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+      </p></div>
+      <a class="more" href="/2019/01/25/JS基础-2/">Read more</a>
+    </article>
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/21/CSS基础1/">CSS基础1</a>
-    </h3>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/24/JS基础-1/">JS基础-1</a>
+      </h2>
+      <p class="article-date">2019年1月24日</p>
+      
+        
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <h2 id="1-JavaScript概述"><a href="#1-JavaScript概述" class="headerlink" title="1. JavaScript概述"></a>1. JavaScript概述</h2><p>JavaScript 是世界上最流行的编程语言。这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。<br>&emsp;<br>JavaScript是一种面向对象的，动态的脚本语言，主要被作为客户端脚本语言在用户的浏览器上运行，不需要编译即可运行，不需要服务器的支持。<br>
+        
+      </p></div>
+      <a class="more" href="/2019/01/24/JS基础-1/">Read more</a>
+    </article>
   
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/24/CSS基础3/">CSS基础3</a>
+      </h2>
+      <p class="article-date">2019年1月24日</p>
+      
+      <div class="article-summary">
+        
+          <p><strong>–css列表</strong><br>导航条、文章列表使用<br>list-style&emsp;&emsp;一条声明设置所有属性<br>list-style-image&emsp;&emsp;图像设置为列表项标记<br>list-style-position&emsp;标记的放置位<br>list-style-type&emsp;&emsp;列表项标记的类型<br>
+        
+      </p></div>
+      <a class="more" href="/2019/01/24/CSS基础3/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/22/CSS基础2/">CSS基础2</a>
+      </h2>
+      <p class="article-date">2019年1月22日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
 
+      
+      <div class="article-summary">
+        
+          <p><strong>–css文本</strong>&emsp;文本外观、颜色、间距、对齐<br>&emsp;<strong>&gt;text-decoration</strong>&emsp;用来去掉元素下滑线<br>&emsp;&emsp;值<br>&emsp;&emsp;&emsp;none&emsp;&emsp;&emsp;没有下划线<br>&emsp;&emsp;&emsp;underline&emsp;底下下滑线<br>&emsp;&emsp;&emsp;overline&emsp;&emsp;顶部下滑线<br>&emsp;&emsp;&emsp;line-throgh&emsp;中间下滑线<br>&emsp;&emsp;&emsp;inherit&emsp;&emsp;&emsp;继承父元素<br>
+        
+      </p></div>
+      <a class="more" href="/2019/01/22/CSS基础2/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/21/CSS基础1/">CSS基础1</a>
+      </h2>
+      <p class="article-date">2019年1月21日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
 
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-21 20:30:00" datetime="2019-01-21T12:30:00.000Z" itemprop="datePublished">2019-01-21</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <p><strong>css层叠样式表</strong><br>&emsp;<strong>1、元素内嵌样式表</strong><br>直接在元素里面写样式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot; color:red;font-size:50px;&quot;&gt;.....&lt;p&gt;</span><br></pre></td></tr></table></figure></p>
+      
+      <div class="article-summary">
+        
+          <p><strong>css层叠样式表</strong><br>&emsp;<strong>1、元素内嵌样式表</strong><br>直接在元素里面写样式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot; color:red;font-size:50px;&quot;&gt;.....&lt;p&gt;</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;<strong>2、外部样式表</strong><br>是一个.css文件，需要在页面引用样式表才能使外部样式表的设置生效。<br><code>&lt;link&gt;</code>元素应用，一般写在<code>&lt;head&gt;</code>元素内部。<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/21/CSS基础1/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-CSS中的px、em、rem 详解" class="article-card article-type-post" itemprop="blogPost">
-
-    
-
-
+      </p></div>
+      <a class="more" href="/2019/01/21/CSS基础1/">Read more</a>
+    </article>
   
-    <h3 class="post-title" itemprop="name">
-      <a href="/2019/01/20/CSS中的px、em、rem 详解/">CSS中的px、em、rem 详解</a>
-    </h3>
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/20/CSS中的px、em、rem 详解/">CSS中的px、em、rem 详解</a>
+      </h2>
+      <p class="article-date">2019年1月20日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          <h2 id="概念介绍："><a href="#概念介绍：" class="headerlink" title="概念介绍："></a>概念介绍：</h2><p><strong>1、px (pixel，像素)</strong>：<br>&emsp;是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI(Dots Per Inch，每英寸像素数)，在扫描打印时一般都有DPI可选。Windows系统默认是96dpi，Apple系统默认是72dpi。<br><strong>2、em(相对长度单位，相对于当前对象内文本的字体尺寸)</strong>：<br>&emsp;是一个相对长度单位，最初是指字母M的宽度，故名em。现指的是字符宽度的倍数，用法类似百分比，如：0.8em, 1.2em,2em等。通常1em=16px。<br>
+        
+      </p></div>
+      <a class="more" href="/2019/01/20/CSS中的px、em、rem 详解/">Read more</a>
+    </article>
   
 
-
-
-
-     <div class="post-meta">
-        <time class="post-time" title="2019-01-20 20:00:00" datetime="2019-01-20T12:00:00.000Z" itemprop="datePublished">2019-01-20</time>
-
-    </div>
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        <h2 id="概念介绍："><a href="#概念介绍：" class="headerlink" title="概念介绍："></a>概念介绍：</h2><p><strong>1、px (pixel，像素)</strong>：<br>&emsp;是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI(Dots Per Inch，每英寸像素数)，在扫描打印时一般都有DPI可选。Windows系统默认是96dpi，Apple系统默认是72dpi。<br><strong>2、em(相对长度单位，相对于当前对象内文本的字体尺寸)</strong>：<br>&emsp;是一个相对长度单位，最初是指字母M的宽度，故名em。现指的是字符宽度的倍数，用法类似百分比，如：0.8em, 1.2em,2em等。通常1em=16px。<br>
-    
-        <div class="post-more-div">
-            <a href="/2019/01/20/CSS中的px、em、rem 详解/" class="post-more waves-button">
-                阅读全文 »
-            </a>
-        </div>
-    </p></div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-    </ul>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
-    </div>
-</nav>
-
-
+  
+    <div class="guide-pager">
+  
+    <a href="/"><span class="page-arrow">← </span>Prev</a>
+  
+  
+    <a href="/page/3/">Next<span class="page-arrow"> →</span></a>
+  
 </div>
-
-        <footer class="footer">
-    <div class="footer-content">
-        <span class="power">
-            <i class="icon icon-lg icon-copyright"></i>
-            2017
-            <i class="icon icon-lg icon-heart"></i>
-            <a href="http://yokemadman.github.io">tomotoes.com</a>
-            <br>
-            Power by
-            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
-            Theme
-            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
-        </span>
-
-        <br>
-
-        <span id="RunTime" style="color:#a7a7a2;"></span>
-        <br>
-
-        <span>
-            
-	<i class="icon icon-lg icon-user">
-<span id="busuanzi_container_site_uv" style="display:none">
-       访问用户：<span id="busuanzi_value_site_uv"></span>
-    </span>人</i>
-    ·
-    <i class="icon icon-lg icon-eye">
-    <span id="busuanzi_container_site_pv" style="display:none">
-      访问次数：<span id="busuanzi_value_site_pv"></span>
-    </span>次
-    </i>
+  
+</main>
 
 
-        </span>
-        <br>
-
-        <span class="license"><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
-    </div>
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
 </footer>
 
-    </main>
-    
-    <div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
-
-
-    <!-- waves按钮特效 -->
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-
-<!-- 主题配置脚本 -->
 <script>
-var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
 </script>
 
-<!-- jquery -->
-<script src="/js/jquery.min.js?v=3.0"></script>
-
-<!-- 搜索 -->
-
-<div class="search-panel" id="search-panel">
-    <ul class="search-result" id="search-result"></ul>
-</div>
-<template id="search-tpl">
-<li class="item waves-block waves-effect" onclick="location.href='{path}'">
-    <div class="title ellipsis" title="{title}">{title}</div>
-</li>
-</template>
-
-
-<!-- main博客脚本 -->
-<script src="/js/main.min.js?v=3.0"></script>
-
-<!-- 动画&配置 -->
-<script src="/js/script.min.js?v=3.0"></script>
-
-<!-- 脚本管理 -->
 <script>
-
-if(window.innerWidth > 800){
-	/* 3D标题 */
-	$(".content-header").on("mousemove", threedee);
-
-	/* 底部追随鼠标 */
-	$(".footer").hover(2);
-
-	/* gotop键的涟漪 */
-	$("#gotop").hover(1);
-
-	/* 赞赏的粒子雨 */
-	$("#reward").hover(3);
-
-	/* 微信公众号的底部渲染 */
-	$("#wechat").hover(4);
-
-    /* 标题跳动 */
-    $(".archivestitle").bumpyText();
-
-	/* 图片点击放大 */
-	const postimg = jQuery(".post-content img:not(.github-emoji)");
-	postimg.on("click",function(){
-
-		mask.classList.add("in");
-		main.classList.add("Mask");
-		menu.classList.add("Mask");
-		var myimg = this.cloneNode(true);
-		myimg.classList.add("imgShow");
-
-		setTimeout(function(){
-			jQuery(myimg).animate({
-				opacity:"1"
-			},1000);
-		},0);
-
-		document.body.appendChild(myimg);
-
-		myimg.onclick=function(){
-			document.body.removeChild(myimg);
-			mask.classList.remove("in");
-			main.classList.remove("Mask");
-			menu.classList.remove("Mask");
-		};
-
-	});
-
-}
-
-/* 名字跳动 */
-$("#name").bumpyText();
-
-
-/* 网站运行时间 */
-setInterval(function () {
-	setTime("2017/10/11");
-}, 1000);
-
-/* 文章块的淡出 */
-postshow();
-
-/* 座右铭 */
-
-   getHitokoto();
-
-
-
-/* 粘贴提示 */
-G($(".post-content"), location.href, "Yokemadman");
-
-
-/* 控制台 */
-if (window.console && window.console.log) {
-	setTimeout(function () {
-		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
-	}, 0);
-}
-
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
 </script>
+<!-- Baidu Tongji -->
 
-
-
-
-<!-- 公式渲染 -->
-
-
-
-<!-- 不蒜子 -->
-
-<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-
-</body>
+<script src="/js/script.js"></script>
+  </body>
 </html>
