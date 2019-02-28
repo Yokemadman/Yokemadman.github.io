@@ -17,9 +17,7 @@
   <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  
-    css('css/plugins/gitment.css')
-  
+
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
@@ -153,29 +151,32 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="emsp-DOM"><a href="#emsp-DOM" class="headerlink" title="&emsp;DOM"></a>&emsp;DOM</h2><p>&emsp;1. 是万维网联盟（W3C）的标准。<br>&emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”<br><a id="more"></a><br>分三部分：</p>
+    <section class="markdown-content"><h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><p>&emsp;1. 是万维网联盟（W3C）的标准。<br>&emsp;2. 定义了访问html和xml文档的标准：”文档对象模型(DOM）是中立平台和语言的接口。允许程序和脚本动态的访问和更新文档内容、结构和样式。”<br><a id="more"></a>分三部分：</p>
 <ul>
 <li>DOM——针对任何文档的标准模型</li>
 <li>XML DOM——针对XML文档</li>
-<li>HTML DOM——针对HTML<h2 id="XML-DOM"><a href="#XML-DOM" class="headerlink" title="XML DOM"></a>XML DOM</h2>&emsp;XML DOM 定义了所有 XML 元素的对象和属性，以及访问它们的方法。<h2 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h2>&emsp;HTML的标准对象模型，标准编程接口，W3C标准。<br>&emsp;定义了所有html元素的对象和属性。以及访问他们的方法。（是关于获取、修改、添加或删除html的标准）<h2 id="DOM节点"><a href="#DOM节点" class="headerlink" title="DOM节点"></a>DOM节点</h2>HTML 文档中的所有内容都是节点：</li>
+<li>HTML DOM——针对HTML</li>
+</ul>
+<h3 id="XML-DOM"><a href="#XML-DOM" class="headerlink" title="XML DOM"></a>XML DOM</h3><p>&emsp;XML DOM 定义了所有 XML 元素的对象和属性，以及访问它们的方法。</p>
+<h3 id="HTML-DOM"><a href="#HTML-DOM" class="headerlink" title="HTML DOM"></a>HTML DOM</h3><p>&emsp;HTML的标准对象模型，标准编程接口，W3C标准。<br>&emsp;定义了所有html元素的对象和属性。以及访问他们的方法。（是关于获取、修改、添加或删除html的标准）</p>
+<h3 id="DOM节点"><a href="#DOM节点" class="headerlink" title="DOM节点"></a>DOM节点</h3><p>HTML 文档中的所有内容都是节点：</p>
+<ul>
 <li>整个文档是一个文档节点</li>
 <li>每个 HTML 元素是元素节点</li>
 <li>HTML 元素内的文本是文本节点</li>
 <li>每个 HTML 属性是属性节点</li>
 <li>注释是注释节点</li>
 </ul>
-<h2 id="HTML-DOM方法"><a href="#HTML-DOM方法" class="headerlink" title="HTML DOM方法"></a>HTML DOM方法</h2><p>——可以在节点（html）上执行的动作。<br><strong>编程接口</strong><br>通过JavaScript（及其他编程语言）对齐访问。<br>元素为对象，编程接口则是对象方法和属性。<br>方法：内够执行的动作。（添加或修改元素）<br>属性：能够获取或设置的值。（节点名称或内容）。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>getElementById()方法</strong>:返回带有指定id的元素。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>HTML DOM对象-方法和属性</strong><br>一些常用的 HTML DOM 方法：</p>
+<h3 id="HTML-DOM方法"><a href="#HTML-DOM方法" class="headerlink" title="HTML DOM方法"></a>HTML DOM方法</h3><p>——可以在节点（html）上执行的动作。<br><strong>编程接口</strong><br>通过JavaScript（及其他编程语言）对齐访问。<br>元素为对象，编程接口则是对象方法和属性。<br>方法：内够执行的动作。（添加或修改元素）<br>属性：能够获取或设置的值。（节点名称或内容）。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>getElementById()方法</strong>:返回带有指定id的元素。<br>_<strong><strong><strong><strong><strong><strong>__</strong></strong></strong></strong></strong></strong><br><strong>HTML DOM对象-方法和属性</strong><br>一些常用的 HTML DOM 方法：</p>
 <ul>
 <li>getElementById(id) - 获取带有指定 id 的节点（元素）</li>
 <li>appendChild(node) - 插入新的子节点（元素）</li>
-<li><p>removeChild(node) - 删除子节点（元素）<br>一些常用的 HTML DOM 属性：</p>
-</li>
-<li><p>innerHTML - 节点（元素）的文本值<br>+parentNode - 节点（元素）的父节点</p>
-</li>
+<li>removeChild(node) - 删除子节点（元素）<br>一些常用的 HTML DOM 属性：</li>
+<li>innerHTML - 节点（元素）的文本值<br>+parentNode - 节点（元素）的父节点</li>
 <li>childNodes - 节点（元素）的子节点</li>
-<li>attributes - 节点（元素）的属性节点<h3 id="DOM对象方法"><a href="#DOM对象方法" class="headerlink" title="DOM对象方法"></a>DOM对象方法</h3></li>
+<li>attributes - 节点（元素）的属性节点</li>
 </ul>
-<table>
+<h3 id="DOM对象方法"><a href="#DOM对象方法" class="headerlink" title="DOM对象方法"></a>DOM对象方法</h3><table>
 <thead>
 <tr>
 <th style="text-align:center">方法</th>
@@ -233,21 +234,19 @@
 </tr>
 </tbody>
 </table>
-<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p><strong>innerHTML属性</strong>：获取元素内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取id=&quot;intro&quot;的&lt;p&gt;元素的innerHTML</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var txt=document.getElementById(&quot;intro&quot;).innerHTML;</span><br><span class="line">document.write(txt);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>nodeName属性</strong>：规定节点名称</p>
-<ul>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><h4 id="innerHTML属性：获取元素内容"><a href="#innerHTML属性：获取元素内容" class="headerlink" title="innerHTML属性：获取元素内容"></a>innerHTML属性：获取元素内容</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//获取id=&quot;intro&quot;的&lt;p&gt;元素的innerHTML</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var txt=document.getElementById(&quot;intro&quot;).innerHTML;</span><br><span class="line">document.write(txt);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="nodeName属性：规定节点名称"><a href="#nodeName属性：规定节点名称" class="headerlink" title="nodeName属性：规定节点名称"></a>nodeName属性：规定节点名称</h4><ul>
 <li>nodeName 是只读的</li>
 <li>元素节点的 nodeName 与标签名相同</li>
 <li>属性节点的 nodeName 与属性名相同</li>
 <li>文本节点的 nodeName 始终是 #text</li>
-<li>文档节点的 nodeName 始终是 #document<br><strong>nodeValue属性</strong>：规定节点的值。</li>
+<li>文档节点的 nodeName 始终是 #document<h4 id="nodeValue属性：规定节点的值。"><a href="#nodeValue属性：规定节点的值。" class="headerlink" title="nodeValue属性：规定节点的值。"></a>nodeValue属性：规定节点的值。</h4></li>
 <li>元素节点的 nodeValue 是 undefined 或 null</li>
 <li>文本节点的 nodeValue 是文本本身</li>
 <li>属性节点的 nodeValue 是属性值</li>
 </ul>
-<h5 id="获取值实例"><a href="#获取值实例" class="headerlink" title="获取值实例"></a>获取值实例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">x=document.getElementById(&quot;intro&quot;);</span><br><span class="line">document.write(x.firstChild.nodeValue);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><strong>nodeType属性</strong>：返回类型。<br>重要节点类型：</p>
+<h3 id="获取值实例"><a href="#获取值实例" class="headerlink" title="获取值实例"></a>获取值实例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;p id=&quot;intro&quot;&gt;Hello World!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">x=document.getElementById(&quot;intro&quot;);</span><br><span class="line">document.write(x.firstChild.nodeValue);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="nodeType属性：返回类型。"><a href="#nodeType属性：返回类型。" class="headerlink" title="nodeType属性：返回类型。"></a>nodeType属性：返回类型。</h4><p>重要节点类型：</p>
 <table>
 <thead>
 <tr>
@@ -278,15 +277,11 @@
 </tr>
 </tbody>
 </table>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>方式（1）：<strong>getElementById()</strong> 方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node.getElementById(&quot;id&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;intro&quot;);//id=&quot;intro&quot;的元素</span><br></pre></td></tr></table></figure></p>
-<p>方式（2）：<strong>getElementsByTagName()</strong> 方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node.getElementsByTagName(&quot;tagname&quot;);</span><br></pre></td></tr></table></figure></p>
-<p>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;p&quot;);//获取文档所有&lt;p&gt;元素的列表</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;mian&quot;).getElementByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure>
-<p>方式（3）： <strong>getElementsByClassName()</strong>方法<br>语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docuement.getElementByClassName(&quot;intro&quot;);//带有相同类名的所有HTML元素（包含class=&quot;intro&quot;的所有元素列表）</span><br></pre></td></tr></table></figure></p>
-<p><font color="red"><strong>注释</strong>：在Inter Explorer 5，6，7，8中无效</font></p>
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>修改元素</p>
-<ul>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>方式（1）：<strong>getElementById()</strong> 方法<br>语法：<code>node.getElementById(&quot;id&quot;);</code><br>实例：<code>document.getElementById(&quot;intro&quot;);//id=&quot;intro&quot;的元素</code><br>方式（2）：<strong>getElementsByTagName()</strong> 方法<br>语法：<code>node.getElementsByTagName(&quot;tagname&quot;);</code><br>实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;p&quot;);//获取文档所有&lt;p&gt;元素的列表</span><br><span class="line">document.getElementById(&quot;mian&quot;).getElementByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>方式（3）： <strong>getElementsByClassName()</strong>方法<br>语法：<code>docuement.getElementByClassName(&quot;intro&quot;);//带有相同类名的所有HTML元素（包含class=&quot;intro&quot;的所有元素列表）</code></p>
+<font color="red"><strong>注释</strong>：在Inter Explorer 5，6，7，8中无效</font>
+
+<h2 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h2><h3 id="修改元素"><a href="#修改元素" class="headerlink" title="修改元素"></a>修改元素</h3><ul>
 <li>改变html内容</li>
 <li>改变css样式</li>
 <li>改变html属性</li>
@@ -321,6 +316,13 @@
       </a>
     
     
+      <a class="nav-right" href="/2019/02/28/jQuery事件处理、鼠标移入-出、委托/">
+        
+          jQuery事件处理、鼠标移入/出、委托
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
   </div>
 
     <!-- NAV END -->
@@ -354,7 +356,7 @@
     <!-- 二维码 END -->
     
       <!-- Gitment START -->
-      <div id="comments"></div>
+      <!-- <div id="comments"></div> -->
       <!-- Gitment END -->
     
   </article>
@@ -365,9 +367,9 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#emsp-DOM"><span class="toc-nav-text"> DOM</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#XML-DOM"><span class="toc-nav-text">XML DOM</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTML-DOM"><span class="toc-nav-text">HTML DOM</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM节点"><span class="toc-nav-text">DOM节点</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTML-DOM方法"><span class="toc-nav-text">HTML DOM方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM对象方法"><span class="toc-nav-text">DOM对象方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#属性"><span class="toc-nav-text">属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#获取值实例"><span class="toc-nav-text">获取值实例</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#访问"><span class="toc-nav-text">访问</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改"><span class="toc-nav-text">修改</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM"><span class="toc-nav-text">DOM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-DOM"><span class="toc-nav-text">XML DOM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML-DOM"><span class="toc-nav-text">HTML DOM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM节点"><span class="toc-nav-text">DOM节点</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML-DOM方法"><span class="toc-nav-text">HTML DOM方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM对象方法"><span class="toc-nav-text">DOM对象方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#属性"><span class="toc-nav-text">属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#innerHTML属性：获取元素内容"><span class="toc-nav-text">innerHTML属性：获取元素内容</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#nodeName属性：规定节点名称"><span class="toc-nav-text">nodeName属性：规定节点名称</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#nodeValue属性：规定节点的值。"><span class="toc-nav-text">nodeValue属性：规定节点的值。</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取值实例"><span class="toc-nav-text">获取值实例</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#nodeType属性：返回类型。"><span class="toc-nav-text">nodeType属性：返回类型。</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#访问"><span class="toc-nav-text">访问</span></a></li></ol><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改"><span class="toc-nav-text">修改</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改元素"><span class="toc-nav-text">修改元素</span></a></li></ol>
     
-  </div>
+  </li></div>
 </aside>
   
   <!-- Catalog END -->
