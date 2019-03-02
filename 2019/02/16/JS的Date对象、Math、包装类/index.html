@@ -3,7 +3,7 @@
   <head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="description" content="yanm1ng&#39;s blog">
+  <meta name="description" content="Yokemadman&#39;s blog">
   <meta name="keyword" content="hexo-theme, vuejs">
   
     <link rel="shortcut icon" href="/css/images/logo.png">
@@ -151,10 +151,9 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>##Date对象##<br>在JS使用Date对象来表示时间<br>&emsp;当前时间<br>var d = new Date();<br>&emsp;指定时间<br>格式：<strong>月/日/年 时：分：秒</strong><br><code>var e = new Date(&quot;02/16/2019 11:49:20&quot;);</code><br><a id="more"></a><br><strong>&emsp;getDate()</strong>获取当前日期对象是几日<br><strong>&emsp;getDay()</strong>获取当前日期对象是周几0-6<br>0表示周日<br><strong>&emsp;getMonth()</strong>获取当前日期对象的月份0-11<br>0表示一月<br><strong>&emsp;getFullYear()</strong>获取当前日期对象的年份<br><strong>&emsp;getTime()</strong>获取当前日期对象的时间戳<br>时间戳：指从格林威治标准时间的1970年1月1日，0时0分0秒到当前日期所花的毫秒数</p>
-<p>获取当前时间戳<code>time = Date.now();</code><br>利用时间戳测试代码的执行性能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var start = Date.now()；</span><br><span class="line">for(var i=0;i&lt;100;i++)&#123;</span><br><span class="line">console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">var end = Date.now();</span><br><span class="line">console.log(&quot;执行了&quot;+(end - start)+&quot;毫秒&quot;)；</span><br></pre></td></tr></table></figure></p>
-<p>##Math##<br>Math不是一个构造函数，属于一个工具类，不用创建对象，里边封装了数学运算相关属性和方法<br>Math.PI表示圆周率<br>Math.abs()表示绝对值<br>&emsp;<strong>Math.ceil()</strong>对一个数进行向上取整，小数有值自动进1<br>&emsp;<strong>Math.floor()</strong>向下取整，小数部分被舍掉<br>&emsp;<strong>Math.round()</strong>四舍五入取整<br>&emsp;<strong>Math.random()</strong>用来生成一个0-1之间的随机数<br>生成x-y之间的随机数<code>Math.round(Math.random()*(y-x)+x)</code><br>&emsp;<strong>Math.max()</strong>获取多个数中的最大值<br>&emsp;<strong>Math.min()</strong>获取多个数中的最小值<br>&emsp;<strong>Math.pow(x,y)</strong>返回x的y次幂<br>&emsp;<strong>Math.sqrt()</strong>对一个数进行开方</p>
-<p>##包装类##<br>通过包装类基本数据类型的数据转换为对象<br><strong>String()</strong><br>将基本数据类型字符串转换为String对象<br><strong>Number()</strong><br>将基本数据类型的数字转换为Number对象<br><strong>Boolean()</strong><br>将基本数据类型的布尔值转换为Boolean对象</p>
+    <section class="markdown-content"><h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a>Date对象</h2><p>在JS使用Date对象来表示时间<br>&emsp;当前时间var d = new Date();<br>&emsp;指定时间格式：<strong>月/日/年 时：分：秒</strong><code>var e = new Date(&quot;02/16/2019 11:49:20&quot;);</code><br><a id="more"></a><br><strong>&emsp;getDate()</strong>获取当前日期对象是几日<br><strong>&emsp;getDay()</strong>获取当前日期对象是周几0-6<br>0表示周日<br><strong>&emsp;getMonth()</strong>获取当前日期对象的月份0-11<br>0表示一月<br><strong>&emsp;getFullYear()</strong>获取当前日期对象的年份<br><strong>&emsp;getTime()</strong>获取当前日期对象的时间戳<br>时间戳：指从格林威治标准时间的1970年1月1日，0时0分0秒到当前日期所花的毫秒数<br>获取当前时间戳<code>time = Date.now();</code><br>利用时间戳测试代码的执行性能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var start = Date.now()；</span><br><span class="line">for(var i=0;i&lt;100;i++)&#123;</span><br><span class="line">console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">var end = Date.now();</span><br><span class="line">console.log(&quot;执行了&quot;+(end - start)+&quot;毫秒&quot;)；</span><br></pre></td></tr></table></figure></p>
+<h2 id="Math"><a href="#Math" class="headerlink" title="Math"></a>Math</h2><p>Math不是一个构造函数，属于一个工具类，不用创建对象，里边封装了数学运算相关属性和方法<br>Math.PI表示圆周率<br>Math.abs()表示绝对值<br>&emsp;<strong>Math.ceil()</strong>对一个数进行向上取整，小数有值自动进1<br>&emsp;<strong>Math.floor()</strong>向下取整，小数部分被舍掉<br>&emsp;<strong>Math.round()</strong>四舍五入取整<br>&emsp;<strong>Math.random()</strong>用来生成一个0-1之间的随机数<br>生成x-y之间的随机数<code>Math.round(Math.random()*(y-x)+x)</code><br>&emsp;<strong>Math.max()</strong>获取多个数中的最大值<br>&emsp;<strong>Math.min()</strong>获取多个数中的最小值<br>&emsp;<strong>Math.pow(x,y)</strong>返回x的y次幂<br>&emsp;<strong>Math.sqrt()</strong>对一个数进行开方</p>
+<h2 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h2><p>通过包装类基本数据类型的数据转换为对象<br><strong>String()</strong><br>将基本数据类型字符串转换为String对象<br><strong>Number()</strong><br>将基本数据类型的数字转换为Number对象<br><strong>Boolean()</strong><br>将基本数据类型的布尔值转换为Boolean对象</p>
 <p><font color="skyblue">注意：实际应用中不会使用基本数据类型的对象，可能出现一些不可预期的结果</font><br>83</p>
 </section>
     <!-- Tags START -->
@@ -184,7 +183,7 @@
     
       <a class="nav-right" href="/2019/02/19/jQuery初识、函数、对象/">
         
-          jQuery初识、函数、对象
+          初识、函数、对象
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -233,7 +232,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="nav">none</ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Date对象"><span class="toc-nav-text">Date对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Math"><span class="toc-nav-text">Math</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#包装类"><span class="toc-nav-text">包装类</span></a></li></ol>
     
   </div>
 </aside>
@@ -302,12 +301,12 @@
 
 
   <script>
-    var gitmentConfig = "yanm1ng";
+    var gitmentConfig = "Yokemadman";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
         id: "JS的Date对象、Math、包装类",
-        owner: "yanm1ng",
-        repo: "yanm1ng.github.io",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
         oauth: {
           client_id: "0f87e490e00ee3fd87ef",
           client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
