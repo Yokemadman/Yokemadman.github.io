@@ -1,0 +1,62 @@
+.cont{
+    width: 800px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1000;
+    position: relative;
+    background-color: #609;
+}
+.cont:hover{
+    box-shadow: #666 0px 0px 30px;
+    margin-top: -5px;
+}
+.imgdiv{
+    width:70px;
+    height: 70px;
+    border-radius: 70px;
+    overflow-x: hidden;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -25px;
+    background: url("https://www.52share.online/images/avatar.jpg") 70px 70px;
+    background-size: 70px;
+}
+.cont:hover .an,.an{
+    float: left;
+    -webkit-transition: -webkit-transform 2s ease-out;
+    -moz-transition: -moz-transform 2s ease-out;
+    -o-transition: -o-transform 2s ease-out;
+    -ms-transition: -ms-transform 2s ease-out;
+}
+.cont:hover .imgdiv,.an:hover{
+    -webkit-transform: rotateZ(360deg);
+    -moz-transform: rotateZ(360deg);
+    -o-transform: rotateZ(360deg);
+    -ms-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+}
+.adress{
+  float: left;
+  margin-top: -35px;
+  margin-left: 20px;
+}
+#adr{
+  font-size: 18px;
+  line-height: 70px;
+}
+#adr:hover{
+  margin-top: 5px;
+  margin-left: 5px;
+  text-shadow: 1px 1px 1px #FF0000;
+}
+.introduce{
+   font-size:15px;
+   width: 560px;
+   margin-top: -50px;
+   margin-left: 20px;
+   display: inline-block;
+}
+.introduce a{
+ color: black;
+}
