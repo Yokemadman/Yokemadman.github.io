@@ -1,15 +1,22 @@
 .cont{
-    width: 800px;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 10px;
+
     overflow: hidden;
     display: inline-block;
     z-index: 1000;
     position: relative;
-    background-color: #609;
+    background-color: #666;
+    box-shadow: #669 0px 0px 40px;
+     transition-duration: 3s;
+/*     以下三值为默认值，稍后会详细介绍 */
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
 .cont:hover{
     box-shadow: #666 0px 0px 30px;
-    margin-top: -5px;
+    top: -10px;
 }
 .imgdiv{
     width:70px;
@@ -51,10 +58,9 @@
   text-shadow: 1px 1px 1px #FF0000;
 }
 .introduce{
-   font-size:15px;
-   width: 560px;
-   margin-top: -50px;
-   margin-left: 20px;
+   font-size:12px;
+   width: 25rem;
+   margin-top: -15px;
    display: inline-block;
 }
 .introduce a{
