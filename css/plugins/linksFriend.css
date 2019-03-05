@@ -1,68 +1,65 @@
-.cont{
-    width: 100%;
-    border-radius: 10px;
-
+.out{
+    height: 80px;
+    background-color:#fff;
     overflow: hidden;
-    display: inline-block;
-    z-index: 1000;
-    position: relative;
-    background-color: #666;
-    box-shadow: #669 0px 0px 40px;
-     transition-duration: 3s;
-/*     以下三值为默认值，稍后会详细介绍 */
-    transition-property: all;
-    transition-timing-function: ease;
-    transition-delay: 0s;
-}
-.cont:hover{
-    box-shadow: #666 0px 0px 30px;
-    top: -10px;
-}
-.imgdiv{
-    width:70px;
-    height: 70px;
-    border-radius: 70px;
-    overflow-x: hidden;
-    display: inline-block;
-    margin-right: 10px;
-    margin-top: -30px;
-    background: url("https://www.52share.online/images/avatar.jpg") 70px 70px;
-    background-size: 70px;
-}
-.cont:hover .an,.an{
     float: left;
+    z-index: 10;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    border-radius: 30px;
+    background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4039041336,2141949983&fm=27&gp=0.jpg);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.out:hover{
+    transform:translateY(-5px);
+    box-shadow: 3px 3px 1px 3px #ddd;
+}
+.in-out{
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    margin: -10px 0 0 10px;
+    box-shadow: #669 0px 0px 10px;
+    background:url("https://www.52share.online/images/avatar.jpg") 60px 60px;
+    background-size: 60px;
+    overflow: hidden;
+    float: left;
+}
+.out:hover .in-out,.in-out{
     -webkit-transition: -webkit-transform 2s ease-out;
     -moz-transition: -moz-transform 2s ease-out;
     -o-transition: -o-transform 2s ease-out;
     -ms-transition: -ms-transform 2s ease-out;
 }
-.cont:hover .imgdiv,.an:hover{
+.out:hover .in-out,.in-out:hover{
     -webkit-transform: rotateZ(360deg);
     -moz-transform: rotateZ(360deg);
     -o-transform: rotateZ(360deg);
     -ms-transform: rotateZ(360deg);
     transform: rotateZ(360deg);
 }
-.adress{
-  float: left;
-  margin-top: -35px;
-  margin-left: 20px;
+.in-links{
+    float: left;
+    height: 15px;
+    margin-top: -20px;
+    margin-left: 10px;
+    padding: 10px;
+    line-height: 15px;
+    border-radius: 10px;
+    background-color: #63a35c;
+    color: #fff;
 }
-#adr{
-  font-size: 18px;
-  line-height: 70px;
+.in-links:hover{
+    background-color: #0085a1;
 }
-#adr:hover{
-  margin-top: 5px;
-  margin-left: 5px;
-  text-shadow: 1px 1px 1px #FF0000;
-}
-.introduce{
-   font-size:12px;
-   width: 25rem;
-   margin-top: -15px;
-   display: inline-block;
-}
-.introduce a{
- color: black;
+.in-introduce{
+    float: left;
+    height: 50%;
+    margin-left: 185px;
+    margin-top: -57px;
+    font-size: 10px;
+    padding: 5px;
+    line-height: 13px;
+    padding-top: 13px;
 }
