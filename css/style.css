@@ -108,7 +108,7 @@ h2.article-head {
   font-size: 0.9em;
 }
 .article-summary {
-  margin: 10px 0;
+  margin: 0px 0;
   color: #34495e;
 }
 .more {
@@ -541,12 +541,12 @@ h2.article-head {
 }
 .markdown-content h2,
 .article-summary h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 .markdown-content h3,
 .article-summary h3 {
   margin: 1em 0;
-  font-size: 1.3em;
+  font-size: 1em;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #e5e5e5;
 }
