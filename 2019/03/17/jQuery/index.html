@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      jQuery | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>jQuery</h2>
+  <p class="post-date">2019-03-17</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="了解jQuery"><a href="#了解jQuery" class="headerlink" title="了解jQuery"></a>了解jQuery</h2><p><strong>定义</strong>：<br>&emsp;jQuery实际上就是一个JS的函数库。它的建库宗旨就是Write Less，Do More。它是用来封装简化DOM操作(CRUD)/Ajax.<br><a id="more"></a><br><strong>优势</strong><br>&emsp;jQuery有着<strong>强大的选择器</strong>，能够方便快速查找DOM元素，允许使用CSS1到CSS3几乎所有的选择器以及jQuery独创的高级二复杂的选择器，&emsp;<strong>隐式遍历(迭代)</strong>:可以一次操作多个元素,及当找到带有“.myclass”类的全部元素并隐藏是，无须循环遍历每一个返回的元素&emsp;<strong>读写合一</strong>：读数据/写数据用的都是一个函数，&emsp;<strong>链式调用</strong>：可以通过不断调用jQuery对象的方法，及对发生在同一个jQuery对象上的动作，可以直接连接而无需重复获取对象，&emsp;此外还有<strong>时间处理，DOM操作，样式操作，动画，浏览器兼容</strong>的优点<br><strong>使用</strong><br>&emsp;要想使用jQuery库，首先需要引入jQuery库，引入的放法有本地引入和CDN远程引入，分为测试版(未压缩版，编程测试时使用)和生产版(压缩版，软件运营时使用)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//本地导入</span><br><span class="line"> &lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.0.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">//远程导入</span><br><span class="line">//官网CDN</span><br><span class="line">&lt;script src=&quot;http://code.jquery.com/jquery-migrate-1.2.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">//百度CDN</span><br><span class="line">&lt;script src=&quot;http://libs.baidu.com/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">//官方CDN</span><br><span class="line">&lt;script src=&quot;http://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">//微软CDN</span><br><span class="line">&lt;script src=&quot;http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;使用jQuery就是使用<strong>jQuery函数：$/jQuery</strong>和<strong>使用jQuery对象：$xxx</strong>(执行$()得到的)</p>
+<h2 id="jQuery的两把利器"><a href="#jQuery的两把利器" class="headerlink" title="jQuery的两把利器"></a>jQuery的两把利器</h2><h3 id="emsp-jQuery函数"><a href="#emsp-jQuery函数" class="headerlink" title="&emsp;jQuery函数"></a>&emsp;jQuery函数</h3><p>&emsp;jQuery函数也就是$/jQuery，向外暴露的就是<strong>jQuery函数</strong>，可以直接使用<br>&emsp;当成一般函数使用$(param)</p>
+<ul>
+<li>param是function：相当于Window.onload = function(文档加载完成的监听)</li>
+<li>param是选择器字符串：查找所有匹配的DOM元素，返回包含所有DOM元素的jQuery对象</li>
+<li>param是DOM元素：将DOM元素对象包装为jQuery对象返回$(this)</li>
+<li>param是标签字符串：创建标签DOM元素对象并封装为jQuery对象返回</li>
+</ul>
+<p>&emsp;当成对象使用：$.xxx</p>
+<ul>
+<li>each(obj/arr,function(key,value){})</li>
+<li>trim(str)</li>
+</ul>
+<h3 id="emsp-jQuery对象"><a href="#emsp-jQuery对象" class="headerlink" title="&emsp;jQuery对象"></a>&emsp;jQuery对象</h3><ul>
+<li>包含所有匹配的n个DOM元素的伪数组对象</li>
+<li>执行$()返回的就是jQuery对象</li>
+<li>基本行为<ul>
+<li>length/size():得到DOM元素的个数</li>
+<li>[index]:得到指定下标对应的DOM元素</li>
+<li>each(function(index,domEle){}):遍历所有dom元素</li>
+<li>index():得到当前dom元素在所有兄弟中的下标</li>
+</ul>
+</li>
+</ul>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><p>&emsp;选择器就是有特定语法规则(css选择器)的字符串，用来查找某个/些DOM元素：$(selector)</p>
+<h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><p> #id&emsp;tagName或*&emsp;.class&emsp;selector1，selector2，selector3：并集&emsp;selector1selector2selector3：交集</p>
+<h3 id="层次选择器"><a href="#层次选择器" class="headerlink" title="层次选择器"></a>层次选择器</h3><p>&emsp;找子孙后代，兄弟元素selector1&gt;selector2：子元素，selector1 selector2：后代元素</p>
+<h3 id="过滤选择器"><a href="#过滤选择器" class="headerlink" title="过滤选择器"></a>过滤选择器</h3><p>&emsp;在原有匹配元素中筛选出其中一些；:first(筛选第一个)，:last(最后一个)，eq(index)(匹配指定索引)，:lt(x)（小于x的），:gt(x)（大于x的），：odd（匹配奇数），:even(匹配偶数)，:not(selector)（排除与选择器相匹配的元素），:hidden（匹配所有不可见的元素）， :visible（匹配所有可见的元素），[attrName]，[attrName = value]</p>
+<h3 id="表单选择器"><a href="#表单选择器" class="headerlink" title="表单选择器"></a>表单选择器</h3><p>&emsp;:input &emsp;:text&emsp; :checkbox &emsp;:radio&emsp; :checked：选中的</p>
+<h2 id="属性-文本"><a href="#属性-文本" class="headerlink" title="属性/文本"></a>属性/文本</h2><p>&emsp;操作标签的属性，标签体文本</p>
+<ul>
+<li>attr(name)/attr(name,value)：读写非布尔值的标签属性</li>
+<li>prop(name)/prop(name,value)：读写布尔值的标签属性</li>
+<li>removeAttr(name)/removeProp(name)：删除属性</li>
+<li>addClass(classValue)：添加class</li>
+<li>removeClass(classValue)：移除指定class</li>
+<li>val()/val(value)：读写标签的value</li>
+<li>html()/html(htmlString)：读写标签体文本</li>
+</ul>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#jQuery">
+    <span class="tag-code">jQuery</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/03/08/SublimeText插件/">
+        <span class="nav-arrow">← </span>
+        
+          SublimeText插件
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <!-- <div id="comments"></div> -->
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#了解jQuery"><span class="toc-nav-text">了解jQuery</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery的两把利器"><span class="toc-nav-text">jQuery的两把利器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-jQuery函数"><span class="toc-nav-text"> jQuery函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-jQuery对象"><span class="toc-nav-text"> jQuery对象</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#选择器"><span class="toc-nav-text">选择器</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#基本选择器"><span class="toc-nav-text">基本选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#层次选择器"><span class="toc-nav-text">层次选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#过滤选择器"><span class="toc-nav-text">过滤选择器</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#表单选择器"><span class="toc-nav-text">表单选择器</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#属性-文本"><span class="toc-nav-text">属性/文本</span></a></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/03/17/jQuery/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "Yokemadman";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "jQuery",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
