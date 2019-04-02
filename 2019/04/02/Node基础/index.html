@@ -10,7 +10,7 @@
   
   <title>
     
-      命令行窗口、线程进程 | Yokemadman
+      Node基础 | Yokemadman
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -155,8 +155,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>命令行窗口、线程进程</h2>
-  <p class="post-date">2019-03-20</p>
+  <h2>Node基础</h2>
+  <p class="post-date">2019-04-02</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -164,25 +164,63 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="命令行窗口"><a href="#命令行窗口" class="headerlink" title="命令行窗口"></a>命令行窗口</h2><p>也叫小黑屏、CMD窗口、终端、shell<br><a id="more"></a></p>
-<ul>
-<li>打开方式：1、直接Windows+r==&gt;输入cmd==&gt;回撤(enter键)，<br>&emsp;&emsp;&emsp;&emsp;&emsp;2、开始菜单==&gt;所有程序==&gt;附件==&gt;命令提示符==&gt;双击进入</li>
-<li>常用指令：<br>&emsp;&emsp;dir&emsp;列出当前目录下的所有文件夹<br>&emsp;&emsp;cd&emsp;目录名 进入到指定的目录</li>
-<li>md 目录名 创建一个文件夹</li>
-<li>rd 目录名 删除一个文件夹</li>
-<li>目录<br>&emsp;&emsp; . &emsp;当前文件夹<br>&emsp;&emsp; ..&emsp;表示上一级目录</li>
-<li>环境变量(Windows系统中的变量)<br>&emsp;计算机(右击)==&gt;属性==&gt;高级系统设置==&gt;高级==&gt;环境变量==&gt;用户变量（系统变量尽量不要动）==&gt;path</li>
+    <section class="markdown-content"><h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p>&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用<strong>事件驱动、非阻塞和异步I/O技术</strong>提高性能，优化程序的传输量和规模<br><a id="more"></a></p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>Web服务API,如REST</li>
+<li>实时多人游戏</li>
+<li>后端的Web服务，如跨域、服务器端的请求</li>
+<li>基于Web的应用</li>
+<li>多客户端的通信，如及时通信<br>Node可以在后台编写服务器，但都是单线程的服务器，传统的服务器都是多线程的（及每进来一个请求，就创建一个线程去处理请求），而用Node的服务器是单线程的（Node处理请求时是单线程，后台拥有一个I/O写线程池）<h2 id="ECMAScript标准的缺陷"><a href="#ECMAScript标准的缺陷" class="headerlink" title="ECMAScript标准的缺陷"></a>ECMAScript标准的缺陷</h2></li>
+<li>没有模块系统<br><strong>模块化</strong>：就是一个完整的程序，分成一个一个的小块（降低耦合性，方便复用）<br>&ensp;在node中，一个文件就是一个模块,每个文件中的js代码都是独立运行在一个函数中，不是全局作用域，所以变量和函数在其他模块中无法访问<h2 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h2>&ensp;弥补js没有标准的缺陷，对模块的定义为<ul>
+<li>模块引用<br><strong>exports</strong>向外暴露变量或方法，把方法或变量设置为exports的属性<br><strong>math.js文件</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">exports.x = 3;</span><br><span class="line">exports.add = function (a,b) &#123;</span><br><span class="line">    var sum = a+b;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br><span class="line">exports.null = function (a,b) &#123;</span><br><span class="line">    return a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>&emsp;当我们在命令行窗口打开一个文件，或调用一个程序时，系统会首先在当前目录下寻找文件程序，如果找到了则直接打开，如果没有找到则依次到环境变量path的路径中寻找，如果没找到则报错<br>&emsp;&emsp;<strong><em>所以我们可以将一些经常需要访问的程序和文件的路径添加到path中，这样就可以在任意位置来访问这些文件和程序了</em></strong></p>
-<h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p><strong>进程</strong><br>&emsp;进程负责为程序运行提供必备的环境<br>&emsp;进程就相当于工厂中的车间<br><strong>线程</strong><br>&emsp;线程是计算机中的最小计算单位，线程负责执行进程中的程序<br>&emsp;线程相当于工厂中的工人<br>&emsp;<strong>单线程</strong>JS是单线程的<br>&emsp;<strong>多线程</strong>像Java就是多线程的</p>
+</li>
+</ul>
+<p><strong>result.js文件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var add =  require(&quot;./math.js&quot;);</span><br><span class="line">console.log(add.x)</span><br><span class="line">console.log(add.add(10,20));</span><br><span class="line">console.log(add.null(5,4));</span><br></pre></td></tr></table></figure></p>
+<p>&ensp;在node中，通过require()函数引入外部的模块，可以传递一个文件的路径作为参数，使用相对路径必须有.或..开头</p>
+<ul>
+<li>模块定义</li>
+<li>模块标识<br>引入外部模块时，使用的就是模块标识<br><strong>分类</strong><br>&emsp;<strong>核心模块</strong>：由node提供的模块，核心的标识就是模块的名字<br>&emsp;<strong>文件模块</strong>：用户自己创建的模块(相对路径、绝对路径)<br><strong>global</strong>全局对象，与网页的Window类似<code>console.log(global.a);</code><br><strong>arguments.callee</strong>保存的是当前执行的对象<code>console.log(arguments.callee + &quot;&quot;);</code><ul>
+<li>标准库较少</li>
+<li>没有标准接口</li>
+<li>缺乏管理系统</li>
+</ul>
+</li>
+</ul>
+<p>执行node模块中的代码时，会自己加上<br>function (exports, require, module, <strong>filename, </strong>dirname) {<br>}<br>exports-该对象用来将变量或函数暴露到外部<br>require-函数，用来引入外部的模块<br>module-代表当前模块本身exports就是module的属性，exports和module.exports一样<br><strong>filename-当前模块的完整路径
+</strong>dirname-当前文件夹所在的完整路径</p>
+<h2 id="包（package）"><a href="#包（package）" class="headerlink" title="包（package）"></a>包（package）</h2><p>CommonJS包括<strong>包结构</strong>(用于组织各种文件)和<strong>包描述文件</strong>(描述包的相关信息，以供外部读取分析)<br>包实际就是一个压缩文件，解压后还原为目录，</p>
+<ul>
+<li><strong>package.json 描述文件</strong></li>
+<li>bin 可执行二进制文件</li>
+<li>lib js代码</li>
+<li>doc 文档</li>
+<li>test 单元测试</li>
+</ul>
+<h2 id="NPM-Node-Package-Manager"><a href="#NPM-Node-Package-Manager" class="headerlink" title="NPM(Node Package Manager)"></a>NPM(Node Package Manager)</h2><p>帮助完成了第三方模块的发布、安装和依赖，与第三方模块形成了很好的一个生态系统</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><ul>
+<li><font color="blue">查看版本&nbsp;&nbsp;npm - v</font></li>
+<li><font color="blue">查看所有模块的版本&nbsp;&nbsp;npm version</font></li>
+<li><font color="blue">搜索模块包&nbsp;&nbsp;npm search 包名</font></li>
+<li><font color="blue">在当前目录安装包&nbsp;&nbsp;npm install/i 包名 </font></li>
+<li><font color="blue">删除一个模块&nbsp;&nbsp;npm remove 包名</font></li>
+<li><font color="red">安装包并添加到依赖中&nbsp;&nbsp;npm install 包名 –save</font></li>
+<li><font color="blue">npm install 下载当前项目所依赖的包</font></li>
+<li><font color="blue">全局模式安装包（工具）&nbsp;&nbsp;npm install 包名 -g</font></li>
+<li>帮助说明&nbsp;&nbsp;npm </li>
+<li>从镜像源安装&nbsp;&nbsp;npm install 包名 -registry=地址</li>
+<li>设置镜像源&nbsp;&nbsp;npm config set registry 地址</li>
+</ul>
+<p><strong>淘宝镜像<a href="https://npm.taobao.org" target="_blank" rel="noopener">https://npm.taobao.org</a></strong></p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#cmd">
-    <span class="tag-code">cmd</span>
+  <a href="/tags#Node">
+    <span class="tag-code">Node</span>
   </a>
 
       </div>
@@ -193,20 +231,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/03/17/jQuery/">
+      <a class="nav-left" href="/2019/03/20/命令行窗口、线程进程/">
         <span class="nav-arrow">← </span>
         
-          jQuery
+          命令行窗口、线程进程
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/04/02/Node基础/">
-        
-          Node基础
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -252,7 +283,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#命令行窗口"><span class="toc-nav-text">命令行窗口</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#进程和线程"><span class="toc-nav-text">进程和线程</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#Node-js简介"><span class="toc-nav-text">Node.js简介</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#用途"><span class="toc-nav-text">用途</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ECMAScript标准的缺陷"><span class="toc-nav-text">ECMAScript标准的缺陷</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#CommonJS规范"><span class="toc-nav-text">CommonJS规范</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#包（package）"><span class="toc-nav-text">包（package）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#NPM-Node-Package-Manager"><span class="toc-nav-text">NPM(Node Package Manager)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#命令"><span class="toc-nav-text">命令</span></a></li></ol></li></ol>
     
   </div>
 </aside>
@@ -262,7 +293,7 @@
 
 <script>
   (function () {
-    var url = 'http://yokemadman.github.io/2019/03/20/命令行窗口、线程进程/';
+    var url = 'http://yokemadman.github.io/2019/04/02/Node基础/';
     var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
@@ -324,7 +355,7 @@
     var gitmentConfig = "Yokemadman";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "命令行窗口、线程进程",
+        id: "Node基础",
         owner: "Yokemadman",
         repo: "Yokemadman.github.io",
         oauth: {
