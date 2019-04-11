@@ -191,7 +191,7 @@
       
       <div class="article-summary">
         
-          <h2 id="Buffer-缓冲区"><a href="#Buffer-缓冲区" class="headerlink" title="Buffer(缓冲区)"></a>Buffer(缓冲区)</h2><p><a href="https://node.js.cn" target="_blank" rel="noopener">Node官网</a><br>&ensp;结构和数组相像，操作方法也和数组类似，可以用来存储二进制数据，显示的是16进制形式，不需要引入模块
+          <h2 id="Buffer-缓冲区"><a href="#Buffer-缓冲区" class="headerlink" title="Buffer(缓冲区)"></a>Buffer(缓冲区)</h2><p><a href="https://node.js.cn" target="_blank" rel="noopener">Node官网</a><br>&ensp;结构和数组相像，操作方法也和数组类似，可以用来存储二进制数据，显示的是16进制形式，不需要引入模块<br>&ensp;Buffer的大小一旦确定，就不能更改，是对底层内存的直接操作<br>&ensp;Buffer.from(str)将一个字符串转换为buffer<br>&ensp;Buffer.alloc(size)创建一个指定大小的Buffer<br>&ensp;Buffer.allocUnsafe(10)创建一个指定大小的buffer，可能包含敏感数据<br>&ensp;buf.toString()将缓冲区中的数据转换为字符串
         
       </p></div>
       <a class="more" href="/2019/04/07/Node基础Buffer(缓冲区)和fs(文件系统)/">Read more</a>
@@ -211,9 +211,15 @@
       
       <div class="article-summary">
         
-          <h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p>&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用<strong>事件驱动、非阻塞和异步I/O技术</strong>提高性能，优化程序的传输量和规模<br>
+          <h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p>&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用<strong>事件驱动、非阻塞和异步I/O技术</strong>提高性能，优化程序的传输量和规模 </p>
+<h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
+<li>Web服务API,如REST</li>
+<li>实时多人游戏</li>
+<li>后端的Web服务，如跨域、服务器端的请求</li>
+<li>基于Web的应用</li>
+<li>多客户端的通信，如及时通信
         
-      </p></div>
+      </li></ul></div>
       <a class="more" href="/2019/04/02/Node基础/">Read more</a>
     </article>
   
@@ -231,9 +237,15 @@
       
       <div class="article-summary">
         
-          <h2 id="命令行窗口"><a href="#命令行窗口" class="headerlink" title="命令行窗口"></a>命令行窗口</h2><p>也叫小黑屏、CMD窗口、终端、shell<br>
+          <h2 id="命令行窗口"><a href="#命令行窗口" class="headerlink" title="命令行窗口"></a>命令行窗口</h2><p>也叫小黑屏、CMD窗口、终端、shell</p>
+<ul>
+<li>打开方式：1、直接Windows+r==&gt;输入cmd==&gt;回撤(enter键)，<br>&emsp;&emsp;&emsp;&emsp;&emsp;2、开始菜单==&gt;所有程序==&gt;附件==&gt;命令提示符==&gt;双击进入</li>
+<li>常用指令：<br>&emsp;&emsp;dir&emsp;列出当前目录下的所有文件夹<br>&emsp;&emsp;cd&emsp;目录名 进入到指定的目录</li>
+<li>md 目录名 创建一个文件夹</li>
+<li>rd 目录名 删除一个文件夹</li>
+<li>目录
         
-      </p></div>
+      </li></ul></div>
       <a class="more" href="/2019/03/20/命令行窗口、线程进程/">Read more</a>
     </article>
   
@@ -251,7 +263,7 @@
       
       <div class="article-summary">
         
-          <h2 id="了解jQuery"><a href="#了解jQuery" class="headerlink" title="了解jQuery"></a>了解jQuery</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>&emsp;jQuery实际上就是一个JS的函数库。它的建库宗旨就是Write Less，Do More。它是用来封装简化DOM操作(CRUD)/Ajax.<br>
+          <h2 id="了解jQuery"><a href="#了解jQuery" class="headerlink" title="了解jQuery"></a>了解jQuery</h2><h3 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h3><p>&emsp;jQuery有着<strong>强大的选择器</strong>，能够方便快速查找DOM元素，允许使用CSS1到CSS3几乎所有的选择器以及jQuery独创的高级二复杂的选择器，&emsp;<strong>隐式遍历(迭代)</strong>:可以一次操作多个元素,及当找到带有“.myclass”类的全部元素并隐藏是，无须循环遍历每一个返回的元素&emsp;<strong>读写合一</strong>：读数据/写数据用的都是一个函数，&emsp;<strong>链式调用</strong>：可以通过不断调用jQuery对象的方法，及对发生在同一个jQuery对象上的动作，可以直接连接而无需重复获取对象，&emsp;此外还有<strong>时间处理，DOM操作，样式操作，动画，浏览器兼容</strong>的优点
         
       </p></div>
       <a class="more" href="/2019/03/17/jQuery/">Read more</a>
@@ -291,9 +303,9 @@
       
       <div class="article-summary">
         
-          <h2 id="emsp-自定义jQuery插件"><a href="#emsp-自定义jQuery插件" class="headerlink" title="&emsp;自定义jQuery插件"></a>&emsp;自定义jQuery插件</h2>
+          <h2 id="日期控件-laydate"><a href="#日期控件-laydate" class="headerlink" title="日期控件(laydate)"></a>日期控件(laydate)</h2><p>官网下载描述：日历插件jCal用于需要输入日期的表单文本框。<br>兼容浏览器：IE浏览器/Firefox/Google Chrome<br><strong>官方链接</strong>:<a href="http://www.overset.com/2008/05/1 ... cker-jquery-plugin/" target="_blank" rel="noopener">http://www.overset.com/2008/05/1 … cker-jquery-plugin/</a><br><strong>JS&emsp;下载</strong>:<a href="http://www.ijquery.cn/js/jquery.jCal.min.js" target="_blank" rel="noopener">http://www.ijquery.cn/js/jquery.jCal.min.js</a><br><strong>预&emsp;&emsp;览</strong>:<a href="http://www.ijquery.cn/study/demo/jCal" target="_blank" rel="noopener">http://www.ijquery.cn/study/demo/jCal</a><br><strong>打包下载</strong>:<a href="http://www.ijquery.cn/study/demo/jCal/jCal.zip" target="_blank" rel="noopener">http://www.ijquery.cn/study/demo/jCal/jCal.zip</a><br>&emsp;&emsp;&emsp;&emsp;<a href="http://www.ijquery.cn/?p=57" target="_blank" rel="noopener">日期控件(laydate)</a>
         
-      </div>
+      </p></div>
       <a class="more" href="/2019/03/07/jQuery插件/">Read more</a>
     </article>
   

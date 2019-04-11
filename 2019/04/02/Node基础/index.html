@@ -164,13 +164,13 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p>&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用<strong>事件驱动、非阻塞和异步I/O技术</strong>提高性能，优化程序的传输量和规模<br><a id="more"></a></p>
+    <section class="markdown-content"><h2 id="Node-js简介"><a href="#Node-js简介" class="headerlink" title="Node.js简介"></a>Node.js简介</h2><p>&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用<strong>事件驱动、非阻塞和异步I/O技术</strong>提高性能，优化程序的传输量和规模 </p>
 <h3 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h3><ul>
 <li>Web服务API,如REST</li>
 <li>实时多人游戏</li>
 <li>后端的Web服务，如跨域、服务器端的请求</li>
 <li>基于Web的应用</li>
-<li>多客户端的通信，如及时通信<br>Node可以在后台编写服务器，但都是单线程的服务器，传统的服务器都是多线程的（及每进来一个请求，就创建一个线程去处理请求），而用Node的服务器是单线程的（Node处理请求时是单线程，后台拥有一个I/O写线程池）<h2 id="ECMAScript标准的缺陷"><a href="#ECMAScript标准的缺陷" class="headerlink" title="ECMAScript标准的缺陷"></a>ECMAScript标准的缺陷</h2></li>
+<li>多客户端的通信，如及时通信<a id="more"></a><br>Node可以在后台编写服务器，但都是单线程的服务器，传统的服务器都是多线程的（及每进来一个请求，就创建一个线程去处理请求），而用Node的服务器是单线程的（Node处理请求时是单线程，后台拥有一个I/O写线程池）<h2 id="ECMAScript标准的缺陷"><a href="#ECMAScript标准的缺陷" class="headerlink" title="ECMAScript标准的缺陷"></a>ECMAScript标准的缺陷</h2></li>
 <li>没有模块系统<br><strong>模块化</strong>：就是一个完整的程序，分成一个一个的小块（降低耦合性，方便复用）<br>&ensp;在node中，一个文件就是一个模块,每个文件中的js代码都是独立运行在一个函数中，不是全局作用域，所以变量和函数在其他模块中无法访问<h2 id="CommonJS规范"><a href="#CommonJS规范" class="headerlink" title="CommonJS规范"></a>CommonJS规范</h2>&ensp;弥补js没有标准的缺陷，对模块的定义为<ul>
 <li>模块引用<br><strong>exports</strong>向外暴露变量或方法，把方法或变量设置为exports的属性<br><strong>math.js文件</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">exports.x = 3;</span><br><span class="line">exports.add = function (a,b) &#123;</span><br><span class="line">    var sum = a+b;</span><br><span class="line">    return sum;</span><br><span class="line">&#125;</span><br><span class="line">exports.null = function (a,b) &#123;</span><br><span class="line">    return a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
