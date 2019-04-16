@@ -63,7 +63,12 @@
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
-    <header class="header fixed-header">
+
+<script type="text/javascript"
+color="10,220,220" opacity='0.8' zIndex="-1" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+     <header class="header fixed-header">
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
@@ -390,6 +395,7 @@
       <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM"><span class="toc-nav-text">DOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#XML-DOM"><span class="toc-nav-text">XML DOM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML-DOM"><span class="toc-nav-text">HTML DOM</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM节点"><span class="toc-nav-text">DOM节点</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#HTML-DOM方法"><span class="toc-nav-text">HTML DOM方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#编程接口"><span class="toc-nav-text">编程接口</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#getElementById-方法"><span class="toc-nav-text">getElementById()方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#HTML-DOM对象-方法和属性"><span class="toc-nav-text">HTML DOM对象-方法和属性</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM对象方法"><span class="toc-nav-text">DOM对象方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#属性"><span class="toc-nav-text">属性</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#innerHTML属性：获取元素内容"><span class="toc-nav-text">innerHTML属性：获取元素内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#nodeName属性：规定节点名称"><span class="toc-nav-text">nodeName属性：规定节点名称</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#nodeValue属性：规定节点的值。"><span class="toc-nav-text">nodeValue属性：规定节点的值。</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#获取值实例"><span class="toc-nav-text">获取值实例</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#nodeType属性"><span class="toc-nav-text">nodeType属性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#访问"><span class="toc-nav-text">访问</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#getElementById-方法-1"><span class="toc-nav-text">getElementById()方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#getElementsByTagName-方法"><span class="toc-nav-text">getElementsByTagName()方法</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#getElementsByClassName-方法"><span class="toc-nav-text">getElementsByClassName()方法</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#修改"><span class="toc-nav-text">修改</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#修改元素"><span class="toc-nav-text">修改元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#创建内容"><span class="toc-nav-text">创建内容</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#改变样式"><span class="toc-nav-text">改变样式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#添加新元素"><span class="toc-nav-text">添加新元素</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#使用事件"><span class="toc-nav-text">使用事件</span></a></li></ol>
     
   </div>
+   
 </aside>
   
   <!-- Catalog END -->
@@ -490,11 +496,12 @@
   <span class="arrow-icon"></span>
 </div>
     <footer class="app-footer">
-  <p class="copyright">
+ <!-- <p class="copyright">
     &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+  </p>-->
+ 
 </footer>
 
 <script>

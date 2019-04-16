@@ -63,7 +63,12 @@
   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
 <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
 <script type="text/javascript" src="/js/fireworks.js"></script>
-    <header class="header fixed-header">
+
+<script type="text/javascript"
+color="10,220,220" opacity='0.8' zIndex="-1" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+     <header class="header fixed-header">
   <div class="header-container">
     <a class="home-link" href="/">
       <div class="logo"></div>
@@ -266,6 +271,7 @@
       <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery-offset和position"><span class="toc-nav-text">jQuery_offset和position</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery-scroll"><span class="toc-nav-text">jQuery_scroll</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#元素尺寸"><span class="toc-nav-text">元素尺寸</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-1、内容尺寸"><span class="toc-nav-text"> 1、内容尺寸</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-2、内部尺寸"><span class="toc-nav-text"> 2、内部尺寸</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-3、外部尺寸"><span class="toc-nav-text"> 3、外部尺寸</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery对象的过滤"><span class="toc-nav-text">jQuery对象的过滤</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-first"><span class="toc-nav-text"> first()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-last"><span class="toc-nav-text"> last()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-eq-index-index"><span class="toc-nav-text"> eq(index|-index)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-filter-selector"><span class="toc-nav-text"> filter(selector)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-not-selector"><span class="toc-nav-text"> not(selector)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-has-selector"><span class="toc-nav-text"> has(selector)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery对象的查找"><span class="toc-nav-text">jQuery对象的查找</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-children"><span class="toc-nav-text"> children()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-find"><span class="toc-nav-text"> find()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-parent"><span class="toc-nav-text"> parent()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-prevAll"><span class="toc-nav-text"> prevAll()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-nextAll"><span class="toc-nav-text"> nextAll()</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-siblings"><span class="toc-nav-text"> siblings()</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#jQuery文档处理"><span class="toc-nav-text">jQuery文档处理</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-1、添加-替换元素"><span class="toc-nav-text"> 1、添加/替换元素</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#emsp-2、删除元素"><span class="toc-nav-text"> 2、删除元素</span></a></li></ol></li></ol>
     
   </div>
+   
 </aside>
   
   <!-- Catalog END -->
@@ -366,11 +372,12 @@
   <span class="arrow-icon"></span>
 </div>
     <footer class="app-footer">
-  <p class="copyright">
+ <!-- <p class="copyright">
     &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
     <br>
     Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
-  </p>
+  </p>-->
+ 
 </footer>
 
 <script>
