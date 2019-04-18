@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+<script type="text/javascript"
+color="100,220,220" opacity='0.8' zIndex="-1" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/22/CSS基础2/">CSS基础2</a>
+      </h2>
+      <p class="article-date">2019年1月22日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          –css文本&emsp;文本外观、颜色、间距、对齐&emsp;&gt;text-decoration&emsp;用来去掉元素下滑线&emsp;&emsp;值&emsp;&emsp;&emsp;none&emsp;&emsp;&emsp;没有下划线&emsp;&emsp;&emsp;under ...
+        
+      </div>
+      <a class="more" href="/2019/01/22/CSS基础2/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/21/CSS基础1/">CSS基础1</a>
+      </h2>
+      <p class="article-date">2019年1月21日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          css层叠样式表&emsp;1、元素内嵌样式表直接在元素里面写样式。1&lt;p style=&quot; color:red;font-size:50px;&quot;&gt;.....&lt;p&gt;
+&emsp;2、外部样式表是一个.css文件，需要在页面引用样式表才能使外部样式表的 ...
+        
+      </div>
+      <a class="more" href="/2019/01/21/CSS基础1/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/20/CSS中的px、em、rem 详解/">CSS中的px、em、rem 详解</a>
+      </h2>
+      <p class="article-date">2019年1月20日</p>
+      
+        
+  <a href="/tags#CSS">
+    <span class="tag-code">CSS</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          概念介绍：1、px (pixel，像素)：&emsp;是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI(Dots Per Inch，每英寸像素数)，在扫描打印时一般都有DPI可选。Windows系统默认是96dpi，Apple系统默认是72d ...
+        
+      </div>
+      <a class="more" href="/2019/01/20/CSS中的px、em、rem 详解/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/15/HTML-tag2/">HTML-tag2</a>
+      </h2>
+      <p class="article-date">2019年1月15日</p>
+      
+        
+  <a href="/tags#HTML">
+    <span class="tag-code">HTML</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          &lt;form&gt;标签&emsp;用户输入的手段&emsp;先服务器传输数据&emsp;&emsp;&emsp;属性:action=”url” &emsp;&emsp;向何处发送表单数据&emsp;&emsp;&emsp;method&emsp;发送form-data的http方法&e ...
+        
+      </div>
+      <a class="more" href="/2019/01/15/HTML-tag2/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/14/HTML-tag1/">HTML-tag1</a>
+      </h2>
+      <p class="article-date">2019年1月14日</p>
+      
+        
+  <a href="/tags#HTML">
+    <span class="tag-code">HTML</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          &lt;ul&gt;&lt;li&gt;有序列表:&emsp;&lt;ul&gt;有序列表&lt;li&gt; 列表中的项&emsp;属性：type= “ “&emsp;&emsp;&emsp;&emsp;disc —-(实心小圆点)&emsp;&emsp;&emsp;&emsp;squar ...
+        
+      </div>
+      <a class="more" href="/2019/01/14/HTML-tag1/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/13/HTML学习笔记/">HTML学习笔记</a>
+      </h2>
+      <p class="article-date">2019年1月13日</p>
+      
+        
+  <a href="/tags#HTML">
+    <span class="tag-code">HTML</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          标题：标题是通过&lt;h1&gt;-&lt;h6&gt;等标签进行定义1234567891011　  &lt;h1&gt;This is a heading&lt;/h1&gt;　　&lt;h2&gt;This is a heading&lt;/h2&gt;　　&lt;h3&gt;This ...
+        
+      </div>
+      <a class="more" href="/2019/01/13/HTML学习笔记/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/10/hello-world/">Hello World</a>
+      </h2>
+      <p class="article-date">2019年1月10日</p>
+      
+      <div class="article-summary">
+        
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
+        
+      </div>
+      <a class="more" href="/2019/01/10/hello-world/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a href="/page/3/"><span class="page-arrow">← </span>Prev</a>
+  
+  
+    <a class="unvisible" href="/">Next <span class="page-arrow">→</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+ 
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

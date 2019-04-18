@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+<script type="text/javascript"
+color="100,220,220" opacity='0.8' zIndex="-1" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/04/14/zepto初识/">zepto初识</a>
+      </h2>
+      <p class="article-date">2019年4月14日</p>
+      
+        
+  <a href="/tags#zepto">
+    <span class="tag-code">zepto</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Zeptozepto官网http://zeptojs.com&emsp;github:https://github.com/madrobby/zepto定义是轻量级的JavaScript库，专为移动端定制的框架，与jQuery有类似的API特点针对移动端，轻量级压缩版仅8kb左右，响应执行快 ...
+        
+      </div>
+      <a class="more" href="/2019/04/14/zepto初识/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/04/11/MongoDB基础/">MongoDB基础</a>
+      </h2>
+      <p class="article-date">2019年4月11日</p>
+      
+        
+  <a href="/tags#数据库">
+    <span class="tag-code">数据库</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          数据库关系型数据库(RDBMS):MySQL、Oracle、DB2、SQL Server,全都是表非关系型数据库(No SQL)：MongoDB、Redis….，键值对数据库、文档数据库MongoDB
+MongoDB快速开发Web应用、目标极简、灵活、作为Web应用栈的一部分，数据模型面向文 ...
+        
+      </div>
+      <a class="more" href="/2019/04/11/MongoDB基础/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/04/07/Node基础Buffer(缓冲区)和fs(文件系统)/">Node基础Buffer(缓冲区)和fs(文件系统)</a>
+      </h2>
+      <p class="article-date">2019年4月7日</p>
+      
+        
+  <a href="/tags#Node">
+    <span class="tag-code">Node</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Buffer(缓冲区)Node官网&ensp;结构和数组相像，操作方法也和数组类似，可以用来存储二进制数据，显示的是16进制形式，不需要引入模块&ensp;Buffer的大小一旦确定，就不能更改，是对底层内存的直接操作&ensp;Buffer.from(str)将一个字符串转换为buffer ...
+        
+      </div>
+      <a class="more" href="/2019/04/07/Node基础Buffer(缓冲区)和fs(文件系统)/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/04/02/Node基础/">Node基础</a>
+      </h2>
+      <p class="article-date">2019年4月2日</p>
+      
+        
+  <a href="/tags#Node">
+    <span class="tag-code">Node</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Node.js简介&emsp;Node.js是一个能在服务器端运行JavaScript的开放原代码、跨平台的JavaScript运行环境采用Google开发的V8引擎运行js代码，使用事件驱动、非阻塞和异步I/O技术提高性能，优化程序的传输量和规模 
+用途
+Web服务API,如REST
+实时 ...
+        
+      </div>
+      <a class="more" href="/2019/04/02/Node基础/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/20/命令行窗口、线程进程/">命令行窗口、线程进程</a>
+      </h2>
+      <p class="article-date">2019年3月20日</p>
+      
+        
+  <a href="/tags#cmd">
+    <span class="tag-code">cmd</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          命令行窗口也叫小黑屏、CMD窗口、终端、shell
+
+打开方式：1、直接Windows+r==&gt;输入cmd==&gt;回撤(enter键)，&emsp;&emsp;&emsp;&emsp;&emsp;2、开始菜单==&gt;所有程序==&gt;附件==&gt;命令提示符==&gt;双击 ...
+        
+      </div>
+      <a class="more" href="/2019/03/20/命令行窗口、线程进程/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/17/jQuery/">jQuery</a>
+      </h2>
+      <p class="article-date">2019年3月17日</p>
+      
+        
+  <a href="/tags#jQuery">
+    <span class="tag-code">jQuery</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          了解jQuery优势&emsp;jQuery有着强大的选择器，能够方便快速查找DOM元素，允许使用CSS1到CSS3几乎所有的选择器以及jQuery独创的高级二复杂的选择器，&emsp;隐式遍历(迭代):可以一次操作多个元素,及当找到带有“.myclass”类的全部元素并隐藏是，无须循环遍历 ...
+        
+      </div>
+      <a class="more" href="/2019/03/17/jQuery/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/08/SublimeText插件/">SublimeText插件</a>
+      </h2>
+      <p class="article-date">2019年3月8日</p>
+      
+        
+  <a href="/tags#Plugin">
+    <span class="tag-code">Plugin</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          Sublime Text 特点&emsp;1、Sublime Text 是一款跨平台代码编辑器，在Linux、OS X和Windows下均可使用。&emsp;2、Sublime Text 是可扩展的，并包含大量实用插件，我们可以通过安装自己领域的插件来成倍提高工作效率。&emsp;3、Sub ...
+        
+      </div>
+      <a class="more" href="/2019/03/08/SublimeText插件/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/07/jQuery插件/">jQuery插件</a>
+      </h2>
+      <p class="article-date">2019年3月7日</p>
+      
+        
+  <a href="/tags#jQuery">
+    <span class="tag-code">jQuery</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          日期控件(laydate)官网下载描述：日历插件jCal用于需要输入日期的表单文本框。兼容浏览器：IE浏览器/Firefox/Google Chrome官方链接:http://www.overset.com/2008/05/1 … cker-jquery-plugin/JS&emsp;下载: ...
+        
+      </div>
+      <a class="more" href="/2019/03/07/jQuery插件/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/06/框架之间区别与联系/">框架之间区别与联系</a>
+      </h2>
+      <p class="article-date">2019年3月6日</p>
+      
+        
+  <a href="/tags#program">
+    <span class="tag-code">program</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          &emsp;jQuery与JavaScript与ajax三者的区别与联系&emsp;简单总结：&emsp;1、JS是一门前端语言。&emsp;2、Ajax是一门技术，它提供了异步更新的机制，使用客户端与服务器间交换数据而非整个页面文档，实现页面的局部更新。&emsp;3、jQuery是一个框 ...
+        
+      </div>
+      <a class="more" href="/2019/03/06/框架之间区别与联系/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/03/03/动画和例子及多库共存/">动画和例子及多库共存</a>
+      </h2>
+      <p class="article-date">2019年3月3日</p>
+      
+        
+  <a href="/tags#jQuery">
+    <span class="tag-code">jQuery</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          jQuery内置动画可以带有参数，参数可以为字符串参数、数值参数，也可以不带参数
+&emsp;淡入淡出不断改变元素的透明度(opacity)实现&emsp;&emsp;1、fadeIn():带动画的显示&emsp;&emsp;2、fadeOut:带动画隐藏&emsp;&emsp;无参$div ...
+        
+      </div>
+      <a class="more" href="/2019/03/03/动画和例子及多库共存/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a class="unvisible" href="/"><span class="page-arrow">←</span> Prev</a>
+  
+  
+    <a href="/page/2/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+ 
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
