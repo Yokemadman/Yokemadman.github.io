@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      AngularJS | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>AngularJS</h2>
+  <p class="post-date">2019-04-21</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="emsp-AngularJS"><a href="#emsp-AngularJS" class="headerlink" title="&emsp;AngularJS"></a>&emsp;AngularJS</h1><p>Google开源的前端JS结构化框架 <a href="https://angularjs.org/" target="_blank" rel="noopener">AngularJS官网</a></p>
+<h2 id="emsp-特性"><a href="#emsp-特性" class="headerlink" title="&emsp;特性"></a>&emsp;特性</h2><p>双向数据绑定、声明式依赖注入、解耦应用逻辑，数据模型和视图、完善的页面指令、定制表单验证、Ajax封装</p>
+<h2 id="emsp-与jQuery比"><a href="#emsp-与jQuery比" class="headerlink" title="&emsp;与jQuery比"></a>&emsp;与jQuery比</h2><p>jQuery：js函数库、封装简化dom操作<br>angular：JS结构化框架、主体不再是DOM，而是页面中的动态数据</p>
+<h2 id="emsp-作用"><a href="#emsp-作用" class="headerlink" title="&emsp;作用"></a>&emsp;作用</h2><p>构建单页面(SPA)Web应用或Web App应用<br><strong>单页面应用(SPA)</strong>:sing page application<br><strong>特点</strong>：</p>
+<ul>
+<li>将所有活动局限于一个页面</li>
+<li>当页面中有部分数据发生了变化不会去刷新整个页面，而是局部刷新</li>
+<li>利用的ajax技术，路由。</li>
+</ul>
+<p>ng-app(指令) : 告诉angular核心它管理当前标签所包含的整个区域,并且会自动创建$rootScope根作用域对象<strong>声明所在的整个标签都由angular来解析管理</strong><br>ng-model : 将当前输入框的值与谁关联(属性名:属性值), 并作为当前作用域对象($rootScope)的属性<strong>将当前输入框的值关联到内存的$rootScope对象指定的属性(username)上</strong><br>{{}}(表达式) : 显示数据,从作用域对象的指定属性名上取<strong>*显示作用域对象($rootScope)上对应属性的值上</strong><br>&emsp;1、表达式：通常有一个返回值，可以放在任何需要值得地方，比如函数调用的参数，一个变量名，一个运算，<br>&emsp;2、语句：通常表示一个完整的执行单位，一段完整的js可执行的代码，有的语句也可以用表达式来执行，叫做表达式语句。<br>&emsp;3、区别：语句用封号结尾，有些语句我们没有加封号，比如console.log虽然我们没有加封号，但也是语句，因为js引擎会自动解析并且加上封号。<br>&emsp;&emsp;&emsp;js引擎在解析的时候会自动的加上封号<br>&emsp;4、特例：if语句，就不用加封号  可也是完整的语句。</p>
+<h1 id="emsp-数据绑定"><a href="#emsp-数据绑定" class="headerlink" title="&emsp;数据绑定"></a>&emsp;数据绑定</h1><ol>
+<li><strong>数据绑定</strong>: 数据从一个地方A转移(传递)到另一个地方B, 而且这个操作由框架来完成</li>
+<li><p><strong>双向数据绑定</strong>: 数据可以从View(视图层)流向Model（模型）, 也可以从Model流向View</p>
+<ul>
+<li>View（视图）： 页面（标签、指令，表达式）</li>
+<li><strong>视图(View)</strong>: 也就是我们的页面(主要是Andular指令和表达式)</li>
+<li><strong>模型(Model) </strong>: 作用域对象(当前为$rootScope), 它可以包含一些属性或方法<ul>
+<li>Model(模型) ：作用域对象（属性、方法）</li>
+<li>数据绑定： 数据从一个位置自动流向另一个位置<ul>
+<li>View–&gt;Model</li>
+<li>Model–&gt;View</li>
+</ul>
+</li>
+<li>单向数据绑定： 只支持一个方向<ul>
+<li>View–&gt;Model  ： ng-init</li>
+<li>Model–&gt;View  : {{name}}</li>
+</ul>
+</li>
+<li>双向数据绑定<ul>
+<li>Model<-->View  : ng-model</--></li>
+</ul>
+</li>
+<li>angular是支持双向数据绑定的</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>当改变View中的数据, Model对象的对应属性也会随之改变:  ng-model指令  数据从View==&gt;Model</li>
+<li>当Model域对象的属性发生改变时, 页面对应数据随之更新: {{}}表达式  数据从Model==&gt;View</li>
+<li>ng-model是双向数据绑定, 而{{}}是单向数据绑定</li>
+</ul>
+</li>
+</ol>
+<p>3.ng-init  用来初始化当前作用域变量。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;body ng-app ng-init=&quot;name=&apos;tom&apos;&quot;&gt;  </span><br><span class="line"></span><br><span class="line">&lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;</span><br><span class="line">&lt;p&gt;姓名1:&#123;&#123;name&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;</span><br><span class="line">&lt;p&gt;姓名2:&#123;&#123;name&#125;&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="emsp-开发的两种方式"><a href="#emsp-开发的两种方式" class="headerlink" title="&emsp;开发的两种方式"></a>&emsp;开发的两种方式</h1><p><strong>1、命令式</strong>更加注重的是执行的过程(象解答题)<br><strong>2、声明式</strong>更加注重的是执行的结果,是对名命令的局部包装(像选择或天空题)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5];</span><br><span class="line"> var newArr1 = [];</span><br><span class="line"> //命令式</span><br><span class="line"> for (var i = 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">   var value = arr[i] + 10;</span><br><span class="line">   newArr1.push(value);</span><br><span class="line"> &#125;</span><br><span class="line"> console.log(newArr1);</span><br><span class="line"> //声明式</span><br><span class="line"> var newArr2 = arr.map(function (item,index) &#123;</span><br><span class="line">   //console.log(item,index);</span><br><span class="line">   return item +10;</span><br><span class="line"> &#125;)</span><br><span class="line"> console.log(newArr2);</span><br></pre></td></tr></table></figure></p>
+<h1 id="emsp-依赖注入"><a href="#emsp-依赖注入" class="headerlink" title="&emsp;依赖注入"></a>&emsp;依赖注入</h1><p><strong>依赖对象</strong>：完成某个特定的功能需要某个对象才能实现，这个对象就是依赖对象。<br><strong>依赖注入</strong>：依赖的对象以形参的形式被注入进来使用，这种方式就是声明式依赖注入。<br>angular的 $scope对象就是依赖对象，并且是依赖注入的形式进行使用。<br>形参必须是特定的名称, 否则Angular无法注入抛异常<br>回调函数的<strong>event</strong>的就是依赖对象<br>回调函数<strong>有形参</strong>就是依赖注入</p>
+<h1 id="emsp-MVC模式"><a href="#emsp-MVC模式" class="headerlink" title="&emsp;MVC模式"></a>&emsp;MVC模式</h1><ul>
+<li><strong>M: Model, 即模型</strong>, 在angular中: <ul>
+<li>为scope</li>
+<li>储存数据的容器</li>
+<li>提供操作数据的方法</li>
+</ul>
+</li>
+<li><strong>V: View, 即视图</strong>, 在angular中:<ul>
+<li>为页面</li>
+<li>包括: html/css/directive/expression</li>
+<li>显示Model的数据</li>
+<li>将数据同步到Model</li>
+<li>与用户交互</li>
+</ul>
+</li>
+<li><strong>C: Controller, 即控制器</strong>, 在angular中:<ul>
+<li>为angular的Controller</li>
+<li>初始化Model数据</li>
+<li>为Model添加行为方法</li>
+</ul>
+</li>
+</ul>
+<h1 id="emsp-MVVM模式"><a href="#emsp-MVVM模式" class="headerlink" title="&emsp;MVVM模式"></a>&emsp;MVVM模式</h1><ul>
+<li>M: Model, 即数据模型, 在angular中:<ul>
+<li>为scope中的各个数据对象</li>
+</ul>
+</li>
+<li>V: View, 即视图, 在angular中:<ul>
+<li>为页面</li>
+</ul>
+</li>
+<li>VM: ViewModel, 即视图模型, 在angular中:<ul>
+<li>为scope对象</li>
+</ul>
+</li>
+<li>在angular中controller不再是架构的核心，在MVVM中只是起辅助作用，用来辅助$scope对象，即VM层</li>
+</ul>
+<h1 id="emsp-作用域、控制器对象"><a href="#emsp-作用域、控制器对象" class="headerlink" title="&emsp;作用域、控制器对象"></a>&emsp;作用域、控制器对象</h1><p><strong>作用域对象</strong></p>
+<ul>
+<li>是一个js实例对象</li>
+<li>这个对象的属性、方法， 页面都可以直接引用、操作</li>
+<li>ng-app指令： 内部创建一个根作用域($rootScope), 是所有其它作用域的父对象<br>&emsp;-一个js实例对象，ng-app指定默认会创建一个根作用域对象($rootScope)<br>&emsp;-它的属性和方法与页面中的指令或表达式是关联的</li>
+</ul>
+<p><strong>控制器对象</strong></p>
+<ul>
+<li>也是一个对象，是我们View与Model之间的桥梁</li>
+<li>当我们使用了ng-controller指令， 内部就会创建控制器对象</li>
+<li>但我们同时得提供控制器的构造函数（必须定义一个$scope的形参）</li>
+<li>每定义一个ng-controller指令， 内部就会创建一个新的作用域对象($scope), 并自动注入构造函数中,在函数内部可以直接使用$scope对象。<br>&emsp;-用来控制AngularJS应用数据的，实例对象<br>&emsp;-ng-controller：指定控制器构造函数, Angular会自动new此函数创建控制器对象<br>&emsp;-同时Angular还有创建一个新的域对象$scope, 它是$rootScope的子对象<br>&emsp;-在控制器函数中声明$scope形参, Angular会自动将$scope传入</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;body ng-app&gt;</span><br><span class="line"></span><br><span class="line">&lt;div ng-controller=&quot;myController&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;</span><br><span class="line">    &lt;p&gt;姓名1:&#123;&#123;firstName+&apos;-&apos;+lastName&#125;&#125;&lt;/p&gt;</span><br><span class="line">    &lt;p&gt;姓名2:&#123;&#123;getName()&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../../js/angular-1.2.29/angular.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  function myController($scope) &#123;//形参必须是$scope</span><br><span class="line">  $scope.firstName = &apos;kobe&apos;;</span><br><span class="line">  $scope.lastName = &apos;bryant&apos;;</span><br><span class="line">  $scope.getName = function () &#123;</span><br><span class="line">    return $scope.firstName +&apos; &apos;+this.lastName;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="emsp-模块控制器"><a href="#emsp-模块控制器" class="headerlink" title="&emsp;模块控制器"></a>&emsp;模块控制器</h1><ul>
+<li>也是一个对象</li>
+<li>创建模块对象： angular.module(‘模块名’, [依赖的模块])</li>
+<li>通过模块添加控制器：<ul>
+<li><code>module.controller(&#39;MyController&#39;, function($scope){//操作$scope的语句})</code></li>
+</ul>
+</li>
+<li>angular的整体设计也是多模块的<ul>
+<li>核心模块： angular.js</li>
+<li>扩展模块： angular-router.js, angular-message.js, angular-animate.js</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;body ng-app=&quot;myApp&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;div ng-controller=&quot;MyController&quot;&gt;</span><br><span class="line">  &lt;input type=&quot;text&quot; ng-model=&quot;empname&quot;&gt;</span><br><span class="line">  &lt;p&gt;姓名1:&#123;&#123;empname&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div ng-controller=&quot;MyController1&quot;&gt;</span><br><span class="line">  &lt;input type=&quot;text&quot; ng-model=&quot;empname&quot;&gt;</span><br><span class="line">  &lt;p&gt;name:&#123;&#123;empname&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;../../js/angular-1.5.5/angular.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  //模块对象</span><br><span class="line">  // var myModule = angular.module(&apos;myApp&apos;,[]);</span><br><span class="line">  // //生成作用域对象</span><br><span class="line">  // myModule.controller(&apos;MyController&apos;,function ($scope) &#123;</span><br><span class="line">  //   $scope.empname = &apos;kobe&apos;;</span><br><span class="line">  // &#125;)</span><br><span class="line">  // myModule.controller(&apos;MyController1&apos;,function ($scope) &#123;</span><br><span class="line">  //   $scope.empname = &apos;weide&apos;;</span><br><span class="line">  // &#125;)</span><br><span class="line">  //优化</span><br><span class="line">  angular.module(&apos;myApp&apos;,[])</span><br><span class="line">          .controller(&apos;MyController&apos;,function ($scope) &#123;//隐式声明依赖注入</span><br><span class="line">            $scope.empname = &apos;kobe&apos;;</span><br><span class="line">          &#125;)</span><br><span class="line">          .controller(&apos;MyController1&apos;,function ($scope) &#123;</span><br><span class="line">            $scope.empname = &apos;weide&apos;;</span><br><span class="line">          &#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//代码压缩$scope会被abcd代替，angular解析不了</span><br><span class="line">  //解决方案</span><br><span class="line">   angular.module(&apos;myApp&apos;,[])</span><br><span class="line">        .controller(&apos;MyController&apos;,[&apos;$scope&apos;,function ($scope) &#123;//显示声明依赖注入</span><br><span class="line">          $scope.empname = &apos;kobe&apos;;</span><br><span class="line">        &#125;])</span><br><span class="line">          .controller(&apos;MyController1&apos;,[&apos;$scope&apos;,function ($scope) &#123;</span><br><span class="line">            $scope.empname = &apos;weide&apos;;</span><br><span class="line">          &#125;])</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="emsp-表达式"><a href="#emsp-表达式" class="headerlink" title="&emsp;表达式"></a>&emsp;表达式</h1><ol>
+<li>使用Angular表达式:<ul>
+<li>语法: {{expression}}</li>
+<li>作用: 显示表达式的结果数据</li>
+<li>注意: 表达式中引用的变量必须是当前域对象有的属性(包括其原型属性)</li>
+</ul>
+</li>
+<li><p>操作的数据</p>
+<ul>
+<li>基本类型数据: number/string/boolean</li>
+<li>undefined, Infinity, NaN, null解析为空串: “”, 不显示任何效果</li>
+<li>对象的属性或方法</li>
+<li><p>数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div ng-controller=&quot;MyCtrl&quot;&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123;123&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123;&apos;abc&apos;&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123;add&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123;add.split(&apos;&apos;)&#125;&#125;&lt;/p&gt;//拆分</span><br><span class="line">  &lt;p&gt;&#123;&#123;add.split(&apos;&apos;).reverse()&#125;&#125;&lt;/p&gt;//反转</span><br><span class="line">  &lt;p&gt;&#123;&#123;add.split(&apos;&apos;).reverse().join(&apos;&apos;)&#125;&#125;&lt;/p&gt;//拼接</span><br><span class="line"></span><br><span class="line">  &lt;p&gt;&#123;&#123;ture&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;----&#123;&#123;undefined&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">   angular.module(&apos;myApp&apos;,[])</span><br><span class="line">      .controller(&apos;MyCtrl&apos;,[&apos;$scope&apos;,function (a) &#123;</span><br><span class="line">        a.add = &apos;abc&apos;;</span><br><span class="line">      &#125;])</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="emsp-常用指令"><a href="#emsp-常用指令" class="headerlink" title="&emsp;常用指令"></a>&emsp;常用指令</h1><ol>
+<li>Angular指令<ul>
+<li>Angular为HTML页面扩展的: 自定义标签属性或标签</li>
+<li>与Angular的作用域对象(scope)交互,扩展页面的动态表现力</li>
+</ul>
+</li>
+<li>常用指令(一)<ul>
+<li>ng-app: 指定模块名，angular管理的区域</li>
+<li>ng-model： 双向绑定，输入相关标签</li>
+<li>ng-init： 初始化数据</li>
+<li>ng-click： 调用作用域对象的方法（点击时）</li>
+<li>ng-controller: 指定控制器构造函数名，内部会自动创建一个新的子作用域（外部的）</li>
+<li>ng-bind： 解决使用{{}}显示数据闪屏（在很短时间内显示{{}}）</li>
+<li>ng-repeat： 遍历数组显示数据， 数组有几个元素就会产生几个新的作用域<ul>
+<li>$index, $first, $last, $middle, $odd, $even</li>
+</ul>
+</li>
+<li>ng-show: 布尔类型， 如果为true才显示</li>
+<li>ng-hide: 布尔类型， 如果为true就隐藏<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">    &lt;body ng-app=&quot;myApp&quot; &gt;</span><br><span class="line">&lt;div ng-controller=&quot;Ctrl&quot;&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h2&gt;价格计算器（自动）&lt;/h2&gt;</span><br><span class="line">            数量: &lt;input type=&quot;number&quot; ng-model=&quot;count1&quot;&gt;</span><br><span class="line">            </span><br><span class="line">            价格: &lt;input type=&quot;number&quot; ng-model=&quot;price1&quot;&gt;</span><br><span class="line">            &lt;p&gt;总计:&#123;&#123;count1*price1&#125;&#125;&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h2&gt;价格计算器（手动）&lt;/h2&gt;</span><br><span class="line">            数量: &lt;input type=&quot;number&quot; ng-model=&quot;count2&quot;&gt;</span><br><span class="line"></span><br><span class="line">            价格: &lt;input type=&quot;number&quot; ng-model=&quot;price2&quot;&gt;</span><br><span class="line">            &lt;!--ng-click： 调用作用域对象的方法（点击时）--&gt;</span><br><span class="line">            &lt;button ng-click=&quot;getTotalPrice()&quot;&gt;计算&lt;/button&gt;</span><br><span class="line">            &lt;p&gt;总计:&#123;&#123;totalPrice&#125;&#125;&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;h2&gt;人员信息列表&lt;/h2&gt;</span><br><span class="line">            &lt;ul&gt;</span><br><span class="line">                &lt;!-- ng-repeat： 遍历数组显示数据， 数组有几个元素就会产生几个新的作用域</span><br><span class="line">    * $index, $first, $last, $middle, $odd, $even--&gt;</span><br><span class="line">                &lt;li ng-repeat=&quot;person in persons&quot;&gt;</span><br><span class="line">                    奇数--&#123;&#123;$odd&#125;&#125;--中间--&#123;&#123;$middle&#125;&#125;--第一个--&#123;&#123;$first&#125;&#125;--索引--&#123;&#123;$index&#125;&#125;--&#123;&#123;person.username&#125;&#125;--&#123;&#123;person.age&#125;&#125;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;p&gt;&#123;&#123;123&#125;&#125;&lt;/p&gt;</span><br><span class="line">            &lt;!--ng-bind： 解决使用&#123;&#123;&#125;&#125;显示数据闪屏（在很短时间内显示&#123;&#123;&#125;&#125;）--&gt;</span><br><span class="line">            &lt;p ng-bind=&quot;123&quot;&gt;&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div&gt;</span><br><span class="line">            &lt;button ng-click=&quot;switchLike()&quot;&gt;切换&lt;/button&gt;</span><br><span class="line">            &lt;!--</span><br><span class="line">            * ng-show: 布尔类型， 如果为true才显示</span><br><span class="line">            * ng-hide: 布尔类型， 如果为true就隐藏--&gt;</span><br><span class="line">            &lt;p ng-show=&quot;isLike&quot;&gt;abdgdg&lt;/p&gt;</span><br><span class="line">            &lt;p ng-hide=&quot;isLike&quot;&gt;zhaoqunyong&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script type=&apos;text/javascript&apos; src=&apos;../../js/angular-1.5.5/angular.js&apos;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&apos;text/javascript&apos;&gt;</span><br><span class="line">   angular.module(&apos;myApp&apos;,[])</span><br><span class="line">        .controller(&apos;Ctrl&apos;,function ($scope) &#123;</span><br><span class="line">            $scope.price1 = 20;</span><br><span class="line">            $scope.count1 = 1;</span><br><span class="line"></span><br><span class="line">            $scope.price2 = 30;</span><br><span class="line">            $scope.count2 = 2;</span><br><span class="line">            $scope.totalPrice=60;</span><br><span class="line">            $scope.getTotalPrice = function () &#123;</span><br><span class="line">            $scope.totalPrice =  $scope.price2 * $scope.count2;</span><br><span class="line">            &#125;</span><br><span class="line">            //初始化</span><br><span class="line">            $scope.persons = [</span><br><span class="line">                &#123;username:&apos;kebi&apos;,age:40&#125;,</span><br><span class="line">                &#123;username:&apos;kebi1&apos;,age:30&#125;,</span><br><span class="line">                &#123;username:&apos;kebi2&apos;,age:35&#125;,</span><br><span class="line">                &#123;username:&apos;kebi3&apos;,age:40&#125;</span><br><span class="line">            ];</span><br><span class="line">            $scope.isLike = true;</span><br><span class="line">            $scope.switchLike = function () &#123;</span><br><span class="line">                $scope.isLike = !$scope.isLike;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="emsp-常用指令-二"><a href="#emsp-常用指令-二" class="headerlink" title="&emsp;常用指令(二)"></a>&emsp;常用指令(二)</h1><ul>
+<li>ng-class: 动态引用定义的样式  {aClass:true, bClass:false}</li>
+<li>ng-style: 动态引用通过js指定的样式对象   {color:'red', background:'blue'}</li>
+<li>ng-click: 点击监听, 值为函数调用, 可以传$event</li>
+<li>ng-mouseenter: 鼠标移入监听, 值为函数调用, 可以传$event</li>
+<li>ng-mouseleave: 鼠标移出监听, 值为函数调用, 可以传$event <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">  .evenB &#123;</span><br><span class="line">    background-color: grey;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .oddB &#123;</span><br><span class="line">    background-color: green;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;body ng-app=&quot;myApp&quot;&gt;</span><br><span class="line">    &lt;div ng-controller=&quot;Ctrl&quot;&gt;</span><br><span class="line">      &lt;div style=&quot;width: 200px;height: 200px;&quot; ng-style=&quot;myStyle&quot; ng-mouseenter=&quot;enter()&quot; ng-mouseleave=&quot;leave()&quot;&gt;&lt;/div&gt;</span><br><span class="line">      &lt;ul&gt;</span><br><span class="line">        &lt;li ng-repeat=&quot;xxx in persons&quot; ng-class=&quot;&#123;evenB:$even,oddB:$odd&#125;&quot;&gt;</span><br><span class="line">          &#123;&#123;xxx.username&#125;&#125;--&#123;&#123;xxx.age&#125;&#125;</span><br><span class="line">        &lt;/li&gt;</span><br><span class="line">      &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&apos;text/javascript&apos; src=&quot;../../js/angular-1.5.5/angular.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">      angular.module(&apos;myApp&apos;,[])</span><br><span class="line">        .controller(&apos;Ctrl&apos;,function ($scope) &#123;</span><br><span class="line">          $scope.myStyle =&#123;</span><br><span class="line">            background: &apos;red&apos;</span><br><span class="line">          &#125;</span><br><span class="line">          $scope.enter = function () &#123;</span><br><span class="line">            this.myStyle.background = &apos;green&apos;;</span><br><span class="line">          &#125;</span><br><span class="line">          $scope.leave = function () &#123;</span><br><span class="line">            this.myStyle.background = &apos;red&apos;;</span><br><span class="line">          &#125;</span><br><span class="line">          $scope.persons = [</span><br><span class="line">            &#123;username:&apos;kebi&apos;,age:40&#125;,</span><br><span class="line">            &#123;username:&apos;kebi1&apos;,age:30&#125;,</span><br><span class="line">            &#123;username:&apos;kebi2&apos;,age:35&#125;,</span><br><span class="line">            &#123;username:&apos;kebi3&apos;,age:40&#125;</span><br><span class="line">          ];</span><br><span class="line">        &#125;)</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="emsp-过滤器"><a href="#emsp-过滤器" class="headerlink" title="&emsp;过滤器"></a>&emsp;过滤器</h1><p>作用: 在显示数据时可以对数据进行格式化或过滤</p>
+<ul>
+<li>单个—&gt;格式化（将别的类型的数据转换为特定格式的字符串）</li>
+<li>多个—-》格式化/过滤</li>
+<li>不会真正改变被操作数据</li>
+</ul>
+{{express | 过滤器名：补充说明}}
+<p><strong>常用过滤器</strong>：</p>
+<ul>
+<li>currency 货币格式化(文本)</li>
+<li>number数值格式化(文本)</li>
+<li>date 将日期对象格式化(文本)</li>
+<li>json: 将js对象格式化为json(文本)</li>
+<li>lowercase : 将字符串格式化为全小写(文本)</li>
+<li>uppercase : 将字符串格式化全大写(文本)</li>
+<li>limitTo 从一个数组或字符串中过滤出一个新的数组或字符串<ul>
+<li>limitTo : 3  limitTo : -3</li>
+</ul>
+</li>
+<li>orderBy : 根据指定作用域属性对数组进行排序<ul>
+<li>{{[2,1,4,3] | orderBy}}  升序</li>
+<li>{{[2,1,4,3] | orderBy：‘-’}}  降序</li>
+<li>{{[{id:2,price:3}, {id:1, price:4}] | orderBy:'id'} id升序</li>
+<li>{{[{id:2,price:3}, {id:1, price:4}] | orderBy:'-price'} price降序</li>
+</ul>
+</li>
+<li>filter : 从数组中过滤返回一个新数组<ul>
+<li>{{[{id:22,price:35}, {id:23, price:45}] | filter:{id:'3'}}//根据id过滤</li>
+<li>{{[{id:22,price:35}, {id:23, price:45}] | filter:{$:'3'}}//根据所有字段过滤</li>
+</ul>
+</li>
+</ul>
+<h1 id="emsp-H5本地存储"><a href="#emsp-H5本地存储" class="headerlink" title="&emsp;H5本地存储"></a>&emsp;H5本地存储</h1><p><strong>1、sessionStorag(回话存储)</strong><br>&emsp;&emsp;生命周期：浏览器打开到关闭的过程<br>&emsp;&emsp;-大小：5M<br>&emsp;&emsp;-保存位置：浏览器端<br>&emsp;&emsp;-setItem(‘key’,value)<br>&emsp;&emsp;-getItem(‘key’)<br>&emsp;&emsp;-removeItem(‘key’)<br><strong>2、localStorage(永久存储)</strong><br>&emsp;&emsp;-生命周期：永久，除非删除<br>&emsp;&emsp;-大小：5M甚至更大<br>&emsp;&emsp;-保存位置：浏览器端<br>&emsp;&emsp;-setItem(‘key’,value)<br>&emsp;&emsp;-getItem(‘key’)<br>&emsp;&emsp;-removeItem(‘key’)<br><strong>3、cookie</strong><br> &emsp;<strong>作用</strong>：用于浏览器端和服务器端进行通信的<br> &emsp;<strong>特点</strong>:<br> &emsp;&emsp;-大小：4kb<br> &emsp;&emsp;-每次发送请求都携带，导致占用带宽<br> &emsp;&emsp;-保存浏览器端<br> &emsp;&emsp;-cookie容易被截获，不安全<br> &emsp;&emsp;生命周期：<br>&emsp;&emsp;&emsp;-会话cookie：浏览器打开到关闭的过程<br>&emsp;&emsp;&emsp;-人为设置cookie：人为设置的时间</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Angular">
+    <span class="tag-code">Angular</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/04/14/zepto初识/">
+        <span class="nav-arrow">← </span>
+        
+          zepto初识
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <!-- <div id="comments"></div> -->
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-AngularJS"><span class="toc-nav-text"> AngularJS</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#emsp-特性"><span class="toc-nav-text"> 特性</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#emsp-与jQuery比"><span class="toc-nav-text"> 与jQuery比</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#emsp-作用"><span class="toc-nav-text"> 作用</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-数据绑定"><span class="toc-nav-text"> 数据绑定</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-开发的两种方式"><span class="toc-nav-text"> 开发的两种方式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-依赖注入"><span class="toc-nav-text"> 依赖注入</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-MVC模式"><span class="toc-nav-text"> MVC模式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-MVVM模式"><span class="toc-nav-text"> MVVM模式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-作用域、控制器对象"><span class="toc-nav-text"> 作用域、控制器对象</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-模块控制器"><span class="toc-nav-text"> 模块控制器</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-表达式"><span class="toc-nav-text"> 表达式</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-常用指令"><span class="toc-nav-text"> 常用指令</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-常用指令-二"><span class="toc-nav-text"> 常用指令(二)</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-过滤器"><span class="toc-nav-text"> 过滤器</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#emsp-H5本地存储"><span class="toc-nav-text"> H5本地存储</span></a></li></ol>
+    
+  </div>
+   
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/04/21/AngularJS/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "Yokemadman";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "AngularJS",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+
+ </footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
