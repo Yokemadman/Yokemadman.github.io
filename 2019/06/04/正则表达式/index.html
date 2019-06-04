@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      正则表达式 | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>正则表达式</h2>
+  <p class="post-date">2019-06-04</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><p>&emsp;正则表达式用于定义一些字符串的规则,计算机根据正则表达式，来检查一个字符串是否符合规则，或者将字符串中符合规则的内容提取出来</p>
+<h2 id="创建正则表达式对象"><a href="#创建正则表达式对象" class="headerlink" title="创建正则表达式对象"></a>创建正则表达式对象</h2><p><strong>语法:</strong>var 变量 = new RegExp(“正则表达式”，”匹配模式”)<br>&emsp;var reg = new RegExp(“a”);这个正则表达式可以来检查字符串中是否含有a<br>&emsp;在构造函数可以传递一个匹配模式作为第二个参数<strong>(i 忽略大小写，g 全局匹配模式)</strong>var reg = new  RegExp(“a”,”i”);<br>正则表达式的方法:<br><strong>test()</strong>,使用这个方法可以用来检查一个字符串是否符合正则表达式的规则，如果符合则返回true，否则返回false</p>
+<h2 id="正则语法"><a href="#正则语法" class="headerlink" title="正则语法"></a>正则语法</h2><p>使用字面量来创建正则表达式<br><strong>语法:</strong>var 变量 = /正则表达式 /匹配模式<br><code>var reg = /a/i;</code><br><strong>| 表示或</strong><br>&emsp;<strong>使用 | 表示或</strong> <code>var reg = /a|b/</code><br>&emsp;<strong>是否有字母</strong><code>var reg = /[ab]/</code><br>&emsp;<strong>是否含有abc或adc或aec</strong><code>reg = /a[bde]c/</code><br><strong>[]里的内容也是或的关系</strong><br>&emsp;a|b == [ab]<br>&emsp;[a-z] 任意小写字母<br>&emsp;[A-Z] 任意大写字母<br>&emsp;[A-z] 任意字母<br>&emsp;[0-9] 任意数字<br><strong>[^ ] 除了</strong></p>
+<h2 id="字符串和正则相关的方法"><a href="#字符串和正则相关的方法" class="headerlink" title="字符串和正则相关的方法"></a>字符串和正则相关的方法</h2><p><strong>split():</strong>可以将一个字符串拆分为一个数组，方法中可以传递一个正则表达式作为参数，就将会根据正则表达式拆分字符串<br>&emsp;任意字母来将字符串拆分<code>var result = str.split(/[A-z]/);</code><br><strong>search():</strong>可以搜索字符串中是否含有指定内容，如果搜索到指定内容，则会返回第一次出现的索引，没有就返回-1，可以接受一个正则表达式<br>&emsp;检索字符串中是否含有abc或aec或afc<code>var result = str.search(/a[bef]c/);</code><br><strong>Match():</strong>根据正则表达式，从一个字符串中将符合条件的内容提取出来<br>&ensp;默认只会找到第一个符合要求的内容，找到后停止<br>&ensp;可以设置正则表达式为全局匹配模式，这样就会匹配到所有的内容<br>&ensp;可以给正则表达式设置多个匹配模式，且顺序无所谓<br>match()会将匹配到的内容封装到一个数组中返回，即使值查询到一个结果<br>&emsp;匹配所有<code>result = str.match(/[a-z]/ig);Array.isArray(result);</code><br><strong>replace():</strong>将字符串中指定的内容替换为新内容<br>&ensp;参数：<br>&emsp;1、被替换的内容,可以接受一个正则表达式作为参数<br>&emsp;2、新内容<br>默认替换第一个<br><code>result = str.replace(/a/g,&quot;@_@&quot;);</code></p>
+<h2 id="正则量词"><a href="#正则量词" class="headerlink" title="正则量词"></a>正则量词</h2><p>通过量词可以设置一个内容出现的次数<br>量词只对它前边的一个内容=起作用<br>{n}正好出现n次<br>{m,n}出现m-n次<br>{m,}m次以上<br><strong>+</strong>至少一个,相当于{1,}<br>* 0个或多个,相当于{0,}<br><strong>?</strong>0个或1个，相当于{0，1}</p>
+<p>a出现3次<code>reg = /a{3}/;</code><br>ab出现3次<code>reg = /(ab){3}/;</code><br>a1次b3次c一次<code>reg = /ab{3}c/;</code><br>1-3次<code>reg = /ab{1,3}c/;</code><br>至少1个b<code>reg = /ab+c/;</code><br>0个或多个<code>reg = /ab*c/</code><br>0个或1个b<code>reg = /ab?c/;</code><br><strong>^</strong>表示开头<br><strong>$</strong>表示结尾<br>匹配开头的a<code>reg = /^a/;</code><br>匹配结尾的a<code>reg = /a$/</code><br>&emsp;如果正则表达式中同时使用^ $则要求字符串必须完全符合正则表达式<br><strong>.</strong>表示任意字符，在正则表达式中使用\作为转义字符<br>在使用构造函数时，由于它的参数是一个字符串，而\是字符串中转义字符，</p>
+<h2 id="其它字符"><a href="#其它字符" class="headerlink" title="其它字符"></a>其它字符</h2><p>. 表示任意字符<br>\w– 相当于[A-z0-9_]<br>\W– 相当于[^A-z0-9_]<br>\d– 任意数字<br>\D– 除了数字<br>\s– 空格<br>\S– 除了空格<br>\b– 单词边界<br>\B– 除了单词边界</p>
+<h2 id="常用表达式"><a href="#常用表达式" class="headerlink" title="常用表达式"></a>常用表达式</h2><h3 id="一、校验数字的表达式"><a href="#一、校验数字的表达式" class="headerlink" title="一、校验数字的表达式"></a>一、校验数字的表达式</h3><ol>
+<li><p>数字：^[0-9]*\$</p>
+</li>
+<li><p>n位的数字：^\d{n}\$</p>
+</li>
+<li><p>至少n位的数字：^\d{n,}\$</p>
+</li>
+<li><p>m-n位的数字：^\d{m,n}\$</p>
+</li>
+<li><p>零和非零开头的数字：^(0|[1-9][0-9]*)\$</p>
+</li>
+<li><p>非零开头的最多带两位小数的数字：^([1-9][0-9]*)+(.[0-9]{1,2})?\$</p>
+</li>
+<li><p>带1-2位小数的正数或负数：^(-)?\d+(.\d{1,2})?\$</p>
+</li>
+<li><p>正数、负数、和小数：^(-|+)?\d+(.\d+)?\$</p>
+</li>
+<li><p>有两位小数的正实数：^[0-9]+(.[0-9]{2})?\$</p>
+</li>
+<li><p>有1~3位小数的正实数：^[0-9]+(.[0-9]{1,3})?\$</p>
+</li>
+<li><p>非零的正整数：^[1-9]\d<em>\$ 或 ^([1-9][0-9]</em>){1,3}\$ 或 ^+?[1-9][0-9]*\$</p>
+</li>
+<li><p>非零的负整数：^-[1-9][]0-9”<em>\$ 或 ^-[1-9]\d</em>$</p>
+</li>
+<li><p>非负整数：^\d+\$ 或 ^[1-9]\d*|0\$</p>
+</li>
+<li><p>非正整数：^-[1-9]\d*|0\$ 或 ^((-\d+)|(0+))\$</p>
+</li>
+<li><p>非负浮点数：^\d+(.\d+)?\$ 或 ^[1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0\$</p>
+</li>
+<li><p>非正浮点数：^((-\d+(.\d+)?)|(0+(.0+)?))\$ 或 ^(-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>))|0?.0+|0\$</p>
+</li>
+<li><p>正浮点数：^[1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>\$ 或 ^(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>))\$</p>
+</li>
+<li><p>负浮点数：^-([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>)\$ 或 ^(-(([0-9]+.[0-9]<em>[1-9][0-9]</em>)|([0-9]<em>[1-9][0-9]</em>.[0-9]+)|([0-9]<em>[1-9][0-9]</em>)))\$</p>
+</li>
+<li><p>浮点数：^(-?\d+)(.\d+)?\$ 或 ^-?([1-9]\d<em>.\d</em>|0.\d<em>[1-9]\d</em>|0?.0+|0)\$</p>
+</li>
+</ol>
+<h3 id="二、校验字符的表达式"><a href="#二、校验字符的表达式" class="headerlink" title="二、校验字符的表达式"></a>二、校验字符的表达式</h3><ol>
+<li><p>汉字：^[\u4e00-\u9fa5]{0,}\$</p>
+</li>
+<li><p>英文和数字：^[A-Za-z0-9]+\$ 或 ^[A-Za-z0-9]{4,40}\$</p>
+</li>
+<li><p>长度为3-20的所有字符：^.{3,20}\$</p>
+</li>
+<li><p>由26个英文字母组成的字符串：^[A-Za-z]+\$</p>
+</li>
+<li><p>由26个大写英文字母组成的字符串：^[A-Z]+\$</p>
+</li>
+<li><p>由26个小写英文字母组成的字符串：^[a-z]+\$</p>
+</li>
+<li><p>由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+\$</p>
+</li>
+<li><p>由数字、26个英文字母或者下划线组成的字符串：^\w+\$ 或 ^\w{3,20}\$</p>
+</li>
+<li><p>中文、英文、数字包括下划线：^[\u4E00-\u9FA5A-Za-z0-9_]+\$</p>
+</li>
+<li><p>中文、英文、数字但不包括下划线等符号：^[\u4E00-\u9FA5A-Za-z0-9]+\$ 或 ^[\u4E00-\u9FA5A-Za-z0-9]{2,20}\$</p>
+</li>
+<li><p>可以输入含有^%&amp;’,;=?\$\“等字符：[^%&amp;’,;=?$\x22]+ 12 禁止输入含有~的字符：[^~\x22]+</p>
+</li>
+</ol>
+<h3 id="三、特殊需求表达式"><a href="#三、特殊需求表达式" class="headerlink" title="三、特殊需求表达式"></a>三、特殊需求表达式</h3><ol>
+<li><p>Email地址：^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$</p>
+</li>
+<li><p>域名：[a-zA-Z0-9][-a-zA-Z0-9]{0,62}(/.[a-zA-Z0-9][-a-zA-Z0-9]{0,62})+/.?</p>
+</li>
+<li><p>InternetURL：[a-zA-z]+://[^\s]<em> 或 ^http://([\w-]+.)+[\w-]+(/[\w-./?%&amp;=]</em>)?$</p>
+</li>
+<li><p>手机号码：^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$</p>
+</li>
+<li><p>电话号码(“XXX-XXXXXXX”、”XXXX-XXXXXXXX”、”XXX-XXXXXXX”、”XXX-XXXXXXXX”、”XXXXXXX”和”XXXXXXXX)：^((\d{3,4}-)|\d{3.4}-)?\d{7,8}$</p>
+</li>
+<li><p>国内电话号码(0511-4405222、021-87888822)：\d{3}-\d{8}|\d{4}-\d{7}</p>
+</li>
+<li><p>身份证号(15位、18位数字)：^\d{15}|\d{18}$</p>
+</li>
+<li><p>短身份证号码(数字、字母x结尾)：^([0-9]){7,18}(x|X)?$ 或  ^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$</p>
+</li>
+<li><p>帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$</p>
+</li>
+<li><p>密码(以字母开头，长度在6~18之间，只能包含字母、数字和下划线)：^[a-zA-Z]\w{5,17}$</p>
+</li>
+<li><p>强密码(必须包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间)：^(?=.<em>\d)(?=.</em>[a-z])(?=.*[A-Z]).{8,10}$</p>
+</li>
+<li><p>日期格式：^\d{4}-\d{1,2}-\d{1,2}</p>
+</li>
+<li><p>一年的12个月(01～09和1～12)：^(0?[1-9]|1[0-2])$</p>
+</li>
+<li><p>一个月的31天(01～09和1～31)：^((0?[1-9])|((1|2)[0-9])|30|31)$</p>
+</li>
+<li><p>钱的输入格式：</p>
+</li>
+<li><p>1.有四种钱的表示形式我们可以接受:”10000.00” 和 “10,000.00”, 和没有 “分” 的 “10000” 和 “10,000”：^[1-9][0-9]*$</p>
+</li>
+<li><p>2.这表示任意一个不以0开头的数字,但是,这也意味着一个字符”0”不通过,所以我们采用下面的形式：^(0|[1-9][0-9]*)$</p>
+</li>
+<li><p>3.一个0或者一个不以0开头的数字.我们还可以允许开头有一个负号：^(0|-?[1-9][0-9]*)$</p>
+</li>
+<li><p>4.这表示一个0或者一个可能为负的开头不为0的数字.让用户以0开头好了.把负号的也去掉,因为钱总不能是负的吧.下面我们要加的是说明可能的小数部分：^[0-9]+(.[0-9]+)?$</p>
+</li>
+<li><p>5.必须说明的是,小数点后面至少应该有1位数,所以”10.”是不通过的,但是 “10” 和 “10.2” 是通过的：^[0-9]+(.[0-9]{2})?$</p>
+</li>
+<li><p>6.这样我们规定小数点后面必须有两位,如果你认为太苛刻了,可以这样：^[0-9]+(.[0-9]{1,2})?$</p>
+</li>
+<li><p>7.这样就允许用户只写一位小数.下面我们该考虑数字中的逗号了,我们可以这样：^[0-9]{1,3}(,[0-9]{3})*(.[0-9]{1,2})?$</p>
+</li>
+</ol>
+<p>23 8.1到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$</p>
+<ol start="24">
+<li><p>备注：这就是最终结果了,别忘了”+”可以用”*”替代如果你觉得空字符串也可以接受的话(奇怪,为什么?)最后,别忘了在用函数时去掉去掉那个反斜杠,一般的错误都在这里</p>
+</li>
+<li><p>xml文件：^([a-zA-Z]+-?)+[a-zA-Z0-9]+\.[x|X][m|M][l|L]$</p>
+</li>
+<li><p>中文字符的正则表达式：[\u4e00-\u9fa5]</p>
+</li>
+<li><p>双字节字符：[^\x00-\xff] (包括汉字在内，可以用来计算字符串的长度(一个双字节字符长度计2，ASCII字符计1))</p>
+</li>
+<li><p>空白行的正则表达式：\n\s*\r (可以用来删除空白行)</p>
+</li>
+<li><p>HTML标记的正则表达式：&lt;(\S<em>?)[^&gt;]</em>&gt;.<em>?&lt;/\1&gt;|&lt;.</em>? /&gt; (网上流传的版本太糟糕，上面这个也仅仅能部分，对于复杂的嵌套标记依旧无能为力)</p>
+</li>
+<li><p>首尾空白字符的正则表达式：^\s<em>|\s</em>$或(^\s<em>)|(\s</em>$) (可以用来删除行首行尾的空白字符(包括空格、制表符、换页符等等)，非常有用的表达式)</p>
+</li>
+<li><p>腾讯QQ号：[1-9][0-9]{4,} (腾讯QQ号从10000开始)</p>
+</li>
+<li><p>中国邮政编码：[1-9]\d{5}(?!\d) (中国邮政编码为6位数字)</p>
+</li>
+<li><p>IP地址：\d+.\d+.\d+.\d+ (提取IP地址时有用)</p>
+</li>
+<li><p>IP地址：((?:(?:25[0-5]|2[0-4]\d|[01]?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|[01]?\d?\d))</p>
+</li>
+</ol>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#正则">
+    <span class="tag-code">正则</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/06/01/JS基础对象、函数、方法/">
+        <span class="nav-arrow">← </span>
+        
+          JS基础对象、函数、方法
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <!-- <div id="comments"></div> -->
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#正则表达式"><span class="toc-nav-text">正则表达式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#创建正则表达式对象"><span class="toc-nav-text">创建正则表达式对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#正则语法"><span class="toc-nav-text">正则语法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#字符串和正则相关的方法"><span class="toc-nav-text">字符串和正则相关的方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#正则量词"><span class="toc-nav-text">正则量词</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#其它字符"><span class="toc-nav-text">其它字符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用表达式"><span class="toc-nav-text">常用表达式</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#一、校验数字的表达式"><span class="toc-nav-text">一、校验数字的表达式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#二、校验字符的表达式"><span class="toc-nav-text">二、校验字符的表达式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三、特殊需求表达式"><span class="toc-nav-text">三、特殊需求表达式</span></a></li></ol></li></ol></li></ol>
+    
+  </div>
+   
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/06/04/正则表达式/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "Yokemadman";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "正则表达式",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+
+ </footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
