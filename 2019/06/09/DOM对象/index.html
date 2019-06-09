@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      DOM对象 | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>DOM对象</h2>
+  <p class="post-date">2019-06-09</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><ul>
+<li>Document Object Model</li>
+<li>文档对象模型，通过DOM可以来任意来修改网页中各个内容</li>
+<li>文档<ul>
+<li>文档指的是网页，一个网页就是一个文档</li>
+</ul>
+</li>
+<li>对象<ul>
+<li>对象指将网页中的每一个节点都转换为对象<br>  转换完对象以后，就可以以一种纯面向对象的形式来操作网页了</li>
+</ul>
+</li>
+<li>模型<ul>
+<li>模型用来表示节点和节点之间的关系，方便操作页面</li>
+</ul>
+</li>
+<li>节点（Node）<ul>
+<li>节点是构成网页的最基本的单元，网页中的每一个部分都可以称为是一个节点</li>
+<li>虽然都是节点，但是节点的类型却是不同的</li>
+<li>常用的节点<ul>
+<li>文档节点 （Document），代表整个网页</li>
+<li>元素节点（Element），代表网页中的标签</li>
+<li>属性节点（Attribute），代表标签中的属性</li>
+<li>文本节点（Text），代表网页中的文本内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h2><h3 id="DOM查询"><a href="#DOM查询" class="headerlink" title="DOM查询"></a>DOM查询</h3><ul>
+<li>在网页中浏览器已经为我们提供了document对象，<br>&emsp;它代表的是整个网页，它是window对象的属性，可以在页面中直接使用。</li>
+<li><p>document查询方法：</p>
+<ul>
+<li>根据元素的id属性查询一个元素节点对象：<br>document.getElementById(“id属性值”);</li>
+<li>根据元素的name属性值查询一组元素节点对象:<br>document.getElementsByName(“name属性值”);</li>
+<li><p>根据标签名来查询一组元素节点对象：<br>document.getElementsByTagName(“标签名”);</p>
+</li>
+<li><p>元素的属性：</p>
+<ul>
+<li>读取元素的属性：<br>  语法：元素.属性名<br>   ele.name<br>   ele.id<br>   ele.value<br>   ele.className</li>
+</ul>
+<ul>
+<li><p>修改元素的属性：<br>语法：元素.属性名 = 属性值</p>
+</li>
+<li><p>innerHTML<br>使用该属性可以获取或设置元素内部的HTML代码</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="DOM查询-1"><a href="#DOM查询-1" class="headerlink" title="DOM查询"></a>DOM查询</h2><ul>
+<li><p>通过具体的元素节点来查询</p>
+<ul>
+<li><p>元素.getElementsByTagName()</p>
+<ul>
+<li>通过标签名查询当前元素的指定后代元素</li>
+</ul>
+</li>
+<li><p>元素.childNodes</p>
+<ul>
+<li>获取当前元素的所有子节点</li>
+<li>会获取到空白的文本子节点</li>
+</ul>
+</li>
+<li><p>元素.children</p>
+<ul>
+<li>获取当前元素的所有子元素</li>
+</ul>
+</li>
+<li><p>元素.firstChild</p>
+<ul>
+<li>获取当前元素的第一个子节点</li>
+</ul>
+</li>
+<li><p>元素.lastChild</p>
+<ul>
+<li>获取当前元素的最后一个子节点</li>
+</ul>
+</li>
+<li><p>元素.parentNode</p>
+<ul>
+<li>获取当前元素的父元素</li>
+</ul>
+</li>
+<li><p>元素.previousSibling</p>
+<ul>
+<li>获取当前元素的前一个兄弟节点</li>
+</ul>
+</li>
+<li><p>元素.nextSibling</p>
+<ul>
+<li>获取当前元素的后一个兄弟节点</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="innerHTML和innerText"><a href="#innerHTML和innerText" class="headerlink" title="innerHTML和innerText"></a>innerHTML和innerText</h2><ul>
+<li>这两个属性并没有在DOM标准定义，但是大部分浏览器都支持这两个属性</li>
+<li>两个属性作用类似，都可以获取到标签内部的内容，<br>不同是innerHTML会获取到html标签，而innerText会自动去除标签</li>
+<li>如果使用这两个属性来设置标签内部的内容时，没有任何区别的    </li>
+</ul>
+<p>读取标签内部的文本内容<code>&lt;h1&gt;h1中的文本内容&lt;/h1&gt;</code>元素.firstChild.nodeValue</p>
+<h2 id="DOM其他的属性和方法"><a href="#DOM其他的属性和方法" class="headerlink" title="DOM其他的属性和方法"></a>DOM其他的属性和方法</h2><p><strong>document.all</strong></p>
+<ul>
+<li>获取页面中的所有元素，相当于document.getElementsByTagName(“*”);</li>
+</ul>
+<p><strong>document.documentElement</strong></p>
+<ul>
+<li>获取页面中html根元素</li>
+</ul>
+<p><strong>document.body</strong></p>
+<ul>
+<li>获取页面中的body元素</li>
+</ul>
+<p><strong>document.getElementsByClassName()</strong></p>
+<ul>
+<li>根据元素的class属性值查询一组元素节点对象</li>
+<li>这个方法不支持IE8及以下的浏览器</li>
+</ul>
+<p><strong>document.querySelector()</strong></p>
+<ul>
+<li>根据CSS选择器去页面中查询一个元素</li>
+<li>如果匹配到的元素有多个，则它会返回查询到的第一个元素    </li>
+</ul>
+<p><strong>document.querySelectorAll()</strong></p>
+<ul>
+<li>根据CSS选择器去页面中查询一组元素</li>
+<li>会将匹配到所有元素封装到一个数组中返回，即使只匹配到一个</li>
+</ul>
+<h2 id="DOM修改"><a href="#DOM修改" class="headerlink" title="DOM修改"></a>DOM修改</h2><p><strong>document.createElement()</strong></p>
+<ul>
+<li>可以根据标签名创建一个元素节点对象</li>
+</ul>
+<p><strong>document.createTextNode()</strong></p>
+<ul>
+<li>可以根据文本内容创建一个文本节点对象</li>
+</ul>
+<p><strong>父节点.appendChild(子节点)</strong></p>
+<ul>
+<li>向父节点中添加指定的子节点</li>
+</ul>
+<p><strong>父节点.insertBefore(新节点,旧节点)</strong></p>
+<ul>
+<li>将一个新的节点插入到旧节点的前边</li>
+</ul>
+<p><strong>父节点.replaceChild(新节点,旧节点)</strong></p>
+<ul>
+<li>使用一个新的节点去替换旧节点</li>
+</ul>
+<p><strong>父节点.removeChild(子节点)</strong></p>
+<ul>
+<li>删除指定的子节点</li>
+<li>推荐方式：子节点.parentNode.removeChild(子节点)</li>
+</ul>
+<h2 id="DOM对CSS的操作"><a href="#DOM对CSS的操作" class="headerlink" title="DOM对CSS的操作"></a>DOM对CSS的操作</h2><ul>
+<li><p><strong>读取和修改内联样式</strong></p>
+<ul>
+<li>使用style属性来操作元素的内联样式</li>
+<li><strong>读取内联样式：</strong><br>语法：元素.style.样式名<br>例子：元素.style.width<br>  &emsp;&emsp;&emsp;元素.style.height<br>&emsp;注意：如果样式名中带有-，则需要将样式名修改为驼峰命名法,将-去掉，然后-后的字母改大写<ul>
+<li>比如：background-color –&gt;backgroundColor<br>&emsp;&emsp;&emsp;border-width —&gt; borderWidth</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>修改内联样式：</strong><br>语法：元素.style.样式名 = 样式值<ul>
+<li>通过style修改的样式都是内联样式，由于内联样式的优先级比较高，所以我们通过JS来修改的样式，往往会立即生效，但是如果样式中设置了!important，则内联样式将不会生效。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>读取元素的当前样式</strong></p>
+<ul>
+<li>正常浏览器<br>&emsp;使用getComputedStyle()，这个方法是window对象的方法，可以返回一个对象，这个对象中保存着当前元素生效样式<br>参数：<br>  1.要获取样式的元素<br>  2.可以传递一个伪元素，一般传null<br>&emsp;例子：&emsp;获取元素的宽度<code>getComputedStyle(box , null)[&quot;width&quot;];--getComputedStyle(box1,null).width</code> 通过该方法读取到样式都是只读的不能修改</li>
+<li>IE8<br>使用currentStyle, 语法：元素.currentStyle.样式名<br>&emsp;例子：&emsp;<code>box.currentStyle[&quot;width&quot;]---box1.currentStyle.width</code>通过这个属性读取到的样式是只读的不能修改</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function getStyle(obj,name) &#123;</span><br><span class="line">          /* if(window.getComputedStyle)&#123;</span><br><span class="line">               /!*正常浏览器*!/</span><br><span class="line">              return getComputedStyle(obj,null)[name];</span><br><span class="line">           &#125;else &#123;</span><br><span class="line">               /!*ie8*!/</span><br><span class="line">               return obj.currentStyle[name];</span><br><span class="line">           &#125;*/</span><br><span class="line">         return window.getComputedStyle?getComputedStyle(obj,null)[name]:obj.currentStyle[name];</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>其他的样式相关的属性</strong><br>注意：以下样式都是只读的<br>&emsp;<strong>clientHeight</strong>&emsp;元素的可见高度，指元素的内容区和内边距的高度<br>&emsp;<strong>clientWidth</strong>&emsp;元素的可见宽度，指元素的内容区和内边距的宽度<br>&emsp;<strong>offsetHeight</strong>&emsp; 整个元素的高度，包括内容区、内边距、边框<br>&emsp;<strong>offfsetWidth</strong>&emsp; 整个元素的宽度，包括内容区、内边距、边框<br>&emsp;<strong>offsetParent</strong>&emsp; 当前元素的定位父元素,离他最近的开启了定位的祖先元素，如果所有的元素都没有开启定位，则返回body<br>&emsp;<strong>offsetLeft<br>&emsp;offsetTop</strong><br>&emsp;&emsp;当前元素和定位父元素之间的偏移量,offsetLeft水平偏移量offsetTop垂直偏移量<br>&emsp;<strong>scrollHeight<br>&emsp;scrollWidth</strong><br>&emsp;&emsp;获取元素滚动区域的高度和宽度<br>&emsp;<strong>scrollTop<br>&emsp;scrollLeft</strong><br>&emsp;&emsp;获取元素垂直和水平滚动条滚动的距离<br>&emsp;&emsp;判断滚动条是否滚动到底<br>&emsp;垂直滚动条<br>&emsp;&emsp;<strong>scrollHeight - scrollTop = clientHeight</strong><br>&emsp;水平滚动<br>&emsp;&emsp;<strong>scrollWidth - scrollLeft = clientWidth</strong></li>
+</ul>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#JavaScript">
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/06/04/正则表达式/">
+        <span class="nav-arrow">← </span>
+        
+          正则表达式
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <!-- <div id="comments"></div> -->
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#DOM"><span class="toc-nav-text">DOM</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM操作"><span class="toc-nav-text">DOM操作</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#DOM查询"><span class="toc-nav-text">DOM查询</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM查询-1"><span class="toc-nav-text">DOM查询</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#innerHTML和innerText"><span class="toc-nav-text">innerHTML和innerText</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM其他的属性和方法"><span class="toc-nav-text">DOM其他的属性和方法</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM修改"><span class="toc-nav-text">DOM修改</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#DOM对CSS的操作"><span class="toc-nav-text">DOM对CSS的操作</span></a></li></ol></li></ol>
+    
+  </div>
+   
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/06/09/DOM对象/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "Yokemadman";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "DOM对象",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+
+ </footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
