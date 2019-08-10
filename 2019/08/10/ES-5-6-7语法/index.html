@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+  <head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Yokemadman&#39;s blog">
+  <meta name="keyword" content="hexo-theme,vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      ES_5_6_7.md | Yokemadman
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  
+    <script src="/js/qrious.js"></script>
+  
+  
+    <script src="/js/gitment.js"></script>
+  
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png">
+</div>
+
+  <link rel="stylesheet" href="/css/plugins/linksFriend.css">
+  <body>
+  <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
+     <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Yokemadman</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">主页</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">归档</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">标签</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/links/" class="item-link">友情链接</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">项目</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">关于</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">主页</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">归档</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">标签</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/links/" class="menu-link">友情链接</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">项目</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">关于</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>ES_5_6_7.md</h2>
+  <p class="post-date">2019-08-10</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="ES-ECMAScript-简介"><a href="#ES-ECMAScript-简介" class="headerlink" title="ES(ECMAScript):简介"></a>ES(ECMAScript):简介</h2><ol>
+<li>它是一种由ECMA组织（前身为欧洲计算机制造商协会）制定和发布的脚本语言规范</li>
+<li>而我们学的 JavaScript 是ECMA的实现, 但术语ECMAScript和JavaScript平时表达同一个意思</li>
+<li>JS包含三个部分：<br>1). ECMAScript（核心）<br>2). 扩展==&gt;浏览器端<ul>
+<li>BOM（浏览器对象模型）</li>
+<li>DOM（文档对象模型）</li>
+</ul>
+</li>
+</ol>
+<p>3). 扩展==&gt;服务器端</p>
+<ul>
+<li>Node</li>
+</ul>
+<ol start="4">
+<li>ES的几个重要版本<ul>
+<li>ES5 : 09年发布</li>
+<li>ES6(ES2015) : 15年发布, 也称为ECMA2015</li>
+<li>ES7(ES2016) : 16年发布, 也称为ECMA2016  (变化不大)</li>
+</ul>
+</li>
+</ol>
+<h2 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h2><h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><ol>
+<li>理解:<ul>
+<li>除了正常运行模式(混杂模式)，ES5添加了第二种运行模式：”严格模式”（strict mode）。</li>
+<li>顾名思义，这种模式使得Javascript在更严格的语法条件下运行</li>
+</ul>
+</li>
+<li>目的/作用<ul>
+<li>消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为</li>
+<li>消除代码运行的一些不安全之处，为代码的安全运行保驾护航</li>
+<li>为未来新版本的Javascript做好铺垫</li>
+</ul>
+</li>
+<li>使用<ul>
+<li>在全局或函数的第一条语句定义为: ‘use strict’;</li>
+<li>如果浏览器不支持, 只解析为一条简单的语句, 没有任何副作用</li>
+</ul>
+</li>
+<li>语法和行为改变<ul>
+<li>必须用var声明变量</li>
+<li>禁止自定义的函数中的this指向window</li>
+<li>创建eval作用域</li>
+<li>对象不能有重名的属性</li>
+</ul>
+</li>
+</ol>
+<h3 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h3><ol>
+<li>JSON.stringify(obj/arr)<ul>
+<li>js对象(数组)转换为json对象(数组)</li>
+</ul>
+</li>
+<li>JSON.parse(json)<ul>
+<li>json对象(数组)转换为js对象(数组)</li>
+</ul>
+</li>
+</ol>
+<h3 id="Object扩展"><a href="#Object扩展" class="headerlink" title="Object扩展"></a>Object扩展</h3><p>ES5给Object扩展了一些静态方法, 常用的2个:</p>
+<ol>
+<li><p>Object.create(prototype, [descriptors])</p>
+<ul>
+<li>作用: 以指定对象为原型创建新的对象</li>
+<li>为新的对象指定新的属性, 并对属性进行描述<ul>
+<li>value : 指定值</li>
+<li>writable : 标识当前属性值是否是可修改的, 默认为false</li>
+<li>configurable: 标识当前属性是否可以被删除 默认为false</li>
+<li>enumerable： 标识当前属性是否能用for in 枚举 默认为false<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;username:&apos;damu&apos;,age:30&#125;;</span><br><span class="line">var obj1 = &#123;&#125;;</span><br><span class="line">obj1 = Object.create(obj,&#123;</span><br><span class="line">  sex:&#123;</span><br><span class="line">      value:&apos;男&apos;,</span><br><span class="line">      writable:true,</span><br><span class="line">      configurable:true,</span><br><span class="line">      enumerable:true</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(obj1.sex);</span><br><span class="line">  obj1.sex = &apos;女&apos;;</span><br><span class="line">console.log(obj1.sex);</span><br><span class="line">/* delete obj1.sex;*/</span><br><span class="line"> console.log(obj1);</span><br><span class="line">for(var i in obj1)&#123;</span><br><span class="line">  console.log(i);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Object.defineProperties(object, descriptors)</p>
+<ul>
+<li>作用: 为指定对象定义扩展多个属性<ul>
+<li>get ：用来获取当前属性值得回调函数</li>
+<li>set ：修改当前属性值得触发的回调函数，并且实参即为修改后的值</li>
+</ul>
+</li>
+<li>存取器属性：setter,getter一个用来存值，一个用来取值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var obj2 = &#123;firstName:&apos;kobe&apos;,lastName:&apos;bryant&apos;&#125;;</span><br><span class="line">  Object.defineProperties(obj2,&#123;</span><br><span class="line">    fullName:&#123;</span><br><span class="line">      get:function () &#123;</span><br><span class="line">        return this.firstName +&quot; &quot;+this.lastName;</span><br><span class="line">      &#125;,</span><br><span class="line">      set:function (data) &#123;//监听扩展属性，当扩展属性发生变化的时候自动调用,自动调用后会将变化的值作为实参注入到set函数</span><br><span class="line">          console.log(&apos;set()&apos;,data);</span><br><span class="line">          var names = data.split(&apos; &apos;);</span><br><span class="line">          this.firstName= names[0];</span><br><span class="line">          this.lastName= names[1];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  console.log(obj2.fullName);</span><br><span class="line">  obj2.fullName = &apos;tim duncan&apos;;</span><br><span class="line">  console.log(obj2.fullName);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>对象本身的两个方法</p>
+<ul>
+<li>get propertyName(){} 用来得到当前属性值的回调函数</li>
+<li>set propertyName(){} 用来监视当前属性值变化的回调函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">       firstName:&apos;curry&apos;,</span><br><span class="line">       lastName:&apos;stephen&apos;,</span><br><span class="line">       get fullName()&#123;</span><br><span class="line">           return this.firstName +&apos; &apos;+ this.lastName;</span><br><span class="line">       &#125;,</span><br><span class="line">       set fullName(data)&#123;</span><br><span class="line">           var names = data.split(&quot; &quot;);</span><br><span class="line">           this.firstName = names[0];</span><br><span class="line">           this.lastName = names[1];</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   console.log(obj.fullName);</span><br><span class="line">   obj.fullName = &apos;kobe bryant&apos;;</span><br><span class="line">   console.log(obj.fullName)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Array扩展"><a href="#Array扩展" class="headerlink" title="Array扩展"></a>Array扩展</h3><ol>
+<li><p>Array.prototype.indexOf(value) : 得到值在数组中的第一个下标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,4,3,1,2,6,5,4];</span><br><span class="line">  console.log(arr.indexOf(4));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.prototype.lastIndexOf(value) : 得到值在数组中的最后一个下标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,4,3,1,2,6,5,4];</span><br><span class="line"> console.log(arr.lastIndexOf(4));</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.prototype.forEach(function(item, index){}) : 遍历数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,4,3,1,2,6,5,4];</span><br><span class="line"> arr.forEach(function (item,index) &#123;</span><br><span class="line">   console.log(item+&quot;--&quot;+index);</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.prototype.map(function(item, index){}) : 遍历数组返回一个新的数组，返回加工之后的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,4,3,1,2,6,5,4];</span><br><span class="line">  var arr1 =  arr.map(function (item,index) &#123;</span><br><span class="line">    return item + 10</span><br><span class="line">  &#125;)</span><br><span class="line">  console.log(arr1);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.prototype.filter(function(item, index){}) : 遍历过滤出一个新的子数组， 返回条件为true的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,4,3,1,2,6,5,4];</span><br><span class="line"> console.log(arr)</span><br><span class="line">var arr2 =  arr.filter(function (item,index) &#123;</span><br><span class="line">        return item &gt; 3;</span><br><span class="line"> &#125;)</span><br><span class="line">  console.log(arr2);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="Function扩展"><a href="#Function扩展" class="headerlink" title="Function扩展"></a>Function扩展</h3><ol>
+<li>Function.prototype.bind(obj) :<ul>
+<li>作用: 将函数内的this绑定为obj, 并将函数返回</li>
+</ul>
+</li>
+<li>面试题: 区别bind()与call()和apply()?<ul>
+<li>都能指定函数中的this</li>
+<li>call()/apply()是立即调用函数</li>
+<li>bind()是将函数返回</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var obj =&#123;username:&apos;kobe&apos;&#125;</span><br><span class="line">function foo(data) &#123;</span><br><span class="line">  console.log(this,data);</span><br><span class="line">&#125;</span><br><span class="line">// 传入参数的形式</span><br><span class="line">foo.call(obj,33);//直接从第二个参数开始，依次传入</span><br><span class="line"></span><br><span class="line">foo.apply(obj,[33]);//第二参数必须是数组，传入放在数组里</span><br><span class="line"></span><br><span class="line">//bind的特点：绑定完this不会立即调用当前的函数，而是将函数返回</span><br><span class="line">//bind传参方式同call一样</span><br><span class="line">foo.bind(obj,33)();</span><br><span class="line">setTimeout(function () &#123;</span><br><span class="line">console.log(this);</span><br><span class="line">&#125;.bind(obj),1000)</span><br></pre></td></tr></table></figure>
+<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><p><strong> let </strong></p>
+<ol>
+<li>作用:<ul>
+<li>与var类似, 用于声明一个变量</li>
+</ul>
+</li>
+<li>特点:<ul>
+<li>在块作用域内有效</li>
+<li>不能重复声明</li>
+<li>不会预处理, 不存在提升</li>
+</ul>
+</li>
+<li>应用:<ul>
+<li>循环遍历加监听</li>
+<li>使用let取代var是趋势</li>
+</ul>
+</li>
+</ol>
+<p><strong> const</strong></p>
+<ol>
+<li>作用:<ul>
+<li>定义一个常量</li>
+</ul>
+</li>
+<li>特点:<ul>
+<li>不能修改</li>
+<li>其它特点同let</li>
+</ul>
+</li>
+<li>应用:<ul>
+<li>保存不用改变的数据</li>
+</ul>
+</li>
+</ol>
+<p><strong> 解构赋值 </strong></p>
+<ol>
+<li>理解:<ul>
+<li>从对象或数组中提取数据, 并赋值给变量(多个)</li>
+</ul>
+</li>
+<li>对象的解构赋值&emsp;<strong> let {n, a} = {n:’tom’, a:12} </strong><br>let obj = {username:’kobe’,sex:’male’,age:40};<br>let {username,age} = obj;<br>console.log(username,age)</li>
+<li>数组的解构赋值&emsp;<strong> let [a,b] = [1, ‘atguigu’]; </strong><br>let arr =[1,3,5,’abc’,true];<br>let [a,b,c,d,e] = arr;<br>console.log(a,b,c,d,e);</li>
+<li>用途<ul>
+<li>给多个形参赋值<br>let obj = {username:’kobe’,sex:’male’,age:40};<br>function foo({username,age}) { // {username,age} = obj;<br>console.log(username,age);<br>}<br>foo(obj)</li>
+</ul>
+</li>
+</ol>
+<p><strong> 模板字符串 </strong></p>
+<ol>
+<li>模板字符串 : 简化字符串的拼接<ul>
+<li>模板字符串必须用 <code></code> 包含</li>
+<li>变化的部分使用${xxx}定义<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> let obj = &#123;username:&apos;kobe&apos;,age:39&#125;;</span><br><span class="line">   let str = &apos;姓名&apos;+obj.username+&apos;age:&apos;+obj.age;</span><br><span class="line">   console.log(str);</span><br><span class="line">   str = `我的名字：$&#123;obj.username&#125;,年龄$&#123;obj.age&#125;`;</span><br><span class="line">   console.log(str);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong> 简写对象 </strong><br>简化的对象写法</p>
+<ul>
+<li>省略同名的属性值</li>
+<li>省略方法的function</li>
+<li>例如:<br>let x = 1;<br>let y = 2;<br>let point = {<br>  x,<br>  y,<br>  setX (x) {this.x = x}<br>};<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">let username= &apos;kobe&apos;;</span><br><span class="line">  let age = 28;</span><br><span class="line">  let obj =&#123;</span><br><span class="line">    username:username,//同名的属性可以省略不写</span><br><span class="line">    age:age,</span><br><span class="line">    getName:function () &#123;</span><br><span class="line">      return this.username;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">  console.log(obj);</span><br><span class="line">  console.log(obj.getName());</span><br><span class="line"> // ES6</span><br><span class="line"> let username1= &apos;kobe&apos;;</span><br><span class="line"> let age1 = 28;</span><br><span class="line"> let obj1 =&#123;</span><br><span class="line">   username1,//同名的属性可以省略不写</span><br><span class="line">   age1,</span><br><span class="line">   getName() &#123;</span><br><span class="line">     return this.username1;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;;</span><br><span class="line"> console.log(obj1);</span><br><span class="line"> console.log(obj1.getName());</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>作用: 定义匿名函数<br><strong> 基本语法:</strong></p>
+<ul>
+<li>没有参数:<br> () =&gt; console.log(‘xxxx’)</li>
+<li>一个参数 (()可以省略):<br>i =&gt; i+2 </li>
+<li>大于一个参数 (()不能省略):<br>(i,j) =&gt; i+j</li>
+<li>函数体只有一条语句或是表达式的时候 {}可以省略—-&gt;会自动返回语句执行的结果或是表达式的结果<br>let fun4 = (x,y)=&gt;x+y;</li>
+<li>函数体如果有多个语句, 需要用{}包围，若有需要返回的内容，需要手动返回 return<br>let fun5 = (x,y)=&gt;{<br>   console.log(x,y);<br>  return x+y;<br> }</li>
+<li><strong>使用场景</strong>: 多用来定义回调函数</li>
+</ul>
+<p><strong> 箭头函数的特点：</strong><br>1、简洁<br>2、箭头函数没有自己的this，箭头函数的this不是调用的时候决定的，而是在定义的时候处在的对象就是它的this<br>3、扩展理解： 箭头函数的this看外层的是否有函数，如果有，外层函数的this就是内部箭头函数的this，如果没有，则this是window。</p>
+<h3 id="点点点运算符"><a href="#点点点运算符" class="headerlink" title="点点点运算符"></a>点点点运算符</h3><p> 用途</p>
+<ol>
+<li><p>rest(可变)参数</p>
+<ul>
+<li>用来取代arguments 但比 arguments 灵活,只能是最后部分形参参数<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function fun(...values) &#123;</span><br><span class="line"> console.log(arguments);</span><br><span class="line"> arguments.forEach(function (item, index) &#123;</span><br><span class="line">           console.log(item, index);</span><br><span class="line">       &#125;);</span><br><span class="line">       console.log(values);</span><br><span class="line">       values.forEach(function (item, index) &#123;</span><br><span class="line">           console.log(item, index);</span><br><span class="line">       &#125;)</span><br><span class="line">   &#125;</span><br><span class="line">   fun(1,2,3);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>扩展运算符</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let arr1 = [1,3,5];</span><br><span class="line"> let arr2 = [2,...arr1,6];</span><br><span class="line"> arr2.push(...arr1);</span><br><span class="line"> //</span><br><span class="line"> let arr = [1,6];</span><br><span class="line">  let arr1 = [2,3,4,5];</span><br><span class="line">  arr = [1,...arr1,6];</span><br><span class="line">  console.log(arr)  //[1,2,3,4,5,6]</span><br><span class="line"> console.log(...arr);1,2,3,4,5,6</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong> 形参默认值 </strong>—-当不传入参数的时候默认使用形参里的默认值</p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><p><img src="/img/09_promise过程分析.png" alt="图片"></p>
+<ol>
+<li>理解:<ul>
+<li>Promise对象: 代表了未来某个将要发生的事件(通常是一个异步操作)</li>
+<li>有了promise对象, 可以将异步操作以同步的流程表达出来, 避免了层层嵌套的回调函数(俗称’回调地狱’)</li>
+<li>ES6的Promise是一个构造函数, 用来生成promise实例</li>
+</ul>
+</li>
+<li><p>使用promise基本步骤(2步):</p>
+<ul>
+<li>创建promise对象<br>let promise = new Promise((resolve, reject) =&gt; {<br>   //初始化promise状态为 pending<br> //执行异步操作<br> if(异步操作成功) {<br>   resolve(value);//修改promise的状态为fullfilled<br> } else {<br>   reject(errMsg);//修改promise的状态为rejected<br> }<br>})</li>
+<li>调用promise的then()<br>promise.then(function(<br> result =&gt; console.log(result),<br> errorMsg =&gt; alert(errorMsg)<br>))<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">let promise = new Promise( (resolve,reject) =&gt; &#123;</span><br><span class="line">   //初始化promise 状态：pending：初始化</span><br><span class="line">   console.log(&apos;111&apos;);</span><br><span class="line">   //执行异步操作，通常是发送ajax请求，开启定时器</span><br><span class="line">   setTimeout( () =&gt; &#123;</span><br><span class="line">     console.log(&apos;333&apos;);</span><br><span class="line">     //根据 异步任务的返回结果去修改promise的状态</span><br><span class="line">     //异步任务执行成功</span><br><span class="line"></span><br><span class="line">     //resolve(&apos;哈哈&apos;);  //修改promise的状态为 fullfilled：成功的状态</span><br><span class="line"></span><br><span class="line">     //异步失败</span><br><span class="line">     reject(&apos;555&apos;); //修改promise的状态为 rejected:失败的状态</span><br><span class="line">   &#125;,2000)</span><br><span class="line"> &#125;)</span><br><span class="line">  console.log(&apos;222&apos;);</span><br><span class="line">   promise.then(</span><br><span class="line">     (data) =&gt;&#123; //成功的回调</span><br><span class="line">       console.log(data,&apos;success&apos;);</span><br><span class="line">        &#125;,</span><br><span class="line">     (error) =&gt;&#123;//失败的回调</span><br><span class="line">       console.log(error,&apos;failed&apos;);</span><br><span class="line">     &#125;</span><br><span class="line">   )</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>promise对象的3个状态</p>
+<ul>
+<li>pending: 初始化状态</li>
+<li>fullfilled: 成功状态</li>
+<li>rejected: 失败状态</li>
+</ul>
+</li>
+<li><p>应用:</p>
+<ul>
+<li><p>使用promise实现超时处理</p>
+</li>
+<li><p>使用promise封装处理ajax请求<br>let request = new XMLHttpRequest();<br>request.onreadystatechange = function () {<br>}<br>request.responseType = ‘json’;<br>request.open(“GET”, url);<br>request.send();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">//定义获取新闻的功能函数</span><br><span class="line">  function getNews(url) &#123;</span><br><span class="line">    let promise = new Promise((resolve,reject) =&gt; &#123;</span><br><span class="line">    //状态：初始化</span><br><span class="line">    //执行异步任务</span><br><span class="line">    //创建xmlHttp实例对象</span><br><span class="line">      let xmlHttp = new XMLHttpRequest();</span><br><span class="line">      console.log(xmlHttp.readyState);</span><br><span class="line">    //绑定监听 readyState</span><br><span class="line">      xmlHttp.onreadystatechange = function () &#123;</span><br><span class="line">        if(xmlHttp.readyState ===4 )&#123;//请求成功</span><br><span class="line">          if(xmlHttp.status == 200)&#123;</span><br><span class="line">            //修改状态</span><br><span class="line">            resolve(xmlHttp.responseText); //promise状态为成功</span><br><span class="line">          &#125;else&#123;//请求失败</span><br><span class="line">            reject(&apos;暂时没有新闻&apos;);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;;</span><br><span class="line">      //open 设置请求的方式以及url</span><br><span class="line">      xmlHttp.open(&apos;GET&apos;,url);</span><br><span class="line">      //发送</span><br><span class="line">      xmlHttp.send();</span><br><span class="line">    &#125;)</span><br><span class="line">    return promise;</span><br><span class="line">  &#125;</span><br><span class="line">getNews(&apos;http://localhost:3000/news?id=2&apos;)</span><br><span class="line">  .then( (data) =&gt;&#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">    //发送请求获取评论内容</span><br><span class="line">    let commentsUrl = JSON.parse(data).commentsUrl;</span><br><span class="line">    let url = &apos;http://localhost:3000&apos;+commentsUrl;</span><br><span class="line">    //发送请求</span><br><span class="line">   return getNews(url);</span><br><span class="line">  &#125;,(error) =&gt;&#123;</span><br><span class="line">   console.log(error);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then( (data) =&gt;&#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">    &#125;</span><br><span class="line">  , () =&gt;&#123;</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p>&emsp;前言：ES5中对象的属性名都是字符串，容易造成重名，污染环境<br><strong> Symbol：</strong><br>&emsp;<strong> 概念：</strong> ES6中的添加了一种原始数据类型symbol(已有的原始数据类型：String, Number, boolean, null, undefined, 对象)<br>&emsp; <strong> 特点：</strong><br>&emsp;&emsp;1、Symbol属性对应的值是唯一的，解决命名冲突问题<br>&emsp;&emsp;2、Symbol值不能与其他数据进行计算，包括同字符串拼串<br>&emsp;&emsp;3、for in, for of遍历时不会遍历symbol属性。<br>&emsp;<strong>使用：</strong><br>&emsp;&emsp;1、调用Symbol函数得到symbol值<br>&emsp;&emsp;&emsp;  let symbol = Symbol();<br>&emsp;&emsp;&emsp;  let obj = {};<br>  obj[symbol] = ‘hello’;<br>&emsp;&emsp;2、传参标识<br>&emsp;&emsp;&emsp;  let symbol = Symbol(‘one’);<br>&emsp;&emsp;&emsp;  let symbol2 = Symbol(‘two’);<br>&emsp;&emsp;&emsp;  console.log(symbol);// Symbol(‘one’)<br>&emsp;&emsp;&emsp;  console.log(symbol2);// Symbol(‘two’)<br>&emsp;&emsp;3、内置Symbol值<br>&emsp;&emsp;&emsp; 除了定义自己使用的Symbol值以外，ES6还提供了11个内置的Symbol值，指向语言内部使用的方法。<br>&emsp;<strong>Symbol.iterator</strong><br>&emsp;&emsp;&emsp;对象的Symbol.iterator属性，指向该对象的默认遍历器方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//等同于在指定的数据结构上部署了itertot接口</span><br><span class="line">    //但是用for of 去遍历某一个数据结构的时候哦，首先去找Symbol.iterator。找到了就去遍历，没有找到的话不能遍历xxx is not iterable</span><br><span class="line">    let targetData = &#123;</span><br><span class="line">      [Symbol.iterator]:function () &#123;</span><br><span class="line">        let nextIndex = 0;</span><br><span class="line">        return &#123;//遍历对象</span><br><span class="line">          next:function () &#123;</span><br><span class="line">            return nextIndex &lt; this.length?&#123;value:this[nextIndex],done:false&#125;:&#123;value:undefined,done:true&#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //使用三点运算符，解构赋值，默认去调用iterator接口</span><br><span class="line">    let arr2 = [1,6];</span><br><span class="line">    let arr3 = [2,3,4,5];</span><br><span class="line">    arr2 = [1,...arr3,6];</span><br><span class="line">    console.log(arr2);</span><br><span class="line">    let [a,b] = arr2;</span><br><span class="line">    console.log(a,b)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><p>&emsp;<strong> 概念：</strong> iterator是一种接口机制，为各种不同的数据结构提供统一的访问机制<br>&emsp;<strong> 作用：</strong><br>&emsp;&emsp;1、为各种数据结构，提供一个统一的、简便的访问接口；<br>&emsp;&emsp;2、使得数据结构的成员能够按某种次序排列<br>&emsp;&emsp;3、ES6创造了一种新的遍历命令for…of循环，Iterator接口主要供for…of消费。<br>&emsp;<strong> 工作原理：</strong></p>
+<ul>
+<li>创建一个指针对象(遍历器对象)，指向数据结构的起始位置。</li>
+<li>第一次调用next方法，指针自动指向数据结构的第一个成员</li>
+<li>接下来不断调用next方法，指针会一直往后移动，直到指向最后一个成员</li>
+<li>每调用next方法返回的是一个包含value和done的对象，{value: 当前成员的值,done: 布尔值}<ul>
+<li>value表示当前成员的值，done对应的布尔值表示当前的数据的结构是否遍历结束。</li>
+<li>当遍历结束的时候返回的value值是undefined，done值为false</li>
+</ul>
+</li>
+</ul>
+<p>原生具备iterator接口的数据(可用for of遍历)<br>将iterator接口部署到指定的数据类型上，可以使用for of去循环遍历,数组，字符串，arguments，set容器，map容器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">//模拟指针（遍历器对象）</span><br><span class="line">    function myIterator() &#123;//iterator接口</span><br><span class="line">      let nextIndex = 0;</span><br><span class="line">      return&#123;//遍历对象</span><br><span class="line">        next:function () &#123;</span><br><span class="line">          return nextIndex &lt;arr.length?&#123;value:arr[nextIndex++],done:false&#125;:&#123;value:arr[nextIndex++],done:true&#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //准备一个数据</span><br><span class="line">    let arr = [1,4,65,&apos;abc&apos;];</span><br><span class="line">    let iteratorObj = myIterator(arr);</span><br><span class="line">    console.log( iteratorObj.next());//&#123;value: 1, done: false&#125;</span><br><span class="line">   console.log( iteratorObj.next());//&#123;value: 4, done: false&#125;</span><br><span class="line">   console.log( iteratorObj.next());//&#123;value: 65, done: false&#125;</span><br><span class="line">   console.log( iteratorObj.next());//&#123;value: &quot;abc&quot;, done: false&#125;</span><br><span class="line">   console.log( iteratorObj.next());//&#123;value: undefined, done: true&#125;</span><br><span class="line">   console.log( iteratorObj.next());//&#123;value: undefined, done: true&#125; </span><br><span class="line"> //</span><br><span class="line"> //for of去循环遍历,数组，字符串，arguments</span><br><span class="line">let arr = [1,4,65,&apos;abc&apos;];</span><br><span class="line">for(let i of arr)&#123;</span><br><span class="line">      console.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    let str = &apos;abcdefg&apos;;</span><br><span class="line">    for(let i of str)&#123;</span><br><span class="line">      console.log(i);</span><br><span class="line">    &#125;</span><br><span class="line">    function fun() &#123;</span><br><span class="line">      for(let i of arguments)&#123;</span><br><span class="line">       console.log(i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    fun(1,4,5,&apos;abc&apos;);</span><br><span class="line">    //等同于在指定的数据结构上部署了itertot接口</span><br><span class="line">    //但是用for of 去遍历某一个数据结构的时候哦，首先去找Symbol.iterator。找到了就去遍历，没有找到的话不能遍历xxx is not iterable</span><br><span class="line">    let targetData = &#123;</span><br><span class="line">      [Symbol.iterator]:function () &#123;</span><br><span class="line">        let nextIndex = 0;</span><br><span class="line">        return &#123;//遍历对象</span><br><span class="line">          next:function () &#123;</span><br><span class="line">            return nextIndex &lt; this.length?&#123;value:this[nextIndex],done:false&#125;:&#123;value:undefined,done:true&#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //使用三点运算符，解构赋值，默认去调用iterator接口</span><br><span class="line">    let arr2 = [1,6];</span><br><span class="line">    let arr3 = [2,3,4,5];</span><br><span class="line">    arr2 = [1,...arr3,6];</span><br><span class="line">    console.log(arr2);</span><br><span class="line">    let [a,b] = arr2;</span><br><span class="line">    console.log(a,b)</span><br></pre></td></tr></table></figure></p>
+<h3 id="Generator函数"><a href="#Generator函数" class="headerlink" title="Generator函数"></a>Generator函数</h3><p>&emsp;<strong>概念：</strong><br>&emsp;&emsp;1、ES6提供的解决异步编程的方案之一<br>&emsp;&emsp;2、Generator函数是一个状态机，内部封装了不同状态的数据，<br>&emsp;&emsp;3、用来生成遍历器对象<br>&emsp;&emsp;4、可暂停函数(惰性求值), yield可暂停，next方法可启动。每次返回的是yield后的表达式结果<br>&emsp;<strong>特点：</strong><br>&emsp;&emsp;1、function 与函数名之间有一个星号<br>&emsp;&emsp;2、内部用yield表达式来定义不同的状态<br>&emsp;&emsp;<em>例如：</em><br>&emsp;&emsp;&emsp; function* generatorExample(){<br>&emsp;&emsp;&emsp; let result = yield ‘hello’;  // 状态值为hello<br>&emsp;&emsp;&emsp; yield ‘generator’; // 状态值为generator<br>&emsp;&emsp;&emsp;  }<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">function* myGenerator()&#123;</span><br><span class="line">     console.log(&apos;start&apos;);</span><br><span class="line">     let result = yield &apos;hello&apos;;</span><br><span class="line">     console.log(result);</span><br><span class="line">     console.log(&apos;pause&apos;);</span><br><span class="line">     yield &apos;generator&apos;;</span><br><span class="line">     console.log(&apos;end&apos;);</span><br><span class="line">     return &apos;return result&apos;;</span><br><span class="line">   &#125;</span><br><span class="line">   let mg = myGenerator();//返回指针对象</span><br><span class="line">   console.log(mg.next())</span><br><span class="line">   console.log(mg.next(&apos;aaaaaaaaaaaaa&apos;))</span><br><span class="line">   console.log(mg.next())</span><br><span class="line">    // 对象的symbol.iterator属性  指向遍历器对象</span><br><span class="line">   let obj = &#123;username:&apos;kobe&apos;,age:39&#125;;</span><br><span class="line"></span><br><span class="line">  obj[Symbol.iterator] = function* myTest() &#123;</span><br><span class="line">    yield 1</span><br><span class="line">    yield 2</span><br><span class="line">    yield 3</span><br><span class="line">  &#125;</span><br><span class="line">   for(let i of obj)&#123;</span><br><span class="line">     console.log(i);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;3、generator函数返回的是指针对象(接11章节里iterator)，而不会执行函数内部逻辑<br>&emsp;&emsp;4、调用next方法函数内部逻辑开始执行，遇到yield表达式停止，返回{value: yield后的表达式结果/undefined, done: false/true}<br>&emsp;&emsp;5、再次调用next方法会从上一次停止时的yield处开始，直到最后<br>&emsp;&emsp;6、yield语句返回结果通常为undefined， 当调用next方法时传参内容会作为启动时yield语句的返回值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">  // 案例练习</span><br><span class="line">  /*</span><br><span class="line">  * 需求：</span><br><span class="line">  * 1、发送ajax请求获取新闻内容</span><br><span class="line">  * 2、新闻内容获取成功后再次发送请求，获取对应的新闻评论内容</span><br><span class="line">  * 3、新闻内容获取失败则不需要再次发送请求。</span><br><span class="line">  * */ </span><br><span class="line"> function getNews(url) &#123;</span><br><span class="line">   $.get(url,function (data) &#123;</span><br><span class="line">     console.log(data)</span><br><span class="line">     let url = &apos;http://localhost:3000&apos;+data.commentsUrl;</span><br><span class="line">     SX.next(url);</span><br><span class="line">   &#125;)</span><br><span class="line"> &#125;</span><br><span class="line">function* sendXml() &#123;</span><br><span class="line"> let url =   yield getNews(&apos;http://localhost:3000/news?id=3&apos;);</span><br><span class="line">    yield getNews(url)</span><br><span class="line">&#125;</span><br><span class="line">//获取遍历器对象</span><br><span class="line">let SX = sendXml();</span><br><span class="line">SX.next();</span><br></pre></td></tr></table></figure></p>
+<h3 id="async函数-源自ES2017"><a href="#async函数-源自ES2017" class="headerlink" title="async函数(源自ES2017)"></a>async函数(源自ES2017)</h3><p>&emsp;<strong>概念：</strong> 真正意义上去解决异步回调的问题，同步流程表达异步操作<br>&emsp;<strong>本质：</strong> Generator的语法糖<br>&emsp;<strong>语法：</strong><br>&emsp;&emsp;      async function foo(){<br>&emsp;&emsp;        await 异步操作;<br>&emsp;&emsp;        await 异步操作；<br>&emsp;&emsp;      }<br>&emsp;<strong>特点：</strong><br>&emsp;1、不需要像Generator去调用next方法，遇到await等待，当前的异步操作完成就往下执行<br>&emsp;2、返回的总是Promise对象，可以用then方法进行下一步操作<br>&emsp;3、async取代Generator函数的星号*，await取代Generator的yield<br>&emsp;4、语意上更为明确，使用简单，经临床验证，暂时没有任何副作用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//获取新闻内容</span><br><span class="line">  async function getNews(url)&#123;</span><br><span class="line">    /*return new Promise( (resolve,reject) =&gt;&#123;</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">        method:&apos;GET&apos;,</span><br><span class="line">        url,</span><br><span class="line">        success:function (data) &#123;</span><br><span class="line">         resolve();</span><br><span class="line">        &#125;,</span><br><span class="line">        error:function (error) &#123;</span><br><span class="line">         reject();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)*/</span><br><span class="line">    return new Promise( (resolve,reject) =&gt;&#123;</span><br><span class="line">      $.ajax(&#123;</span><br><span class="line">        method:&apos;GET&apos;,</span><br><span class="line">        url,</span><br><span class="line">        success: data =&gt; resolve(data),</span><br><span class="line">        error: error =&gt; resolve(false)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  async  function sendXml() &#123;</span><br><span class="line">   let result = await  getNews(&apos;http://localhost:3000/news?id=7&apos;);</span><br><span class="line">   console.log(result)</span><br><span class="line">    if(!result)&#123;</span><br><span class="line">        alert(&apos;暂时没有新闻推送&apos;);return</span><br><span class="line">    &#125;</span><br><span class="line">    result = await getNews(&apos;http://localhost:3000&apos;+result.commentsUrl)</span><br><span class="line">    console.log(result)</span><br><span class="line">  &#125;</span><br><span class="line">  sendXml();</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;<strong>class</strong></p>
+<ol>
+<li>通过class定义类/实现类的继承</li>
+<li>在类中通过constructor定义构造方法</li>
+<li>通过new来创建类的实例</li>
+<li>通过extends来实现类的继承</li>
+<li>通过super调用父类的构造方法</li>
+<li>重写从父类中继承的一般方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">/*function Person(name,age) &#123;</span><br><span class="line">       this.name = name;</span><br><span class="line">       this.age = age;</span><br><span class="line">   &#125;</span><br><span class="line">  let person = new Person(&apos;kobe&apos;,39);</span><br><span class="line">   console.log(person);*/</span><br><span class="line">//class</span><br><span class="line">   class Person&#123;</span><br><span class="line">     //类的构造方法</span><br><span class="line">     constructor(name,age)&#123;</span><br><span class="line">       this.name = name;</span><br><span class="line">       this.age = age;</span><br><span class="line">     &#125;</span><br><span class="line">     //类的一般方法</span><br><span class="line">     showName()&#123;</span><br><span class="line">       console.log(&apos;父类&apos;)</span><br><span class="line">       console.log(this.name,this.age)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   let person = new Person(&apos;kobe&apos;,39)</span><br><span class="line">  console.log(person);</span><br><span class="line">   person.showName();</span><br><span class="line">   //子类</span><br><span class="line">   class StartPerson extends Person&#123;</span><br><span class="line">     constructor(name,age,salary)&#123;</span><br><span class="line">       super(name,age);//调用父类的构造方法</span><br><span class="line">       this.salary = salary;</span><br><span class="line">     &#125;</span><br><span class="line">     //父类的方法重写</span><br><span class="line">     showName() &#123;</span><br><span class="line">       console.log(&apos;子类&apos;)</span><br><span class="line">       console.log(this.name,this.age,this.salary)</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   let p1 = new StartPerson(&apos;wade&apos;,36,100000000);</span><br><span class="line">   console.log(p1)</span><br><span class="line">   p1.showName()</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="ES6其他方法"><a href="#ES6其他方法" class="headerlink" title="ES6其他方法"></a>ES6其他方法</h3><p>&emsp;<strong>字符串</strong></p>
+<ol>
+<li>includes(str) : 判断是否包含指定的字符串</li>
+<li>startsWith(str) : 判断是否以指定字符串开头</li>
+<li>endsWith(str) : 判断是否以指定字符串结尾</li>
+<li>repeat(count) : 重复指定次数</li>
+</ol>
+<p>&emsp;<strong>数值</strong></p>
+<ol>
+<li>二进制与八进制数值表示法: 二进制用0b, 八进制用0o</li>
+<li>Number.isFinite(i) : 判断是否是有限大的数</li>
+<li>Number.isNaN(i) : 判断是否是NaN</li>
+<li>Number.isInteger(i) : 判断是否是整数</li>
+<li>Number.parseInt(str) : 将字符串转换为对应的数值</li>
+<li>Math.trunc(i) : 直接去除小数部分</li>
+</ol>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><ol>
+<li><p>Array.from(v) : 将伪数组对象或可遍历对象转换为真数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let btns = document.getElementsByTagName(&apos;button&apos;);</span><br><span class="line">   Array.from(btns).forEach(function (item,index) &#123;</span><br><span class="line">     console.log(item);</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Array.of(v1, v2, v3) : 将一系列值转换成数组<code>let arr = Array.of(1,4,&#39;abc&#39;,true);//[1, 4, &quot;abc&quot;, true]</code></p>
+</li>
+<li><p>find(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let arr2 = [2,3,4,2,5,7,3,6,5];</span><br><span class="line">   let result =arr2.find(function (item,index) &#123;</span><br><span class="line">   return item &gt;4</span><br><span class="line"> &#125;)</span><br><span class="line"> console.log(result) // 5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>findIndex(function(value, index, arr){return true}) : 找出第一个满足条件返回true的元素下标</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let arr2 = [2,3,4,2,5,7,3,6,5];</span><br><span class="line">   let result =arr2.findIndex(function (item,index) &#123;</span><br><span class="line">   return item &gt;4</span><br><span class="line"> &#125;)</span><br><span class="line"> console.log(result) // 4</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><ol>
+<li><p>Object.is(v1, v2)</p>
+<ul>
+<li>判断2个数据是否完全相等<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(0 == -0)  //true</span><br><span class="line">console.log(NaN == NaN) //false</span><br><span class="line">console.log(Object.is(0,-0)) //false</span><br><span class="line">console.log(Object.is(NaN,NaN)) //true</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Object.assign(target, source1, source2..)</p>
+<ul>
+<li>将源对象的属性复制到目标对象上<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> let obj = &#123;&#125;</span><br><span class="line">let obj1 = &#123;username:&apos;anverson&apos;,age:42&#125;;</span><br><span class="line">let obj2 = &#123;sex:&apos;男&apos;&#125;</span><br><span class="line"> Object.assign(obj,obj1);</span><br><span class="line">console.log(obj) //&#123;username:&apos;anverson&apos;,age:42&#125;</span><br><span class="line"> Object.assign(obj,obj2);</span><br><span class="line">console.log(obj); //&#123;username: &quot;anverson&quot;, age: 42, sex: &quot;男&quot;&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>直接操作 <strong>proto</strong> 属性<br>let obj2 = {};<br>obj2.<strong>proto</strong> = obj1;</p>
+</li>
+</ol>
+<h4 id="深度克隆"><a href="#深度克隆" class="headerlink" title="深度克隆"></a>深度克隆</h4><p>&emsp;1、数据类型：<br>&emsp;&emsp; 数据分为基本的数据类型(String, Number, boolean, Null, Undefined)和对象数据类型</p>
+<ul>
+<li>基本数据类型：<br>特点： 存储的是该对象的实际数据,(拷贝后会生成一份新的数据，不会影响原来的数据)<ul>
+<li>对象数据类型：(对象、数组)<br>特点： 存储的是该对象在栈中引用，真实的数据存放在堆内存里(拷贝后不会生成新的数据，而是拷贝是引用，会影响原数据)</li>
+</ul>
+</li>
+</ul>
+<p>&emsp;方法：</p>
+<ol>
+<li>直接赋值给一个变量  //浅拷贝</li>
+<li>Object.assign()  //浅拷贝</li>
+<li>Array.prototype.concat()  //浅拷贝</li>
+<li>Array.prototype.slice()  //浅拷贝<br>5.JSON.parse(JSON.stringify()) //深拷贝(深度克隆)</li>
+</ol>
+<p>&emsp;2、复制数据</p>
+<ul>
+<li>基本数据类型存放的就是实际的数据，可直接复制<br>let number2 = 2;<br>let number1 = number2;</li>
+<li>克隆数据：对象/数组<br>&emsp; 1、区别： 浅拷贝/深度拷贝<br>&emsp; 判断： 拷贝是否产生了新的数据还是拷贝的是数据的引用<br>&emsp; 知识点：对象数据存放的是对象在栈内存的引用，直接复制的是对象的引用<br>&emsp; let obj = {username: ‘kobe’}<br>&emsp; let obj1 = obj; // obj1 复制了obj在栈内存的引用<br>&emsp;2、常用的拷贝技术<br>&emsp; 1). 直接赋值给一个变量  //浅拷贝<br>&emsp; 2). Object.assign()  //浅拷贝<br>&emsp; 3). Array.prototype.concat()  //浅拷贝<br>&emsp; 4). Array.prototype.slice()  //浅拷贝<br>&emsp; 5). arr.concat(): 数组浅拷贝<br>&emsp; 6). arr.slice(): 数组浅拷贝<br>&emsp; 7). JSON.parse(JSON.stringify(arr/obj))  //深拷贝(深度克隆) , 数组或对象深拷贝, 但不能处理函数数据<br>&emsp; 8). 浅拷贝包含函数数据的对象/数组<br>&emsp; 9). 深拷贝包含函数数据的对象/数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">  * 如何实现深度拷贝(克隆)</span><br><span class="line">  * 拷贝的数据里有对象/数组、</span><br><span class="line">  * 拷贝大的数据里不能有对象/数组</span><br><span class="line">  * 即使有对象/数组可以继续遍历对象、数组拿到里边的每一项值。一直拿到是基本数组类型，然后再去复制，就是深度拷贝</span><br><span class="line">  * */</span><br><span class="line">  //知识储备</span><br><span class="line">  /*</span><br><span class="line">  * 如何判断数据类型：arr--&gt;Array null --&gt;</span><br><span class="line">  * 1.typeof返回的数据类型：String，Number，Boolean，Undefined，Object，Function</span><br><span class="line">  * 2.Object.prototype.toString.call(obj)</span><br><span class="line">  * */</span><br><span class="line">  let result = &apos;abcd&apos;;</span><br><span class="line">  result = null;</span><br><span class="line"> result = [1,3];</span><br><span class="line">  console.log(Object.prototype.toString.call(result).slice(8,-1))</span><br><span class="line">  //for in 循环 对象(属性名) 数组(下标)</span><br><span class="line">  let obj = &#123;username:&apos;wade&apos;,age:45&#125;</span><br><span class="line">  for(let i in obj)&#123;</span><br><span class="line">    console.log(i); //username age</span><br><span class="line">  &#125;</span><br><span class="line">  let arr = [1,3,&apos;abc&apos;];</span><br><span class="line">  for(let i in arr) &#123;</span><br><span class="line">    console.log(i); //0 1 2</span><br><span class="line">  &#125;</span><br><span class="line">  //定义检测数据类型的功能函数</span><br><span class="line">  function checkedType(target)&#123;</span><br><span class="line">    return Object.prototype.toString.call(target).slice(8,-1)</span><br><span class="line">  &#125;</span><br><span class="line">  //实现深度克隆 --&gt;对象/数组</span><br><span class="line">  function clone(target) &#123;</span><br><span class="line">      //判断拷贝的数据类型</span><br><span class="line">      //初始化变量result成为最终克隆的数据</span><br><span class="line">    let result,targetType = checkedType(target);</span><br><span class="line">     if(targetType ===&apos;Object&apos;)&#123;</span><br><span class="line">        result = &#123;&#125;</span><br><span class="line">       &#125;else if(targetType ===&apos;Array&apos;)&#123;</span><br><span class="line">        result = []</span><br><span class="line">       &#125;else &#123;</span><br><span class="line">       return target</span><br><span class="line">     &#125;</span><br><span class="line">     //遍历目标数据</span><br><span class="line">    for(let i  in target)&#123;</span><br><span class="line">      //获取数据结构的每一项值</span><br><span class="line">      let value = target[i];</span><br><span class="line">      //判读目标结构里的每一项值是否存在对象/数组</span><br><span class="line">      if(checkedType(value) === &apos;Object&apos; || checkedType(value) === &apos;Array&apos;)&#123; // 对象 / 数组 里嵌套了对象 / 数组</span><br><span class="line">        //继续遍历获取到的value值</span><br><span class="line">        result[i] = clone(value)</span><br><span class="line">      &#125;else&#123; // 获取到的value值是基本数据类型或函数</span><br><span class="line">        result[i] = value</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return result;</span><br><span class="line">  &#125;</span><br><span class="line">  let arr3 = [1,2,&#123;username:&apos;kobe&apos;,age:39&#125;]</span><br><span class="line">  let arr4 = clone(arr3);</span><br><span class="line">  console.log(arr4);</span><br><span class="line">  arr4[2].username = &apos;wade&apos;;</span><br><span class="line">  console.log(arr3,arr4);</span><br><span class="line"></span><br><span class="line">  let obj3 = &#123;username:&apos;kobe&apos;,age:39&#125;</span><br><span class="line">  let obj4 = clone(obj3);</span><br><span class="line">  console.log(obj4);</span><br><span class="line">  obj4.username = &apos;wade&apos;;</span><br><span class="line">  console.log(obj3,obj4)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Set和Map容器"><a href="#Set和Map容器" class="headerlink" title="Set和Map容器"></a>Set和Map容器</h4><p>&emsp;1. Set容器 : 无序不可重复的多个value的集合体<code>let set = new Set([1,2,4,5,2,3,6]);</code><br>&emsp;&emsp;  Set()  &emsp;Set(array)&emsp;add(value)&emsp; delete(value)&emsp; has(value)&emsp; clear()&emsp;size<br>&emsp;2. Map容器 : 无序的 key不重复的多个key-value的集合体<code>let  map = new Map([[&#39;aaa&#39;,&#39;username&#39;],[35,&#39;age&#39;]]);</code><br>&emsp;&emsp;  Map()&emsp; Map(array)&emsp; set(key, value)//添加&emsp; get(key)&emsp; delete(key)&emsp; has(key)&emsp; clear()&emsp; size</p>
+<h4 id="for-of-数组去重"><a href="#for-of-数组去重" class="headerlink" title="for of(数组去重)"></a>for of(数组去重)</h4><p>&emsp;for(let value of target){}循环遍历<br>  &emsp; 遍历数组&emsp; 遍历Set&emsp; 遍历Map&emsp; 遍历字符串&emsp; 遍历伪数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1,2,3,4,5,6,2];</span><br><span class="line">let arr1 = arr;</span><br><span class="line">arr = []</span><br><span class="line">let set = new Set(arr1);</span><br><span class="line">for(let i of set)&#123;</span><br><span class="line">  arr.push(i)</span><br><span class="line">&#125;</span><br><span class="line">console.log(arr)</span><br></pre></td></tr></table></figure></p>
+<h2 id="ES7"><a href="#ES7" class="headerlink" title="ES7"></a>ES7</h2><ol>
+<li>指数运算符(幂): **</li>
+<li>Array.prototype.includes(value) : 判断数组中是否包含指定value<code>let arr = [1,4,5,6,&#39;abc&#39;];console.log(arr.includes(1))</code></li>
+</ol>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#ES">
+    <span class="tag-code">ES</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2019/06/15/事件、BOM、JSON/">
+        <span class="nav-arrow">← </span>
+        
+          事件、BOM、JSON
+        
+      </a>
+    
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <!-- <div id="comments"></div> -->
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ES-ECMAScript-简介"><span class="toc-nav-text">ES(ECMAScript):简介</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ES5"><span class="toc-nav-text">ES5</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#严格模式"><span class="toc-nav-text">严格模式</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#JSON"><span class="toc-nav-text">JSON</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Object扩展"><span class="toc-nav-text">Object扩展</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Array扩展"><span class="toc-nav-text">Array扩展</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Function扩展"><span class="toc-nav-text">Function扩展</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ES6"><span class="toc-nav-text">ES6</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#箭头函数"><span class="toc-nav-text">箭头函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#点点点运算符"><span class="toc-nav-text">点点点运算符</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Promise"><span class="toc-nav-text">Promise</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Symbol"><span class="toc-nav-text">Symbol</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Iterator"><span class="toc-nav-text">Iterator</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#Generator函数"><span class="toc-nav-text">Generator函数</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#async函数-源自ES2017"><span class="toc-nav-text">async函数(源自ES2017)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#ES6其他方法"><span class="toc-nav-text">ES6其他方法</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#数组"><span class="toc-nav-text">数组</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对象"><span class="toc-nav-text">对象</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#深度克隆"><span class="toc-nav-text">深度克隆</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#Set和Map容器"><span class="toc-nav-text">Set和Map容器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#for-of-数组去重"><span class="toc-nav-text">for of(数组去重)</span></a></li></ol></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#ES7"><span class="toc-nav-text">ES7</span></a></li></ol>
+    
+  </div>
+   
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yokemadman.github.io/2019/08/10/ES-5-6-7语法/';
+    var banner = ''
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+    // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+  })();
+</script>
+
+
+  <script>
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+  </script>
+
+
+
+  <script>
+    var gitmentConfig = "Yokemadman";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "ES_5_6_7.md",
+        owner: "Yokemadman",
+        repo: "Yokemadman.github.io",
+        oauth: {
+          client_id: "0f87e490e00ee3fd87ef",
+          client_secret: "4a9d2b148e7971c2201ad12131ce8bf8159ccd2e"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  </script>
+
+
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+
+ <!-- <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>-->
+
+ </footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
